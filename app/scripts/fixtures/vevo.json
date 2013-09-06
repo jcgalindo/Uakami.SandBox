@@ -1,0 +1,838 @@
+{
+    "@id": "7a08b8a0-052b-11e3-a7b8-22000aa81abc",
+    "appId": "79e33a8a-052b-11e3-a1d5-1231381a2950",
+    "appContainerMaxVersion": null,
+    "accountId": null,
+    "createdDate": "Wed, 14 Aug 2013 21:50:04 +0000",
+    "data": {
+        "voteWidget": {
+            "byIdAndName": [
+                {
+                    "itemName": "Roberto Junior Y Su Bande\u00f1o",
+                    "itemId": "8",
+                    "count": 6
+                },
+                {
+                    "itemName": "Daddy Yankee",
+                    "itemId": "0",
+                    "count": 5
+                },
+                {
+                    "itemName": "Banda Sinaloense MS de Sergio Liz\u00e1rraga",
+                    "itemId": "2",
+                    "count": 4
+                },
+                {
+                    "itemName": "Thal\u00eda",
+                    "itemId": "9",
+                    "count": 4
+                },
+                {
+                    "itemName": "Pitbull",
+                    "itemId": "6",
+                    "count": 4
+                },
+                {
+                    "itemName": "Jennifer Lopez",
+                    "itemId": "4",
+                    "count": 3
+                },
+                {
+                    "itemName": "Belinda",
+                    "itemId": "3",
+                    "count": 3
+                },
+                {
+                    "itemName": "Juan Magan",
+                    "itemId": "5",
+                    "count": 2
+                },
+                {
+                    "itemName": "Don Omar",
+                    "itemId": "1",
+                    "count": 2
+                },
+                {
+                    "itemName": "Reik",
+                    "itemId": "7",
+                    "count": 1
+                }
+            ],
+            "totalVotes": 34
+        }
+    },
+    "deleted": null,
+    "description": "JLo, Pitbull, Thal\u00eda & more face off for Latino video of the summer. \u00a1Vota por tu favorito ya!",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [
+
+    ],
+    "endDate": null,
+    "env": "prod",
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "VEVO's Hottest Latin Videos of Summer poll presented by RadioShack",
+    "odpBaseUrl": "https://offer.moontoast.com",
+    "pageTemplate": "{% block viewport %}<meta name='viewport' content='width=device-width, initial-scale=1.0'>{% endblock %}",
+    "pageTemplateParams": {
+        "swfUrl": "https://offer.moontoast.com/widgetTest/vevo/AppContainer.swf"
+    },
+    "piCatalog": [
+
+    ],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "voting_app",
+        "dite": {
+            "eventType": "default"
+        },
+        "widget": {
+            "desktopWidget": {
+                "widgetName": "proximaNovaFont",
+                "widgetClass": "ProximaNovaFont",
+                "widgetLocation": "https://offer.moontoast.com/widgetTest/vevo/ProximaNovaFont.swf"
+            },
+            "options": [
+
+            ]
+        },
+        "elements": [
+            {
+                "id": "preloader",
+                "widget": {
+                    "widget": "preloader",
+                    "options": {
+                        "id": "preloader_widget",
+                        "preloadUrls": [
+
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "header",
+                "elements": [
+                    {
+                        "id": "share_button",
+                        "backgroundImage": "{{share_img}}",
+                        "click": {
+                            "toggle": [
+                                "share_popup"
+                            ],
+                            "dite": {
+                                "screenName": "share",
+                                "eventName": "shareThisHeader"
+                            }
+                        }
+                    },
+                    {
+                        "id": "logo_header",
+                        "backgroundImage": "{{header_img}}",
+                        "click": {
+                            "link": "{{logo_link}}",
+                            "dite": {
+                                "eventName": "clickLogo"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "share_popup",
+                "visible": false,
+                "position": "absolute",
+                "forceLeft": "266px",
+                "mouseOut": {
+                    "fadeOut": "share_popup"
+                },
+                "click": [
+
+                ],
+                "elements": [
+                    {
+                        "id": "share_popup_background",
+                        "position": "relative",
+                        "widget": {
+                            "widget": "share",
+                            "options": {
+                                "id": "share_popup_widget",
+                                "position": "relative",
+                                "networks": [
+                                    {
+                                        "network": "facebook",
+                                        "url": "{{share_url}}"
+                                    },
+                                    {
+                                        "network": "twitter",
+                                        "url": "offer.moontoast.com/7a08b8a0-052b-11e3-a7b8-22000aa81abc&title=.@LatinoOnVEVO's Hottest Latin Video of Summer poll presented by @RadioShack! Vota aqu%C3%AD  &shortener=bitly&pubid=moontoast"
+                                    },
+                                    {
+                                        "networks": [
+                                            "google+",
+                                            "pinterest"
+                                        ],
+                                        "url": "{{share_url}}"
+                                    }
+                                ],
+                                "dite": {
+                                    "screenName": "share"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "main_wrapper",
+                "elements": [
+                    {
+                        "id": "main_banner",
+                        "backgroundColor": "{{banner_bg_color}}",
+                        "elements": [
+                            {
+                                "id": "banner_image",
+                                "backgroundImage": "{{banner_img}}"
+                            },
+                            {
+                                "id": "banner_text",
+                                "content": "{{banner_content}}"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "gallery_panel",
+                        "elements": [
+                            {
+                                "id": "render_element",
+                                "widget": {
+                                    "widget": "thumbRender",
+                                    "width": "100%",
+                                    "height": "100%",
+                                    "desktopWidget": {
+                                        "widgetName": "thumbRender",
+                                        "widgetClass": "com.moontoast.gallery.view.mediator.MTGalleryMediator",
+                                        "widgetLocation": "https://offer.moontoast.com/widgetTest/vevo/GalleryWidget.swf"
+                                    },
+                                    "options": {
+                                        "id": "thumb-render",
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "position": "relative",
+                                        "arrangement": "inline",
+                                        "assets": [
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Daddy-Yankee.jpg",
+                                                "name": "Daddy Yankee",
+                                                "title": "La Noche De Los Dos ft. Natalia Jim\u00e9nez"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Don-Omar.jpg",
+                                                "name": "Don Omar",
+                                                "title": "Zumba Campaign Video"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Banda.jpg",
+                                                "name": "Banda Sinaloense MS de Sergio Liz\u00e1rraga",
+                                                "title": "Mi Raz\u00f3n De Ser"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Belinda.jpg",
+                                                "name": "Belinda",
+                                                "title": "En La Obscuridad"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Jennifer-Lopez.jpg",
+                                                "name": "Jennifer Lopez",
+                                                "title": "Live It Up ft. Pitbull"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Juan-Magan.jpg",
+                                                "name": "Juan Magan",
+                                                "title": "Mal De Amores"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Pitbull.jpg",
+                                                "name": "Pitbull",
+                                                "title": "Feel This Moment ft. Christina Aguilera"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Reik.jpg",
+                                                "name": "Reik",
+                                                "title": "Te Fuiste de Aqu\u00ed"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Roberto.jpg",
+                                                "name": "Roberto Junior Y Su Bande\u00f1o",
+                                                "title": "El Coco No"
+                                            },
+                                            {
+                                                "image": "https://offer.moontoast.com/vevo/voting/mobile/hero/Thalia.jpg",
+                                                "name": "Thal\u00eda",
+                                                "title": "Te Perdiste Mi Amor ft. Prince Royce"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "image_thumbs",
+                        "widget": {
+                            "widget": "thumbSelector",
+                            "width": "100%",
+                            "height": "100%",
+                            "desktopWidget": {
+                                "widgetName": "thumbSelector",
+                                "widgetClass": "com.moontoast.thumbselector.view.mediator.MTThumbSelectorMediator",
+                                "widgetLocation": "https://offer.moontoast.com/widgetTest/vevo/ThumbSelectorWidget.swf"
+                            },
+                            "options": {
+                                "id": "thumb",
+                                "width": "100%",
+                                "height": "100%",
+                                "position": "relative",
+                                "arrangement": "inline",
+                                "thumbs": [
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Daddy-Yankee.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Don-Omar.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Banda.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Belinda.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Jennifer-Lopez.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Juan-Magan.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Pitbull.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Reik.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Roberto.jpg",
+                                    "https://offer.moontoast.com/vevo/voting/mobile/thumb/Thalia.jpg"
+                                ],
+                                "titles": [
+                                    "Daddy Yankee",
+                                    "Don Omar",
+                                    "Banda Sinaloense MS de Sergio Liz\u00e1rraga",
+                                    "Belinda",
+                                    "Jennifer Lopez",
+                                    "Juan Magan",
+                                    "Pitbull",
+                                    "Reik",
+                                    "Roberto Junior Y Su Bande\u00f1o",
+                                    "Thal\u00eda"
+                                ],
+                                "type": "image"
+                            }
+                        }
+                    },
+                    {
+                        "id": "vote_button",
+                        "widget": {
+                            "widget": "voteRender",
+                            "desktopWidget": {
+                                "widgetName": "voteRender",
+                                "widgetClass": "com.moontoast.vote.view.mediator.MTVoteButtonMediator",
+                                "widgetLocation": "https://offer.moontoast.com/widgetTest/vevo/VoteButtonWidget.swf"
+                            },
+                            "options": {
+                                "id": "vote_button_widget",
+                                "content": "Vote Aqu\u00cd",
+                                "afterSubmit": {
+                                    "hide": [
+                                        "main_wrapper"
+                                    ],
+                                    "show": [
+                                        "leaderboard"
+                                    ],
+                                    "dite": {
+                                        "eventName": "thankYou/conversionreferral"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "leaderboard",
+                "visible": false,
+                "dite": {
+                    "eventName": "thankYou"
+                },
+                "elements": [
+                    {
+                        "id": "leaderboard_header",
+                        "elements": [
+                            {
+                                "id": "leader_header_title",
+                                "content": "\u00a1GRACIAS POR VOTAR!"
+                            },
+                            {
+                                "id": "leader_header_subtext",
+                                "content": "SHARE WITH YOUR FRIENDS"
+                            },
+                            {
+                                "id": "twitter_share",
+                                "click": {
+                                    "share": {
+                                        "network": "twitter",
+                                        "url": "offer.moontoast.com/7a08b8a0-052b-11e3-a7b8-22000aa81abc&title=.@LatinoOnVEVO's Hottest Latin Video of Summer poll presented by @RadioShack! Vota aqu%C3%AD  &shortener=bitly&pubid=moontoast"
+                                    },
+                                    "dite": {
+                                        "eventName": "thankYou/twitter"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "facebook_share",
+                                "click": {
+                                    "share": {
+                                        "network": "facebook",
+                                        "url": "{{share_url}}"
+                                    },
+                                    "dite": {
+                                        "eventName": "thankYou/facebook"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "leaderboard_lists",
+                        "widget": {
+                            "widget": "leaderBoard",
+                            "desktopWidget": {
+                                "widgetName": "leaderBoard",
+                                "widgetClass": "com.moontoast.vote.view.mediator.MTVotingResultsMediator",
+                                "widgetLocation": "https://offer.moontoast.com/widgetTest/vevo/VotingResultsWidget.swf"
+                            },
+                            "width": "100%",
+                            "height": "100%",
+                            "options": {
+                                "colorBars": [
+                                    "",
+                                    "",
+                                    "",
+                                    "#00AEEF",
+                                    "#A864A8",
+                                    "#7CC576",
+                                    "#FFFF00",
+                                    "#FF0030",
+                                    "#F7941D",
+                                    "#C7B299"
+                                ],
+                                "id": "votingResultsWidget",
+                                "assets": [
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Daddy-Yankee.jpg",
+                                        "name": "Daddy Yankee",
+                                        "title": "La Noche De Los Dos ft. Natalia Jim\u00e9nez"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Don-Omar.jpg",
+                                        "name": "Don Omar",
+                                        "title": "Zumba Campaign Video"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Banda.jpg",
+                                        "name": "Banda Sinaloense MS de Sergio Liz\u00e1rraga",
+                                        "title": "Mi Raz\u00f3n De Ser"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Belinda.jpg",
+                                        "name": "Belinda",
+                                        "title": "En La Obscuridad"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Jennifer-Lopez.jpg",
+                                        "name": "Jennifer Lopez",
+                                        "title": "Live It Up ft. Pitbull"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Juan-Magan.jpg",
+                                        "name": "Juan Magan",
+                                        "title": "Mal De Amores"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Pitbull.jpg",
+                                        "name": "Pitbull",
+                                        "title": "Feel This Moment ft. Christina Aguilera"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Reik.jpg",
+                                        "name": "Reik",
+                                        "title": "Te Fuiste de Aqu\u00ed"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Roberto.jpg",
+                                        "name": "Roberto Junior Y Su Bande\u00f1o",
+                                        "title": "El Coco No"
+                                    },
+                                    {
+                                        "image": "https://offer.moontoast.com/vevo/voting/mobile/voting/Thalia.jpg",
+                                        "name": "Thal\u00eda",
+                                        "title": "Te Perdiste Mi Amor ft. Prince Royce"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "templateOverrides": [
+        {
+            "rules": {
+                "deviceType": "flash"
+            },
+            "overrides": {
+                "voting_app": [
+
+                ],
+                "header": {
+                    "height": "41px"
+                },
+                "leaderboard": {
+                    "top": "41px",
+                    "height": "419px",
+                    "backgroundColor": "#0"
+                },
+                "leaderboard_header": {
+                    "height": "76px",
+                    "backgroundColor": "#ff0031"
+                },
+                "leader_header_title": {
+                    "fontSize": "32",
+                    "fontColor": "#FFFFFF",
+                    "left": "28px",
+                    "top": "0px",
+                    "width": "371px",
+                    "height": "44px",
+                    "textFormatting": {
+                        "bold": true,
+                        "font": "Proxima Nova Bold"
+                    }
+                },
+                "twitter_share": {
+                    "height": "29px",
+                    "width": "29px",
+                    "left": "266px",
+                    "top": "41px",
+                    "backgroundImage": "https://offer.moontoast.com/widgetTest/vevo/assets/twitter.png"
+                },
+                "facebook_share": {
+                    "height": "29px",
+                    "width": "29px",
+                    "top": "41px",
+                    "left": "303px",
+                    "backgroundImage": "https://offer.moontoast.com/widgetTest/vevo/assets/facebook.png"
+                },
+                "leader_header_subtext": {
+                    "fontSize": "15",
+                    "fontColor": "#FFFFFF",
+                    "left": "60px",
+                    "top": "45px",
+                    "width": "200px",
+                    "height": "19px",
+                    "textFormatting": {
+                        "font": "Proxima Nova"
+                    }
+                },
+                "leaderboard_lists": {
+                    "top": "76px",
+                    "height": "343px"
+                },
+                "main_wrapper": {
+                    "height": "419px",
+                    "top": "41px"
+                },
+                "main_banner": {
+                    "height": "68px",
+                    "content": "",
+                    "elements": [
+
+                    ],
+                    "backgroundImage": "https://offer.moontoast.com/widgetTest/vevo/assets/banner.png"
+                },
+                "gallery_panel": {
+                    "top": "68px",
+                    "height": "235px"
+                },
+                "image_thumbs": {
+                    "top": "303px",
+                    "height": "70px",
+                    "width": "398px"
+                },
+                "vote_button": {
+                    "top": "373px",
+                    "height": "48px",
+                    "backgroundImage": "https://offer.moontoast.com/widgetTest/vevo/assets/voteButton.png"
+                },
+                "share_button": {
+                    "left": "356px",
+                    "width": "42px",
+                    "backgroundImage": "https://offer.moontoast.com/widgetTest/vevo/assets/share.png"
+                },
+                "logo_header": {
+                    "width": "356px",
+                    "backgroundImage": "https://offer.moontoast.com/widgetTest/vevo/assets/header.png"
+                },
+                "share_popup": {
+                    "width": "30%",
+                    "height": "25%",
+                    "top": "41",
+                    "right": "6px",
+                    "noScaleBackground": "true",
+                    "backgroundImage": "http://offer.moontoast.com/widgetTest/vevo/assets/share_back_bkg_right.png"
+                },
+                "thumb-render": {
+                    "selectorId": "thumb",
+                    "baseElement": {
+                        "noScaleBackground": true,
+                        "backgroundImage": "{{!heroImage}}",
+                        "elements": [
+                            {
+                                "id": "nameplate",
+                                "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/nameplate.png",
+                                "height": "47px",
+                                "top": "188px",
+                                "elements": [
+                                    {
+                                        "id": "name",
+                                        "top": "6px",
+                                        "height": "18px",
+                                        "left": "7px",
+                                        "fontSize": "14",
+                                        "fontColor": "#FFFFFF",
+                                        "textFormatting": {
+                                            "font": "Proxima Nova Bold",
+                                            "bold": true
+                                        },
+                                        "content": "{{!name}}"
+                                    },
+                                    {
+                                        "id": "title",
+                                        "height": "18px",
+                                        "left": "7px",
+                                        "top": "24px",
+                                        "fontSize": "14px",
+                                        "fontColor": "#FFFFFF",
+                                        "content": "{{!title}}",
+                                        "textFormatting": {
+                                            "font": "Proxima Nova"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "renderParams": [
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Daddy-Yankee.jpg",
+                            "name": "Daddy Yankee",
+                            "title": "La Noche De Los Dos ft. Natalia Jim\u00e9nez"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Don-Omar.jpg",
+                            "name": "Don Omar",
+                            "title": "Zumba Campaign Video"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Banda.jpg",
+                            "name": "Banda Sinaloense MS de Sergio Liz\u00e1rraga",
+                            "title": "Mi Raz\u00f3n De Ser"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Belinda.jpg",
+                            "name": "Belinda",
+                            "title": "En La Obscuridad"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Jennifer-Lopez.jpg",
+                            "name": "Jennifer Lopez",
+                            "title": "Live It Up ft. Pitbull"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Juan-Magan.jpg",
+                            "name": "Juan Magan",
+                            "title": "Mal De Amores"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Pitbull.jpg",
+                            "name": "Pitbull",
+                            "title": "Feel This Moment ft. Christina Aguilera"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Reik.jpg",
+                            "name": "Reik",
+                            "title": "Te Fuiste de Aqu\u00ed"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Roberto.jpg",
+                            "name": "Roberto Junior Y Su Bande\u00f1o",
+                            "title": "El Coco No"
+                        },
+                        {
+                            "heroImage": "https://offer.moontoast.com/vevo/voting/desktop/hero/Thalia.jpg",
+                            "name": "Thal\u00eda",
+                            "title": "Te Perdiste Mi Amor ft. Prince Royce"
+                        }
+                    ]
+                },
+                "thumb": {
+                    "width": "398px",
+                    "thumbs": [
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Daddy-Yankee.jpg",
+                            "value": "Daddy Yankee"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Don-Omar.jpg",
+                            "value": "Don Omar"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Banda.jpg",
+                            "value": "Banda Sinaloense MS de Sergio Liz\u00e1rraga"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Belinda.jpg",
+                            "value": "Belinda"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Jennifer-Lopez.jpg",
+                            "value": "Jennifer Lopez"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Juan-Magan.jpg",
+                            "value": "Juan Magan"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Pitbull.jpg",
+                            "value": "Pitbull"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Reik.jpg",
+                            "value": "Reik"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Roberto.jpg",
+                            "value": "Roberto Junior Y Su Bande\u00f1o"
+                        },
+                        {
+                            "backgroundImage": "https://offer.moontoast.com/vevo/voting/desktop/thumb/Thalia.jpg",
+                            "value": "Thal\u00eda"
+                        }
+                    ]
+                },
+                "vote_button_widget": {
+                    "content": "",
+                    "selectorId": "thumb",
+                    "submit": {
+                        "url": "{{txnBaseUrl}}/api/rpc?methodName=recordVote"
+                    }
+                },
+                "preloader_widget": {
+                    "preloadUrls": [
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Daddy-Yankee.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Don-Omar.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Banda.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Belinda.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Jennifer-Lopez.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Juan-Magan.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Pitbull.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Reik.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Roberto.jpg",
+                        "https://offer.moontoast.com/vevo/voting/desktop/hero/Thalia.jpg"
+                    ]
+                },
+                "votingResultsWidget": {
+                    "font": "Proxima Nova",
+                    "fontBold": "Proxima Nova Bold",
+                    "assets": [
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Daddy-Yankee.jpg",
+                            "name": "Daddy Yankee",
+                            "title": "La Noche De Los Dos ft. Natalia Jim\u00e9nez"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Don-Omar.jpg",
+                            "name": "Don Omar",
+                            "title": "Zumba Campaign Video"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Banda.jpg",
+                            "name": "Banda Sinaloense MS de Sergio Liz\u00e1rraga",
+                            "title": "Mi Raz\u00f3n De Ser"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Belinda.jpg",
+                            "name": "Belinda",
+                            "title": "En La Obscuridad"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Jennifer-Lopez.jpg",
+                            "name": "Jennifer Lopez",
+                            "title": "Live It Up ft. Pitbull"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Juan-Magan.jpg",
+                            "name": "Juan Magan",
+                            "title": "Mal De Amores"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Pitbull.jpg",
+                            "name": "Pitbull",
+                            "title": "Feel This Moment ft. Christina Aguilera"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Reik.jpg",
+                            "name": "Reik",
+                            "title": "Te Fuiste de Aqu\u00ed"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Roberto.jpg",
+                            "name": "Roberto Junior Y Su Bande\u00f1o",
+                            "title": "El Coco No"
+                        },
+                        {
+                            "image": "https://offer.moontoast.com/vevo/voting/desktop/results/Thalia.jpg",
+                            "name": "Thal\u00eda",
+                            "title": "Te Perdiste Mi Amor ft. Prince Royce"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "templateParams": {
+        "header_img": "https://moontoast-assets-live.s3.amazonaws.com/vevo/logo.png",
+        "logo_link": "http://www.vevo.com/",
+        "share_img": "https://moontoast-assets-live.s3.amazonaws.com/vevo/share_icon.png",
+        "share_url": "{{odpBaseUrl}}/7a08b8a0-052b-11e3-a7b8-22000aa81abc",
+        "banner_img": "https://moontoast-assets-live.s3.amazonaws.com/vevo/bg_main_banner.png",
+        "banner_bg_color": "#FF0031",
+        "banner_content": "VOTE FOR THE HOTTEST LATINO VIDEO DEL VERANO",
+        "learn_more_url": "http://www.chevrolet.com/spark-ev-electric-vehicle.html",
+        "start_img": "https://offer.moontoast.com/chevy/quiz/mobile/get_started.png",
+        "final_img": "https://offer.moontoast.com/chevy/quiz/images/thankyou-bg.png",
+        "stylesheetUrl": "/app/styles/clientspecific/vevo.css",
+        "share_background_image": "",
+        "previewImageUrl": "https://offer.moontoast.com/vevo/voting/vevo-fb-share-image.jpg",
+        "icons_header": "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/share-icons.png",
+        "catalogId": "3523",
+        "privacyLink": "http://www.gm.com/privacy/",
+        "rulesLink": "http://www.gm.com/privacy/",
+        "appDiteName": "vevocustomvotingapp",
+        "mobileFirst": "true"
+    },
+    "thumbnail": null,
+    "txnBaseUrl": "https://vevo.moontoast.com",
+    "updatedDate": "Mon, 19 Aug 2013 22:51:42 +0000",
+    "@resourceType": "offer",
+    "_links": {
+        "self": {
+            "href": "/offers/7a08b8a0-052b-11e3-a7b8-22000aa81abc"
+        },
+        "collection": {
+            "href": "/offers"
+        }
+    }
+}

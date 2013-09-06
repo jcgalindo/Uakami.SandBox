@@ -1,0 +1,356 @@
+{
+    "template": {
+                "id": "video_app",
+                "width":"398px",
+                "height":"460px",
+                "backgroundColor":"#000000",
+                "dite": {
+                  "screenName": "",
+                  "eventName": "loadDefault",
+                  "eventData": ""
+                },
+                "elements": [{
+                    "id": "app_contents",
+                    "elements": [{
+                        "id": "app_header",
+                        "height": "42px",
+                        "backgroundColor": "{{header_color}}",
+                        "elements": [{
+                            "id": "logo",
+                            "left": "6%",
+                            "width": "100px",
+                            "backgroundImage": "{{app_header_image}}",
+                            "backgroundColor": "{{header_color}}"
+                        }, {
+                            "id": "share_this_button",
+                            "left": "272px",
+                            "width": "172px",
+                            "visible": "{{allow_sharing}}",
+                            "backgroundImage": "{{share_this_image}}",
+                            "click": {
+                                "fadeIn": ["share_this_screen"],
+                                "dite": {
+                                    "screenName": "",
+                                    "eventName": "clickShare",
+                                    "eventData": "shareThisHeader"
+                                }
+                            }
+                        }]
+                        },
+                        {
+                            "id": "video_player",
+                            "height": "209px",
+                            "width": "398px",
+                            "top": "42px",
+                            "backgroundImage": "{{poster_image}}",
+                            "visible": true,
+                            "widget": {
+                                "widget": "youTubePlayer",
+                                "options": {
+                                    "id": "video_widget",
+                                    "autoPlay":"{{autoplay_video}}",
+                                    "videoEnd": {
+                                        "fadeIn": ["{{video_end_command}}"],
+                                        "fadeOut": ["video_player"]
+                                    },
+                                    "dite": {
+                                        "screenName": ""
+                                    },
+                                    "videoUrl": "{{video_url}}",
+                                    "videoId": "{{video_id}}",
+                                    "showControls": "{{show_video_controls}}"
+                                }
+                            }
+                        }
+                        ,{
+                            "id": "video_thankyou",
+                            "height": "224px",
+                            "top": "42px",
+                            "dite": {
+                                "screenName": "thankYou",
+                                "eventName": "loadThankYou",
+                                "eventData": ""
+                            },
+                            "visible": false,
+                            "backgroundImage": "{{poster_image}}",
+                            "elements": [{
+                                "id": "thankyou_blocker",
+                                "backgroundGradient": {"colors": ["#000000"], "alphas": [0.8], "ratios": [127] },
+                                "elements": [{
+                                  "id": "large_thanks",
+                                  "top": "20px",
+                                  "height": "50px",
+                                  "width": "250px",
+                                  "left": "74px",
+                                  "content": "{{thankyou_text_large}}",
+                                  "fontSize": "20",
+                                  "fontColor": "#FFFFFF",
+                                  "textFormatting": {
+                                      "align": "center"
+                                  }
+                                }, {
+                                    "id": "small_thanks",
+                                    "top": "70px",
+                                    "height": "45px",
+                                    "width": "350px",
+                                    "left": "24px",
+                                    "content": "{{thankyou_text_small}}",
+                                    "fontSize": "14",
+                                    "fontColor": "#FFFFFF",
+                                    "textFormatting": {
+                                        "align": "center"
+                                    }
+                                }, {
+                                    "id": "play_again",
+                                    "left": "94px",
+                                    "top": "122px",
+                                    "width": "211px",
+                                    "height": "38px",
+                                    "backgroundImage": "{{play_again_image}}",
+                                    "click": {
+                                        "show": ["video_player"],
+                                        "hide": ["video_thankyou"],
+                                        "dite": {
+                                            "screenName": "thankYou",
+                                            "eventName": "clickPlayPauseVideo",
+                                            "eventData": "playVideo"
+                                        }
+                                    }
+                                }, {
+                                    "id": "share_widget",
+                                    "visible": "{{show_thankyou_share}}",
+                                    "top": "174px",
+                                    "left": "32px",
+                                    "widget": {
+                                        "widget": "share",
+                                        "options": {
+                                            "id": "thankyou_share_widget",
+                                            "dite": {
+                                                "screenName": "thankYou"
+                                            },
+                                            "networks":[{
+                                                "networks": ["facebook", "twitter", "googleplus", "tumblr", "linkedin", "blogger", "wordpress", "stumbleupon", "email"],
+                                                "url": "{{share_url}}"
+                                            }]
+                                        }
+                                    }
+                                }]
+                            }]
+                        }, {
+                                    "id": "hotspot_area",
+                                    "width": "100%",
+                                    "height": "210px",
+                                    "top": "251px",
+                                    "elements": [
+                                        {
+                                        "id": "hotspot_widget",
+                                        "backgroundImage": "https://jonathan.dev.moontoast.net/estore/file/thumbnail/id/15625/w/398/h/172",
+                                        "top": "0",
+                                        "left": "",
+                                        "widget": {
+                                            "widget": "hotspot",
+                                            "options": {
+                                                "id": "hotspot_widget_app",
+                                                "backgroundColor": "#ccc",
+                                                "height": "110px",
+                                                "top": "0px",
+                                                "width": "398px",
+                                                "text-align": "center",
+                                                "imageUrl": "http://25.media.tumblr.com/tumblr_lgp75eDQAw1qdgb75o1_500.jpg",
+                                                "hotSpots":[]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "width": "200px",
+                                        "height": "50px",
+                                        "top": "10px",
+                                        "left": "10px",
+                                        "click": { "link": "http://www.google.com" }
+                                    },
+                                    {
+                                        "width": "200px",
+                                        "height": "50px",
+                                        "top": "30px",
+                                        "left": "50px",
+                                        "click": { "link": "http://www.google.com" }
+                                    }
+                                    ]
+                                    
+                        }
+                        ]
+                }, {
+                    "id": "share_this_screen",
+                    "visible": false,
+                    "dite": {
+                        "screenName": "share",
+                        "eventName": "loadShare",
+                        "eventData": ""
+                    },
+                    "backgroundGradient": {"colors": ["#000000"], "alphas": [0.7], "ratios": [127] },
+                    "elements": [{
+                        "id": "main_pain",
+                        "backgroundGradient": {"rotation": "-90", "colors": ["#bbbbbb", "#eeeeee", "#bbbbbb"], "alphas": [1, 1, 1], "ratios": [0, 127, 255] },
+                        "border": {
+                            "color": "#333333",
+                            "thickness": "3"
+                        },
+                        "height": "324px",
+                        "width": "368px",
+                        "left": "15px",
+                        "top": "62px",
+                        "elements": [{
+                            "id": "title_text",
+                            "content": "Share",
+                            "width": "75px",
+                            "height": "25px",
+                            "top": "42px",
+                            "left": "10px",
+                            "fontSize": "15"
+                        }, {
+                            "id": "flavor_title",
+                            "content": "{{share_flavor}}",
+                            "width": "300px",
+                            "height": "25px",
+                            "top": "77px",
+                            "left": "10px",
+                            "fontSize": "13",
+                            "fontColor": "#444444"
+                        }, {
+                            "id": "share_row",
+                            "height": "50px",
+                            "top": "107px",
+                            "left": "15px",
+                            "widget": {
+                                "widget": "share",
+                                "options": {
+                                    "id": "share_row_share_widget",
+                                    "buttonsPerRow": "9",
+                                    "dite": {
+                                        "screenName": "share"
+                                    },
+                                    "networks":[{
+                                        "networks": ["facebook", "twitter", "googleplus", "tumblr", "linkedin", "blogger", "wordpress", "stumbleupon", "email"],
+                                        "url": "{{share_url}}"
+                                    }]
+                                }
+                            }
+                        }, {
+                            "id": "add_store_label",
+                            "left": "10px", 
+                            "top": "170px",
+                            "height": "25px",
+                            "content": "{{embed_section_label}}",
+                            "fontSize": "13",
+                            "fontColor": "#444444"
+                        }, {
+                            "id": "embed_code_panel",
+                            "left": "10px",
+                            "top": "195px",
+                            "height": "30px",
+                            "width": "250px",
+                            "backgroundGradient": {"rotation": "90", "colors": ["#eeeeee", "#dddddd"], "alphas": [1, 1], "ratios": [0, 255] },
+                            "border": {
+                                "color": "#cccccc"
+                            },
+                            "elements": [{
+                                "id": "embed_code_content",
+                                "top": "8px",
+                                "content": "{{embed_code}}",
+                                "fontSize": "13",
+                                "textFormatting": {
+                                    "selectable": true,
+                                    "multiline": false
+                                }
+                            }]
+                        }, {
+                            "id": "embed_code_copy_panel",
+                            "left": "270px",
+                            "top": "195px",
+                            "height": "30px",
+                            "width": "90px",
+                            "backgroundGradient": {"rotation": "90", "colors": ["#eeeeee", "#dddddd"], "alphas": [1, 1], "ratios": [0, 255] },
+                            "border": {
+                                "color": "#cccccc"
+                            },
+                            "click": {
+                                "copyText": "{{embed_code}}",
+                                "dite": {
+                                    "screenName": "share",
+                                    "eventName": "clickShareCopyLink",
+                                    "eventData": "copyLink"
+                                }
+                            },
+                            "elements": [{
+                                "id": "copy_code_contents",
+                                "top": "8px",
+                                "content": "Copy Code",
+                                "fontSize": "13",
+                                "textFormatting": {
+                                    "multiline": false,
+                                    "align": "center"
+                                }
+                            }]
+                        }, {
+                            "id": "add_store_footer",
+                            "left": "10px",
+                            "top": "250px",
+                            "height": "40px",
+                            "width": "230px",
+                            "content": "{{embed_code_footer}}",
+                            "fontSize": "11",
+                            "fontColor": "#444444"
+                        }]
+                    }, {
+                        "id": "close_share_panel_button",
+                        "backgroundImage": "{{close_button}}",
+                        "top": "54px",
+                        "left": "368px",
+                        "width": "24px",
+                        "height": "24px",
+                        "click": {
+                            "fadeOut": ["share_this_screen"]
+                        }
+                    }]
+                }]
+            },
+
+    "templateParams": {
+        
+        "share_url": "https://toasters.moontoast.com/estore/embed/1810",
+        "video_end_command": "video_thankyou",
+        "video_url": "https://www.youtube.com/watch?v=u1zgFlCw8Aw&feature=player_embedded",
+        "video_id": "u1zgFlCw8Aw",
+        "show_video_controls": true,
+        
+        "header_color": "#fafafa",
+        
+        "app_header_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_header.png",
+        "linked_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_links.png",
+        "moontoast_powered_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_moontoast.png",
+        "share_this_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_sharethis.png",
+        "play_again_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_playAgain.png",
+        "close_button": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/close.png",
+        
+        "thankyou_text_large": "THANK YOU FOR VIEWING OUR VIDEO",
+        "thankyou_text_small": "We'll be sending you the information you need. Hopefully you gave us your actual email address.",
+        "show_thankyou_share": "true",
+        
+        "share_flavor": "Tell your friends about {{store_name}}.",
+        "store_name": "Nike",
+        
+        "show_poster_image": true,
+        "autoplay_video": false,
+        
+        "embed_section_label": "Add our store:",
+        "embed_code": "<object style=\"width: 398px; height: 460px;\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"460\" height=\"398\" id=\"embeddedstore\" > <param name=\"movie\" value=\"http://analytics-dev.moontoast.com/TemplatedApp.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--[if !IE]>--> <object type=\"application/x-shockwave-flash\" data=\"http://analytics-dev.moontoast.com/TemplatedApp.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" width=\"460\" height=\"398\" style=\"width: 398px; height: 460px;\"> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--<![endif]--> <div style=\"background-color:#ffffff;\"> <!--[if gte IE 6]>--> <p> Either scripts and active content are not permitted to run or Adobe Flash Player version 0.0.0 or greater is not installed. </p> <!--<![endif]--> <a href=\"http://www.adobe.com/go/getflashplayer\"> <img src=\"https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\" alt=\"Get Adobe Flash Player\" /> </a> </div> <!--[if !IE]>--> </object> <!--<![endif]--> </object>",
+        "embed_code_footer": "Add our store to your tumblr, blog, website, or a social network.",
+        
+        "small_twitter_image": "https://moontoast-assets-live.s3.amazonaws.com/images/sharing_endpoints/twitter.png",
+        "small_facebook_image": "https://moontoast-assets-live.s3.amazonaws.com/images/sharing_endpoints/facebook.png",
+        
+        "play_button": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/playButton.png",
+        
+        "allow_sharing": true
+    }
+}

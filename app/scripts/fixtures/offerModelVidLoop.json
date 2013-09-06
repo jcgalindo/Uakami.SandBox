@@ -1,0 +1,84 @@
+{
+    "templateParams": {
+    "share_url": "https://toasters.moontoast.com/estore/embed/1810",
+    "video_end_command": "video_endscene",
+    "video_mp4": "http://hungergames-explorer.moontoast.com.s3.amazonaws.com/ie_video.mp4",
+    "video_id": "u1zgFlCw8Aw",
+    "show_video_controls": true,
+    
+    "header_color": "#000000",
+    
+    "app_header_image": "//moontoast-assets-dev.s3.amazonaws.com/jonathan/api_app/ie_logo_white.png",
+    "poster_image": "//hungergames-explorer.moontoast.com.s3.amazonaws.com/hero-loop-cropped-64.gif",
+    "hotspot_image": "//moontoast-assets-dev.s3.amazonaws.com/jonathan/hunger/imageHunger.png",
+    "linked_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_links.png",
+    "moontoast_powered_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_moontoast.png",
+    "share_this_image": "//moontoast-assets-dev.s3.amazonaws.com/jonathan/api_app/videoApp_sharethis.png",
+    "play_again_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_playAgain.png",
+    "close_button": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/close.png",
+    
+    "thankyou_text_large": "THANK YOU FOR VIEWING OUR VIDEO",
+    "thankyou_text_small": "We'll be sending you the information you need. Hopefully you gave us your actual email address.",
+    "show_thankyou_share": "true",
+    
+    "cta_image": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/hunger/imageHunger.png",
+    "cta_url": {},
+    "share_flavor": "Tell your friends about {{store_name}}.",
+    "store_name": "Proto",
+    
+    "show_poster_image": false,
+    "autoplay_video": true,
+    
+    "embed_section_label": "Add our store:",
+    "embed_code": "This is my embed code!",
+    "embed_code_footer": "Add our store to your tumblr, blog, website, or a social network.",
+    
+    "small_twitter_image": "https://moontoast-assets-live.s3.amazonaws.com/images/sharing_endpoints/twitter.png",
+    "small_facebook_image": "https://moontoast-assets-live.s3.amazonaws.com/images/sharing_endpoints/facebook.png",
+    
+    "play_button": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/playButton.png",
+    
+    "allow_sharing": true,
+    
+    "":""
+    },
+
+    "template": {
+                "id": "livestream_app",
+                "width":"398px",
+                "height":"460px",
+                "backgroundColor":"#000000",
+                "dite": {
+                  "screenName": "",
+                  "eventName": "loadDefault",
+                  "eventData": ""
+                },
+                "elements": [{
+                    "id": "app_contents",
+                    "elements": [{
+                            "id": "video_player",
+                            "height": "418px",
+                            "width": "398px",
+                            "top": "42px",
+                            "visible": "{{autoplay_video}}",
+                            "widget": {
+                                "widget": "videoPlayer",
+                                "options": {
+                                    "id": "videoloop_widget",
+                                    "autoPlay":"{{autoplay_video}}",
+                                    "videoEnd": {
+                                        "fadeIn": ["{{video_end_command}}"],
+                                        "fadeOut": ["video_player"]
+                                    },
+                                    "dite": {
+                                        "screenName": ""
+                                    },
+                                    "videoUrl": "{{video_mp4}}",
+                                    "videoId": "{{video_id}}",
+                                    "showControls": "{{show_video_controls}}"
+                                }
+                            }
+                        }]
+                }]
+            }
+}

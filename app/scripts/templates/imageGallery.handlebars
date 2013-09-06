@@ -1,0 +1,23 @@
+<div id="image_gallery" style="position: relative; width: 100%; height: 100%;">
+    <ul id="images-wrapper" style="margin: 0; padding: 0; height: {{height}}; width: 100%;">
+        {{#images}}
+            <li style="background: url('{{this.src}}'); width: 100%; height: {{../height}}; background-size: contain; background-repeat: no-repeat; background-position: center center;" class="slide">
+            </li>
+        {{/images}}
+    </ul>
+    <div id="slide-controls-wrapper">
+        <div id="slide-controls" style="display: {{controls}}">
+            <div id="slides-prev" rel="previous"><i class="icon-chevron-left" rel="previous"></i></div>
+            <div id="slides-PlayPause" rel="play"><i class="icon-play" rel="play"></i></div>
+            <div id="slides-current" rel="current">{{current_slide}}</div>
+            <div id="slides-count-divider" rel="divider">/</div>
+            <div id="slides-total" rel="total">{{image_count}}</div>
+            <div id="slides-next" rel="next"><i class="icon-chevron-right" rel="next"></i></div>
+        </div>
+    </div>
+    <ul id="share_links">
+        {{#shareLinks}}
+            <li>{{.}}</li>
+        {{/shareLinks}}
+    </ul>
+</div>

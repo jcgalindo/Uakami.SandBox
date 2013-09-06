@@ -1,0 +1,236 @@
+{
+    "@id": "757d6650-d53d-11e2-8b8b-0800200c9a66",
+    "appId": "cbcc2050-d53d-11e2-8b8b-0800200c9a66",
+    "accountId": null,
+    "createdDate": "Fri, 14 Jun 2013 22:28:26 +0000",
+    "deleted": null,
+    "description": "Toyota Video Referral",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif?",
+    "embedCode": null,
+    "embedCodeData": [
+
+    ],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Equinot",
+    "pageTemplate": null,
+    "pageTemplateParams": [
+
+    ],
+    "piCatalog": [
+
+    ],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "video_app",
+        "width": "100%",
+        "height": "100%",
+        "backgroundColor": "#000000",
+        "overflow": "scroll",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "app_contents",
+                "minHeight": "550px",
+                "elements": [
+                    {
+                        "id": "preloader",
+                        "widget": {
+                            "widget": "preloader",
+                            "options": {
+                                "preloadUrls": [
+                                    "{{thankyou_popup}}",
+                                    "{{form_background}}"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "header",
+                        "height": "7%",
+                        "backgroundColor": "#f0f0f0",
+                        "elements": [
+                            {
+                                "id": "logo",
+                                "height": "95%",
+                                "width": "40%",
+                                "backgroundImage": "{{logo_img}}",
+                                "backgroundRepeat": "no-repeat",
+                                "backgroundSize": "contain",
+                                "click": {
+                                    "link": "{{logo_link}}",
+                                    "dite": {
+                                        "eventName": "clickLogo"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "share_button",
+                                "right": "15px",
+                                "width": "4%",
+                                "height": "75%",
+                                "top": "20%",
+                                "backgroundImage": "{{share_img}}",
+                                "backgroundRepeat": "no-repeat",
+                                "backgroundSize": "contain",
+                                "backgroundPosition": "center",
+                                "click": {
+                                    "toggle": [
+                                        "share_popup"
+                                    ],
+                                    "dite": {
+                                        "eventType": "shareThisHeader",
+                                        "eventName": "shareThisHeader"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main_screen",
+                        "top": "7%",
+                        "height": "56%",
+                        "elements": [
+                            {
+                                "id": "video_mode",
+                                "elements": [
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main_creative",
+                        "top": "63%",
+                        "height": "37%",
+                        "backgroundImage": "http://apps.moontoast.com.s3.amazonaws.com/toyota/api-video/hotspot_bkg.jpg",
+                        "backgroundSize": "cover",
+                        "elements": [
+                            {
+                                "id": "learn_more",
+                                "width": "25%",
+                                "height": "22%",
+                                "top": "32%",
+                                "left": "5%",
+                                "backgroundImage": "http://apps.moontoast.com.s3.amazonaws.com/toyota/api-video/button.png",
+                                "backgroundSize": "contain",
+                                "backgroundRepeat": "no-repeat",
+                                "click": {
+                                    "link": "http://www.google.com",
+                                    "dite": {
+                                        "eventName": "clickHotspot1"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "footer",
+                                "bottom": "0",
+                                "height": "25px",
+                                "backgroundColor": "#d92027",
+                                "elements": [
+                                    {
+                                        "id": "footer_copy",
+                                        "content": "#2014Corolla",
+                                        "width": "100%",
+                                        "fontColor": "#FFFFFF",
+                                        "fontSize": "16px",
+                                        "textFormatting": {
+                                            "align": "center"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "share_popup",
+                        "visible": false,
+                        "width": "18%",
+                        "height": "15%",
+                        "right": "13px",
+                        "top": "6%",
+                        "minWidth": "120px",
+                        "fontSize": ".7em",
+                        "mouseOut": {
+                            "fadeOut": "share_popup"
+                        },
+                        "click": [
+
+                        ],
+                        "elements": [
+                            {
+                                "id": "share_popup_background",
+                                "height": "100%",
+                                "backgroundRepeat": "no-repeat",
+                                "backgroundSize": "cover",
+                                "top": "0px",
+                                "display": "table",
+                                "position": "relative",
+                                "paddingTop": "15px",
+                                "paddingLeft": "5px",
+                                "backgroundImage": "{{share_background_image}}",
+                                "widget": {
+                                    "widget": "share",
+                                    "options": {
+                                        "id": "share_popup_widget",
+                                        "position": "relative",
+                                        "networks": [
+                                            {
+                                                "networks": [
+                                                    "facebook",
+                                                    "twitter",
+                                                    "googleplus",
+                                                    "pinterest"
+                                                ],
+                                                "url": "{{share_url}}"
+                                            }
+                                        ],
+                                        "dite": {
+                                            "screenName": "share"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "templateParams": {
+        "previewImageUrl": "https://s3.amazonaws.com/apps.moontoast.com/toyota/vote/share-image.jpg",
+        "share_url": "{{rootUrl}}estore/embed/{{catalogId}}",
+        "share_img": "http://moontoast-assets-live.s3.amazonaws.com/toyota/share.png",
+        "share_background_image": "http://apps.moontoast.com.s3.amazonaws.com/equinot/html/assets/share_back_bkg_right.png",
+        "default_form_on": true,
+        "default_form_off": false,
+        "logo_link": "http://moontoast.com?logo=1",
+        "logo_img": "http://moontoast-assets-live.s3.amazonaws.com/toyota/logo.png",
+        "poster_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/posterImage.png",
+        "video_id": "JspHqoegTkc",
+        "show_video_controls": true,
+        "main_creative_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/formBackground.png",
+        "form_background": "https://s3.amazonaws.com/apps.moontoast.com/equinot/formBackground.png",
+        "form_text_color": "#000000",
+        "thankyou_popup": "https://s3.amazonaws.com/apps.moontoast.com/equinot/thankyouScreen.png",
+        "header_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/header.png",
+        "terms_link": "http://moontoast.com?terms=1",
+        "privacy_link": "http://moontoast.com?privacy=1",
+        "opt_text": "In the future, I would like to receive information on the upcoming events, special offers, exciting news, and new product announcements from Toyota",
+        "fb_img": "https://moontoast-assets-uakami.s3.amazonaws.com/widgets/fb.png",
+        "tw_img": "https://moontoast-assets-uakami.s3.amazonaws.com/widgets/tw.png",
+        "mobileFirst": "true"
+    },
+    "thumbnail": null,
+    "updatedDate": null,
+    "@resourceType": "offer",
+    "_links": {
+        "self": {
+            "href": "/offers/757d6650-d53d-11e2-8b8b-0800200c9a66"
+        },
+        "collection": {
+            "href": "/offers"
+        }
+    }
+}

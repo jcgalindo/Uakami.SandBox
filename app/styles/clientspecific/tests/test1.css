@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html, body {
+    height: auto !important;
+}
+
+body {
+    font-size: 13px;
+    font-family: Montserrat, sans-serif;
+    background: #000;
+}
+
+div.header {
+    height: 7%;
+}
+
+div.header #header_googleLink {
+    height: 100%;
+    margin: 8px auto;
+    position: relative;
+    text-align: center;
+    width: 22%;
+    color: #333333;
+    text-decoration: none;
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -khtml-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+div.header #header_googleLink:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    opacity: 0.4;
+
+}
+
+div.main {
+    height: 90%;
+    background-color: white;
+
+}
+
+div.main #main_helloWorldText {
+    font-family: Consolas, monospace;
+    font-size: 5em;
+    height: 67px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    left: 100px;
+    margin: -6% 0 0 -20.6%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    line-height: 70px;
+    text-shadow: rgb(187, 187, 187) 0px 1px 0px,
+    rgb(181, 181, 181) 0px 2px 0px,
+    rgb(172, 172, 172) 0px 3px 0px,
+    rgb(160, 160, 160) 0px 4px 0px,
+    rgb(145, 145, 145) 0px 5px 0px,
+    rgb(127, 127, 127) 0px 6px 0px,
+    rgba(0, 0, 0, 0.199219) 0px 7px 1px,
+    rgba(0, 0, 0, 0.296875) 0px 8px 6px;
+}
+
+div.footer {
+    height: 3%;
+    background-color: blue;
+}
+
+

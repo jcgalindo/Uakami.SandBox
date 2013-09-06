@@ -1,0 +1,256 @@
+
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('BebasNeue-webfont.eot');
+    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BebasNeue-webfont.woff') format('woff'),
+         url('BebasNeue-webfont.ttf') format('truetype'),
+         url('BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html {
+    height: auto !important;
+}
+#video_app {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4em;
+    font-family: 'bebas_neueregular', sans-serif !important;
+    letter-spacing: 0.15em;
+}
+#mtt_header {
+    overflow: hidden;
+    background-image: url(https://s3.amazonaws.com/apps.moontoast.com/nissan/video-referral/header_Background.png);
+}
+
+#mtt_logo {
+    float: left;
+    width: 48px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+#sweeps_text {
+    width: 50%;
+    margin: 0 auto;
+    height: 44px;
+}
+#mtt_share_button{
+        float: right;
+        border-left: 1px solid #4F4F4F;
+        background-repeat: no-repeat;
+        background-size: 13px 20px;
+        background-position: center;
+    }
+
+@import '../widgets/share';
+
+.social_icon {
+    font-size: 20px !important;
+}
+.social_icon:hover {
+    color: #fff !important;
+}
+
+#share_popup {
+    &:before {
+        border-bottom-color: #E45569 !important;
+    }
+    #share_popup_background {
+        background-color: #E45569 !important;
+    }
+}
+
+#video_mode {
+    width: 100%;    
+    padding-top: 56.25%;
+    border-bottom: 4px solid #E45569;
+}
+#video_mode > div {
+    position: absolute !important;
+    left:0;
+    top: 0;
+}
+#video_player {
+    left:0;
+    top: 0;
+}
+
+#form_window {
+    padding-top: 10px;
+    background-repeat:  no-repeat;
+    background-size: cover;
+    color: #fff !important;
+}
+
+#form_headline {
+    margin: 10px 5% 20px;
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+#form_container {
+    max-width: 700px;
+    margin: 0 auto !important;
+    
+    input[type=text] {
+        display: block;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 3px solid #FCB041 !important;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        color: #888888 !important;
+        margin: 0 auto 10px;
+        padding: 5px;
+        width: 300px;
+        height: auto !important;
+        background: #fff !important;
+        font-family: 'bebas_neueregular', sans-serif !important;
+    }
+    
+    form > div {
+        clear: left;
+        width: 100% !important;
+        top: auto;
+    }
+    
+    .mtt-form-check {
+        text-align: center;
+    }
+    .checkbox_label {
+        display: inline;
+        text-align: left;
+    }
+}
+
+#form_widget_submit {
+    font-family: 'bebas_neueregular', sans-serif !important;
+    letter-spacing: 0.1em;
+    display: block;
+    margin: 20px auto;
+    width: 150px !important;
+    height: 44px !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #fff !important;
+    text-align: center;
+    border: 2px solid #fff !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fbb040 !important; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fbb040 0%, #ec8820 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbb040), color-stop(100%,#ec8820)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fbb040 0%,#ec8820 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fbb040 0%,#ec8820 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fbb040 0%,#ec8820 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom,  #fbb040 0%,#ec8820 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbb040', endColorstr='#ec8820',GradientType=0 ) !important; /* IE6-9 */
+}
+
+#thankyou_screen {
+    min-height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5% 10px;
+    z-index: 5000;
+    background: #381B0A;
+    color: #fff;
+}
+#thankyou_headline {
+    font-size: 2em;
+    line-height: 1.3em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#thankyou_message {
+    text-align: center;
+    margin-bottom: 15px;
+    
+    a, a:hover, a:visited, a:active {
+        color: #fff;
+    }
+}
+#thankyou_sharetext {
+    text-align: center;
+    margin-bottom: 15px;
+}
+#share_box {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+#facebook_share, #twitter_share, #googleplus_share, #pinterest_share {
+    position: relative !important;
+    width: 25%;
+    float: left;
+    left: auto !important;
+    margin: 0 0 10px;
+    color: #E25468;
+    font-size: 3.5em;
+    line-height: 1.2em;
+
+    &:before {
+        font-family: 'FontAwesome';
+    }
+}
+
+#facebook_share:before {
+    content: "\f082 ";
+}
+
+#twitter_share:before {
+    content: "\f081 ";
+}
+
+#googleplus_share:before {
+    content: "\f0d4 ";
+}
+
+#pinterest_share:before {
+    content: "\f0d3 ";
+}
+@media only screen and (min-width:700px) {
+    #form_window {
+        min-height: 544px;
+        padding-top: 50px;
+    }
+    #form_container {
+    
+        input[type=text] {
+            float: left;
+            margin: 0 3.125% 20px;
+            width: 300px;
+        }
+        form > div {
+            clear: left;
+            float: left;
+            width: 70% !important;
+        }
+        .mtt-form-check {
+            padding-top: 10px;
+            text-align: left;
+        }
+        .checkbox_label {
+            display: block;
+            text-align: left;
+        }
+    }
+    #form_widget_submit {
+        float: left;
+        margin-left: 15px;
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "@id": "ea5dc84e-ee32-11e2-9e75-22000A977273",
+    "appId": "ea412cc0-ee32-11e2-b090-12313b0a58c7",
+    "accountId": null,
+    "createdDate": "Tue, 16 Jul 2013 16:15:22 +0000",
+    "deleted": null,
+    "description": "Click below to learn more about the 2013 Hyundai Sales Event happening right now!",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Adaptive Design",
+    "pageTemplate": null,
+    "pageTemplateParams": {
+        "swfUrl": "https://s3.amazonaws.com/apps.moontoast.com/equinot/AppContainer.swf"
+    },
+    "piCatalog": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "stylesheetUrl": "http://localhost/tmp/adapt/styles.css",
+    "template": {
+        "id": "video_app",
+        "width": "100%",
+        "height": "100%",
+        "forceWidth": "398px",
+        "forceHeight": "460px",
+        "backgroundColor": "#000000",
+        "minHeight": "650px",
+        "overflow": "scroll",
+        "externalStyles": "{{stylesheetUrl}}",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+            "id": "share_popup_background",
+            "height": "100%",
+            "backgroundRepeat": "no-repeat",
+            "backgroundSize": "cover",
+            "top": "0px",
+            "display": "table",
+            "position": "relative",
+            "paddingTop": "15px",
+            "paddingLeft": "5px",
+            "noScaleBackground": true,
+            "elements":[
+                {
+                    "id": "header",
+                    "width": "100%",
+                    "height": "10%",
+                    "backgroundColor": "#000000"
+                },
+                {
+                    "id": "video_player"
+                },
+                {
+                    "id": "creative_area"
+                },
+                {
+                    "id": "form"
+                },
+                {
+                    "id": "footer"
+                }
+            ]
+            }
+        ]
+    },
+    "templateParams": {
+        "previewImageUrl": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/Hyundai_Share%20Image_Preview.png",
+        "share_url": "toasters.moontoast.com/estore/embed/{{catalogId}}",
+        "share_img": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/icon_share.png",
+        "share_background_image": "http://apps-cdn.moontoast.com/equinot/html/assets/share_back_bkg_right.png",
+        "default_form_on": true,
+        "default_form_off": false,
+        "logo_link": "http://www.hyundaiusa.com",
+        "logo_img": "http://apps.moontoast.com/hyundai/video-lead-gen/Hyundai_Logo_MTVideoLeadGen.png",
+        "poster_image": "http://apps.moontoast.com/hyundai/video-lead-gen/Hyundai_Poster_Image.png",
+        "video_id": "mcQT0uN4BZU",
+        "show_video_controls": true,
+        "form_text_color": "#000000",
+        "header_image": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/Hyundai_Logo_MTVideoLeadGen.jpg",
+        "terms_link": "http://moontoast.com?terms=1",
+        "privacy_link": "http://moontoast.com?privacy=1",
+        "opt_text": "In the future, I would like to receive information on the upcoming events, special offers, exciting news, and new product announcements from Hyundai.",
+        "fb_img": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/icon_facebook.png",
+        "tw_img": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/icon_twitter.png",
+        "gplus_img": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/icon_googleplus.png",
+        "pinterest_img": "http://apps.moontoast.com.s3.amazonaws.com/hyundai/video-lead-gen/icon_pinterest.png",
+        "catalogId": "3344",
+        "appDiteName": "videoLeadGen"
+    },
+    "thumbnail": null,
+    "updatedDate": "Wed, 17 Jul 2013 21:23:23 +0000"
+}

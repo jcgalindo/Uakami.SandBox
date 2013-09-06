@@ -1,0 +1,922 @@
+{
+    "@id": "7c97ec84-f631-11e2-abec-22000A977273",
+    "appId": "33338018-f608-11e2-b778-22000a9a92ba",
+    "accountId": null,
+    "createdDate": "Fri, 26 Jul 2013 20:25:17 +0000",
+    "deleted": null,
+    "description": "",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [
+
+    ],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Chevy Spark App",
+    "pageTemplate": "{% block swfEmbed %}\n        <div id=\"movie\">\n            <object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"{{swfWidth}}\" height=\"{{swfHeight}}\" id=\"embeddedstore\">\n            <param name=\"movie\" value=\"{{swfUrl}}?offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=cb0576e6-f485-11e2-8abc-22000A977273&rootUrl={{rootUrl}}\" />\n            <param name=\"quality\" value=\"high\" />\n            <param name=\"bgcolor\" value=\"{{swfBackgroundColor}}\" />\n            <param name=\"allowScriptAccess\" value=\"always\" />\n            <param name=\"allowFullScreen\" value=\"true\" />\n            <param name=\"flashVars\" value=\"offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=cb0576e6-f485-11e2-8abc-22000A977273&rootUrl={{rootUrl}}\" />\n            <!--[if !IE]>-->\n            <object type=\"application/x-shockwave-flash\" data=\"{{swfUrl}}?offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=cb0576e6-f485-11e2-8abc-22000A977273&rootUrl=\" width=\"{{swfWidth}}\" height=\"{{swfHeight}}\"> \n            <param name=\"quality\" value=\"high\" />\n            <param name=\"bgcolor\" value=\"{{swfBackgroundColor}}\" />\n            <param name=\"allowScriptAccess\" value=\"always\" />\n            <param name=\"allowFullScreen\" value=\"true\" />\n            <param name=\"flashVars\" value=\"offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=cb0576e6-f485-11e2-8abc-22000A977273&rootUrl={{rootUrl}}&channel={{channel}}\" />\n            <!--<![endif]-->\n\n            <!--[if !IE]>-->\n            </object>\n            <!--<![endif]-->\n            </object>\n\n        </div>\n{% endblock %}",
+    "pageTemplateParams": {
+        "html5Url": "http://apps.moontoast.com/container-qa/1.1.0-dev/index.html",
+        "swfEmbedUrl": "https://apps-cdn.moontoast.com/container/flash/AppContainer.swf?offerEndpoint=http://api-stage.moontoast.com/offers/&catalogId=691&offerId=cb0576e6-f485-11e2-8abc-22000A977273"
+    },
+    "piCatalog": [
+
+    ],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "video_app",
+        "width": "100%",
+        "height": "100%",
+        "backgroundColor": "#000000",
+        "overflow": "scroll",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "preloader",
+                "widget": {
+                    "widget": "preloader",
+                    "options": {
+                        "preloadUrls": [
+                            "{{header_img}}",
+                            "{{start_img}}",
+                            "{{option-or}}"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "header",
+                "height": "4.7%",
+                "backgroundColor": "#ffffff",
+                "elements": [
+                    {
+                        "id": "logo_header",
+                        "backgroundImage": "{{header_img}}",
+                        "backgroundSize": "contain",
+                        "backgroundRepeat": "no-repeat",
+                        "width": "100%"
+                    },
+                    {
+                        "id": "logo_header",
+                        "backgroundImage": "{{header_img}}",
+                        "backgroundSize": "contain",
+                        "backgroundRepeat": "no-repeat",
+                        "width": "100%"
+                    },
+                    {
+                        "id": "link_chevy",
+                        "left": "2%",
+                        "top": "5%",
+                        "width": "63.82%",
+                        "height": "90%",
+                        "click": {
+                            "link": "{{chevy_url}}",
+                            "dite": {
+                                "screenName": "default",
+                                "eventName": "clickLogo"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_fb",
+                        "right": "10%",
+                        "top": "24%",
+                        "width": "4%",
+                        "height": "60%",
+                        "click": {
+                            "share": {
+                                "network": "facebook",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "share",
+                                "eventName": "facebook"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_tw",
+                        "left": "90%",
+                        "top": "24%",
+                        "width": "4%",
+                        "height": "60%",
+                        "click": {
+                            "share": {
+                                "network": "twitter",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "share",
+                                "eventName": "twitter"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_gp",
+                        "left": "94%",
+                        "top": "24%",
+                        "width": "4%",
+                        "height": "60%",
+                        "click": {
+                            "share": {
+                                "network": "googleplus",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "header",
+                                "eventName": "googleplus"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "video_screen",
+                "top": "4.7%",
+                "height": "51.3%",
+                "elements": [
+                    {
+                        "id": "video_mode",
+                        "elements": [
+                            {
+                                "id": "video_player",
+                                "height": "100%",
+                                "width": "100%",
+                                "widget": {
+                                    "widget": "youTubePlayer",
+                                    "options": {
+                                        "id": "video_widget",
+                                        "videoEnd": {
+                                            "fadeIn": [
+                                                "video_hotspot"
+                                            ],
+                                            "fadeOut": [
+                                                "video_player"
+                                            ]
+                                        },
+                                        "autoPlay": false,
+                                        "videoId": "{{video_id}}",
+                                        "dite": {
+                                            "screenName": ""
+                                        },
+                                        "showControls": "{{show_video_controls}}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "get_started",
+                "top": "56%",
+                "height": "44.8%",
+                "backgroundImage": "{{start_img}}",
+                "backgroundSize": "cover",
+                "elements": [
+                    {
+                        "id": "link1",
+                        "left": "53%",
+                        "top": "25%",
+                        "width": "35%",
+                        "height": "20%",
+                        "click": {
+                            "fadeOut": [
+                                "get_started",
+                                "video_screen"
+                            ],
+                            "fadeIn": [
+                                "quiz_container"
+                            ],
+                            "dite": {
+                                "eventName": "quiz"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "quiz_container",
+                "visible": false,
+                "width": "100%",
+                "height": "95.3%",
+                "top": "4.7%",
+                "fontSize": "1.6em",
+                "elements": [
+                    {
+                        "id": "quiz_widget",
+                        "widget": {
+                            "widget": "quizForm",
+                            "options": {
+                                "whenFinish": {
+                                    "fadeIn": [
+                                        "puzzle_container"
+                                    ],
+                                    "dite": {
+                                        "screenName": "quiz",
+                                        "eventName": "jumble"
+                                    }
+                                },
+                                "question_text_bg": "{{question_text_bg}}",
+                                "wrong_question_text_bg": "{{wrong_question_text_bg}}",
+                                "plug_init": "{{plug_init}}",
+                                "option-a": "{{option-a}}",
+                                "option-b": "{{option-b}}",
+                                "option-true": "{{option-true}}",
+                                "option-false": "{{option-false}}",
+                                "option-or": "{{option-or}}",
+                                "mobile": {
+                                    "questionTitleStyles": {
+                                        "font-size": ".5em",
+                                        "font-weight": "bold",
+                                        "width": "75%",
+                                        "height": "auto",
+                                        "margin": "auto",
+                                        "text-align": "center",
+                                        "font-style": "italic",
+                                        "color": "#000000",
+                                        "display": "block",
+                                        "text-transform": "uppercase",
+                                        "position": "relative",
+                                        "top": "20%"
+                                    },
+                                    "questionDetailsTitle": {
+                                        "font-size": ".7em",
+                                        "color": "#ffffff",
+                                        "width": "100%",
+                                        "padding-top": "5%",
+                                        "text-align": "center",
+                                        "font-style": "italic",
+                                        "text-transform": "uppercase",
+                                        "font-weight": "bold"
+                                    },
+                                    "questionDetailsText": {
+                                        "font-size": ".5em",
+                                        "color": "#ffffff",
+                                        "width": "95%",
+                                        "padding-top": "1%",
+                                        "text-align": "center",
+                                        "margin": "0 auto"
+                                    },
+                                    "questionTrueFalse": {
+                                        "position": "absolute",
+                                        "bottom": "30%",
+                                        "width": "100%",
+                                        "height": "12.7%",
+                                        "left": "8.5%"
+                                    },
+                                    "questionTrue": {
+                                        "background": "url({{option-true}}) no-repeat",
+                                        "background-size": "contain",
+                                        "width": "36.4%",
+                                        "height": "100%",
+                                        "float": "left",
+                                        "cursor": "pointer"
+                                    },
+                                    "questionOr": {
+                                        "background": "url({{option-or}}) no-repeat",
+                                        "background-size": "cover",
+                                        "background-position": "50% 50%",
+                                        "width": "4%",
+                                        "height": "72%",
+                                        "margin-left": "3%",
+                                        "margin-top": ".5%",
+                                        "float": "left"
+                                    },
+                                    "questionFalse": {
+                                        "background": "url({{option-false}}) no-repeat",
+                                        "background-size": "contain",
+                                        "width": "36.4%",
+                                        "height": "100%",
+                                        "float": "left",
+                                        "margin-left": "3.5%",
+                                        "cursor": "pointer"
+                                    },
+                                    "questionAB": {
+                                        "width": "90%",
+                                        "height": "21%",
+                                        "padding-top": "5%",
+                                        "padding-left": "6.8%",
+                                        "font-size": ".6em",
+                                        "color": "#ffffff"
+                                    },
+                                    "questionAletter": {
+                                        "width": "7%",
+                                        "height": "73%",
+                                        "float": "left",
+                                        "background": "url( {{option-a}} ) no-repeat",
+                                        "background-size": "contain",
+                                        "background-position": "top 50%",
+                                        "margin-right": "3%"
+                                    },
+                                    "questionBletter": {
+                                        "width": "7%",
+                                        "height": "73%",
+                                        "float": "left",
+                                        "background": "url( {{option-b}} ) no-repeat",
+                                        "background-size": "contain",
+                                        "background-position": "top 50%",
+                                        "margin-right": "3%"
+                                    },
+                                    "percentageBar": {
+                                        "width": "48%",
+                                        "height": "25%",
+                                        "background": "url( {{batery-color}} ) no-repeat",
+                                        "position": "absolute",
+                                        "z-index": "8",
+                                        "top": "22.4%",
+                                        "right": "-12%",
+                                        "background-size": "contain"
+                                    },
+                                    "percentageText": {
+                                        "position": "absolute",
+                                        "color": "#f4bc00",
+                                        "top": "22%",
+                                        "font-size": ".5em",
+                                        "right": "16%",
+                                        "font-weight": "bold"
+                                    },
+                                    "percentageSign": {
+                                        "color": "#fff"
+                                    },
+                                    "birthday": {
+                                        "position": "absolute",
+                                        "top": "28%",
+                                        "left": "53%",
+                                        "font-size": "1.5em",
+                                        "font-weight": "bold",
+                                        "height": "11%"
+                                    },
+                                    "birthdayReq": {
+                                        "position": "absolute",
+                                        "top": "28%",
+                                        "left": "53%",
+                                        "font-size": ".75em",
+                                        "color": "red",
+                                        "height": "9%"
+                                    },
+                                    "ip5_video_height": "38.8%",
+                                    "ip5_main_screen_height": "53.9%",
+                                    "ip5_start_image": "{{ip5_start_image}}",
+                                    "ip5_header_img": "{{ip5_header_img}}",
+                                    "ip5_sweepstakes": "{{ip5_sweepstakes-bg}}",
+                                    "ip5_main_screen_top": "46.1%",
+                                    "ip5_facebook_share": "79.2%",
+                                    "ip5_twitter_share": "85.6%",
+                                    "ip5_googlep_share": "92%",
+                                    "default_facebook_share": "86%",
+                                    "default_twitter_share": "90%",
+                                    "default_googlep_share": "94%",
+                                    "default_sweepstakes": "{{sweepstakes-bg}}",
+                                    "ip5_plug_init": "{{ip5_plug_init}}",
+                                    "ip5_thankyou": "{{ip5_thankyou}}",
+                                    "buttonStartPosition": {
+                                        "ip5": {
+                                            "top": "27%",
+                                            "left": "43%",
+                                            "width": "54%"
+                                        },
+                                        "default": {
+                                            "top": "25%",
+                                            "left": "53%",
+                                            "width": "35%"
+                                        }
+                                    },
+                                    "header": {
+                                        "ip5": {
+                                            "height": "5.5%",
+                                            "top": "-1%"
+                                        },
+                                        "default": {
+                                            "height": "4.7%",
+                                            "top": "0"
+                                        }
+                                    },
+                                    "submit": {
+                                        "ip5": {
+                                            "top": "40%",
+                                            "left": "34%",
+                                            "height": "17%"
+                                        },
+                                        "default": {
+                                            "top": "60%",
+                                            "left": "32%",
+                                            "height": "30%"
+                                        }
+                                    },
+                                    "battery": {
+                                        "right": "10%",
+                                        "ip5": "22%",
+                                        "default": "30%"
+                                    },
+                                    "form_widget": {
+                                        "ip5": "50%",
+                                        "default": "64%"
+                                    },
+                                    "thankyouShare": {
+                                        "learnmore": {
+                                            "ip5": {
+                                                "top": "80%",
+                                                "height": "3%"
+                                            },
+                                            "default": {
+                                                "top": "84%",
+                                                "height": "14%"
+                                            }
+                                        },
+                                        "shareLinkip5": {
+                                            "top": "58%",
+                                            "width": "14%",
+                                            "height": "9%"
+                                        },
+                                        "shareLinkdefault": {
+                                            "top": "70%",
+                                            "width": "14%",
+                                            "height": "15%"
+                                        },
+                                        "facebook": {
+                                            "ip5": {
+                                                "left": "21%"
+                                            },
+                                            "default": {
+                                                "left": "21%"
+                                            }
+                                        },
+                                        "twitter": {
+                                            "ip5": {
+                                                "left": "42%"
+                                            },
+                                            "default": {
+                                                "left": "42%"
+                                            }
+                                        },
+                                        "googleP": {
+                                            "ip5": {
+                                                "left": "65%"
+                                            },
+                                            "default": {
+                                                "left": "65%"
+                                            }
+                                        }
+                                    }
+                                },
+                                "questions": [
+                                    {
+                                        "normal": "{{quiz_back_img}}",
+                                        "selected": "{{quiz_back_img_over}}",
+                                        "puzzlePart": "{{cart_part_4}}",
+                                        "type": "ab",
+                                        "title": "EV",
+                                        "question": "What does EV stand for?",
+                                        "answers": [
+                                            "Early Vacation",
+                                            "Electron Volt"
+                                        ],
+                                        "right": "b",
+                                        "correctTitle": "You're right!",
+                                        "correctText": "EV stands for \"Electric Vehicle.\" Although, sometimes it should stand for \"Early Vacation,\" too.",
+                                        "incorrectTitle": "Actually...",
+                                        "incorrectText": "EV stands for \"Electric Vehicle.\" Although, sometimes it should stand for \"Early Vacation,\" too.",
+                                        "delay": "10"
+                                    },
+                                    {
+                                        "normal": "{{quiz_back_img_light}}",
+                                        "selected": "{{quiz_back_img_over}}",
+                                        "puzzlePart": "{{cart_part_5}}",
+                                        "type": "tf",
+                                        "title": "240V Charging System",
+                                        "question": "The available 240V charging system charges the Spark EV from empty to full in 12 hours.",
+                                        "right": "false",
+                                        "correctTitle": "You're right!",
+                                        "correctText": "It only takes 7 hours to get a full charge with the available 240V charging system, and Spark EV owners and lessees are eligible for up to a $500 discount on toward the purchase of a 240V charger from Bosch.",
+                                        "incorrectTitle": "Actually...",
+                                        "incorrectText": "It only takes 7 hours to get a full charge with the available 240V charging system, and Spark EV owners and lessees are eligible for up to a $500 discount on toward the purchase of a 240V charger from Bosch.",
+                                        "delay": "10"
+                                    },
+                                    {
+                                        "normal": "{{quiz_back_img_light}}",
+                                        "selected": "{{quiz_back_img_over}}",
+                                        "puzzlePart": "{{cart_part_1}}",
+                                        "type": "tf",
+                                        "title": "Torque",
+                                        "question": "Torque is what makes your car get up and go when you hit the  accelerator.",
+                                        "right": "true",
+                                        "correctTitle": "You're right!",
+                                        "correctText": "And the Spark EV gets 400 lb.-ft of instant torque, more than a Ferrari 458 Italia",
+                                        "incorrectTitle": "Actually...",
+                                        "incorrectText": "It's true! And the Spark EV gets 400 lb.-ft of instant torque, more than a Ferrari 458 Italia.",
+                                        "delay": "10"
+                                    },
+                                    {
+                                        "normal": "{{quiz_back_img}}",
+                                        "selected": "{{quiz_back_img_over}}",
+                                        "puzzlePart": "{{cart_part_6}}",
+                                        "type": "ab",
+                                        "title": "Regenerative Braking",
+                                        "question": "What's so special about regenerative brakes?",
+                                        "answers": [
+                                            "They capture energy lost while braking",
+                                            "They are brakes that can be charged"
+                                        ],
+                                        "right": "a",
+                                        "correctTitle": "You're right!",
+                                        "correctText": "Regenerative brakes capture energy lost while braking, helping you go further on a single charge.",
+                                        "incorrectTitle": "Actually...",
+                                        "incorrectText": "Regenerative brakes capture energy lost while braking, helping you go further on a single charge.",
+                                        "delay": "10"
+                                    },
+                                    {
+                                        "normal": "{{quiz_back_img}}",
+                                        "selected": "{{quiz_back_img_over}}",
+                                        "puzzlePart": "{{cart_part_2}}",
+                                        "type": "ab",
+                                        "title": "Zero Emissions",
+                                        "question": "What does \"zero emissions\" even mean?",
+                                        "answers": [
+                                            "Zero pollutants put into the air by a source (like from a vehicle's tailpipe)",
+                                            "An explorer who hasn't gone on any missions"
+                                        ],
+                                        "right": "a",
+                                        "correctTitle": "You're right!",
+                                        "correctText": "\"Zero emissions\" refers to zero pollutants put into the air by a source \u00e2\u20ac\u201c like the Spark EV, which gives you an average of 82 miles of driving with zero emissions.",
+                                        "incorrectTitle": "Actually...",
+                                        "incorrectText": "\"Zero emissions\" refers to zero pollutants put into the air by a source \u00e2\u20ac\u201c like the Spark EV, which gives you an average of 82 miles of driving with zero emissions.",
+                                        "delay": "10"
+                                    },
+                                    {
+                                        "normal": "{{quiz_back_img_light}}",
+                                        "selected": "{{quiz_back_img_over}}",
+                                        "puzzlePart": "{{cart_part_3}}",
+                                        "type": "ab",
+                                        "title": "MPGe",
+                                        "question": "What does MPGe stand for?",
+                                        "answers": [
+                                            "Miles Per Gallon of Electricity",
+                                            "Miles Per Gallon of Gasoline-Equivalent"
+                                        ],
+                                        "right": "b",
+                                        "correctTitle": "You're right!",
+                                        "correctText": "Miles Per Gallon of Gasoline-Equivalent was formulated by the EPA as a method of comparing fuel economy across all types of vehicles. MPGe calculates the number of miles a vehicle can go using the same amount of energy found in a gallon of gasoline.",
+                                        "incorrectTitle": "Actually...",
+                                        "incorrectText": "Miles Per Gallon of Gasoline-Equivalent was formulated by the EPA as a method of comparing fuel economy across all types of vehicles. MPGe calculates the number of miles a vehicle can go using the same amount of energy found in a gallon of gasoline.",
+                                        "delay": "10"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "puzzle_container",
+                "backgroundColor": "#fff",
+                "visible": false,
+                "width": "100%",
+                "height": "51.3%",
+                "top": "4.7%",
+                "fontSize": "4em",
+                "elements": [
+                    {
+                        "id": "puzzle_widget",
+                        "widget": {
+                            "widget": "puzzle",
+                            "options": {
+                                "columns": 2,
+                                "rows": 3,
+                                "images": [
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle1.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle2.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle3.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle4.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle5.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle6.png"
+                                ],
+                                "solution": "3,5,6,1,2,4",
+                                "styles": {
+                                    "puzzle": {
+                                        "position": "absolute",
+                                        "display": "block",
+                                        "cursor": "move"
+                                    },
+                                    "backgrounCover": {
+                                        "background-size": "100% 100%"
+                                    },
+                                    "puzzleImg": {
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "display": "block",
+                                        "width": "99%",
+                                        "height": "99%"
+                                    }
+                                },
+                                "whenFinish": {
+                                    "fadeIn": [
+                                        "form_container"
+                                    ],
+                                    "fadeOut": [
+                                        "puzzle_container",
+                                        "quiz_container"
+                                    ],
+                                    "dite": {
+                                        "screenName": "quiz",
+                                        "eventName": "jumble/contactInformation"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "form_container",
+                "backgroundImage": "{{sweepstakes-bg}}",
+                "backgroundSize": "cover",
+                "visible": false,
+                "width": "100%",
+                "height": "95.3%",
+                "top": "4.7%",
+                "elements": [
+                    {
+                        "id": "form_widget",
+                        "top": "57%",
+                        "height": "43%",
+                        "widget": {
+                            "widget": "simpleForm",
+                            "options": {
+                                "submit": {
+                                    "url": "{{form_submit}}",
+                                    "method": "GET"
+                                },
+                                "afterSubmit": {
+                                    "fadeOut": [
+                                        "form_container"
+                                    ],
+                                    "fadeIn": [
+                                        "thankyou_screen"
+                                    ],
+                                    "dite": {
+                                        "screenName": "quiz",
+                                        "eventName": "jumble/contactInformation/thankYou"
+                                    }
+                                },
+                                "elements": [
+                                    {
+                                        "id": "form_widget_submit",
+                                        "type": "submit",
+                                        "value": "",
+                                        "width": "32%",
+                                        "height": "40%",
+                                        "position": "absolute",
+                                        "overflow": "visible",
+                                        "top": "54%",
+                                        "left": "32%",
+                                        "name": "colors",
+                                        "click": {
+                                            "dite": {
+                                                "eventName": "clickSubmit",
+                                                "screenName": "quiz/jumble/contactInformation"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "id": "birthdayText",
+                                        "top": "30%",
+                                        "type": "label",
+                                        "value": "BIRTHDAY"
+                                    },
+                                    {
+                                        "id": "birthdayTextReq",
+                                        "type": "label",
+                                        "top": "40%",
+                                        "value": "You have to be over 18."
+                                    }
+                                ],
+                                "fields": [
+                                    [
+                                        {
+                                            "preset": "firstName",
+                                            "width": "90%",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "First Name is required"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "preset": "lastName",
+                                            "width": "90%",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "Last Name is required"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "preset": "email",
+                                            "width": "90%",
+                                            "name": "email",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "Email Address is required"
+                                                },
+                                                {
+                                                    "type": "email",
+                                                    "message": "Please enter a valid email addresssss."
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "preset": "zipUS",
+                                            "width": "90%",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "Zip Code is required"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "preset": "dob",
+                                            "width": "30%",
+                                            "validate": [
+                                                {
+                                                    "type": "minAge",
+                                                    "value": "18",
+                                                    "message": "You have to be over 18."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "privacy_link",
+                        "width": "20%",
+                        "height": "5%",
+                        "top": "85%",
+                        "left": "13%",
+                        "click": {
+                            "link": "{{privacyLink}}",
+                            "dite": {
+                                "screenName": "quiz",
+                                "eventName": "jumble/contactInformation/clickPrivacyPolicy/"
+                            }
+                        }
+                    },
+                    {
+                        "id": "rules_link",
+                        "width": "20%",
+                        "height": "5%",
+                        "top": "85%",
+                        "right": "15%",
+                        "click": {
+                            "link": "{{rulesLink}}",
+                            "dite": {
+                                "screenName": "quiz",
+                                "eventName": "jumble/contactInformation/cickOfficialRules/"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "thankyou_screen",
+                "backgroundImage": "{{final_img}}",
+                "backgroundSize": "cover",
+                "visible": false,
+                "width": "100%",
+                "height": "95.3%",
+                "top": "4.7%",
+                "elements": [
+                    {
+                        "id": "link_fb_thanks",
+                        "left": "21%",
+                        "top": "65%",
+                        "width": "14%",
+                        "height": "15%",
+                        "click": {
+                            "share": {
+                                "network": "facebook",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "quiz",
+                                "eventName": "jumble/contactInformation/thankYou/facebook"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_tw_thanks",
+                        "left": "42%",
+                        "top": "65%",
+                        "width": "14%",
+                        "height": "15%",
+                        "click": {
+                            "share": {
+                                "network": "twitter",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "quiz",
+                                "eventName": "jumble/contactInformation/thankYou/twitter"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_gp_thanks",
+                        "left": "65%",
+                        "top": "65%",
+                        "width": "14%",
+                        "height": "15%",
+                        "click": {
+                            "share": {
+                                "network": "googleplus",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "quiz",
+                                "eventName": "jumble/contactInformation/thankYou/googlePlus"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_learn_more",
+                        "left": "35%",
+                        "top": "81%",
+                        "width": "30%",
+                        "height": "14%",
+                        "click": {
+                            "link": "http://www.chevrolet.com/spark-ev-electric-vehicle.html",
+                            "dite": {
+                                "screenName": "quiz",
+                                "eventName": "jumble/contactInformation/thankYou/clickLearnMore"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "templateParams": {
+        "share_url": "qa.moontoast.net/estore/embed/{{catalogId}}",
+        "learn_more_url": "http://www.chevrolet.com/spark-ev-electric-vehicle.html",
+        "form_submit": "https://qa.moontoast.net/api/rpc?methodName=saveEngagement",
+        "stylesheetUrl": "/app/styles/spark.css",
+        "share_background_image": "",
+        "previewImageUrl": "https://s3.amazonaws.com/apps.moontoast.com/toyota/vote/share-image.jpg",
+        "video_id": "JspHqoegTkc",
+        "show_video_controls": true,
+        "icons_header": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/share-icons.png",
+        "header_img": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/logo-mobile.png",
+        "start_img": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/get-started.jpg",
+        "final_img": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/thankyou-bg.jpg",
+        "chevy_url": "http://www.chevy.com",
+        "catalogId": "691",
+        "quiz_back_img": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/blue-bg.png",
+        "quiz_back_img_light": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/bluelight-bg.png",
+        "quiz_back_img_over": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/orange-bg.png",
+        "question_text_bg": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/text-bg.jpg",
+        "wrong_question_text_bg": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/wrong-text-bg.jpg",
+        "plug_init": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/plug-bar.png",
+        "cart_part_1": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/cart-part-1.jpg",
+        "cart_part_2": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/cart-part-2.jpg",
+        "cart_part_3": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/cart-part-3.jpg",
+        "cart_part_4": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/cart-part-4.jpg",
+        "cart_part_5": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/cart-part-5.jpg",
+        "cart_part_6": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/cart-part-6.jpg",
+        "option-a": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/option-a.png",
+        "option-b": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/option-b.png",
+        "option-true": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/option-true.png",
+        "option-false": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/option-false.png",
+        "option-or": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/option-or.png",
+        "batery-color": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/percent.png",
+        "sweepstakes-bg": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/sweepstake.jpg",
+        "ip5_start_image": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/get_started_ip5.jpg",
+        "ip5_header_img": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/header_iP5.png",
+        "ip5_sweepstakes-bg": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/sweepstake_iP5_nB.png",
+        "ip5_plug_init": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/plug_bar_ip5.png",
+        "ip5_thankyou": "http://moontoast-assets-uakami.s3.amazonaws.com/chevy/images/thankyou_ip5.png",
+        "privacyLink": "http://www.google.com",
+        "rulesLink": "http://www.yahoo.com",
+        "appDiteName": "chevyvoltquizcustom"
+    },
+    "thumbnail": null,
+    "updatedDate": "Tue, 30 Jul 2013 14:43:25 +0000",
+    "@resourceType": "offer",
+    "_links": {
+        "self": {
+            "href": "/offers/7c97ec84-f631-11e2-abec-22000A977273"
+        },
+        "collection": {
+            "href": "/offers"
+        }
+    }
+}

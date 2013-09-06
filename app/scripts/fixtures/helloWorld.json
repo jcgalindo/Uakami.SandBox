@@ -1,0 +1,267 @@
+{
+    "@id": "52ece4ca-e7ef-11e2-a260-22000A977273",
+    "appId": "52bedd3c-e7ef-11e2-a04f-22000a91c8e5",
+    "accountId": null,
+    "createdDate": "Mon, 08 Jul 2013 16:56:24 +0000",
+    "deleted": null,
+    "description": "",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "NVA Custom App",
+    "pageTemplate": "",
+    "pageTemplateParams": [],
+    "piCatalog": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "video_app",
+        "width": "100%",
+        "height": "100%",
+        "backgroundColor": "#000000",
+        "minHeight": "650px",
+        "overflow": "scroll",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "preloader",
+                "widget": {
+                    "widget": "preloader",
+                    "options": {
+                        "preloadUrls": [
+                            "{{header_img}}",
+                            "{{start_img}}"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "header",
+                "height": "9.13%",
+                "backgroundImage": "{{header_img}}",
+                "elements": [
+                    {
+                        "id": "link_chevy",
+                        "left": "2%",
+                        "top": "5%",
+                        "width": "63.82%",
+                        "height": "90%",
+                        "click": {
+                            "link": "{{chevy_url}}"
+                        }
+                    },
+                    {
+                "id": "share_popup",
+                "visible": false,
+                "width": "15%",
+                "height": "25%",
+                "right": "1%",
+                "top": "6%",
+                "minWidth": "120px",
+                "mouseOut": {
+                    "fadeOut": "share_popup"
+                },
+                "click": [
+
+                ],
+                "elements": [
+                    {
+                        "id": "share_popup_background",
+                        "height": "100%",
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundSize": "cover",
+                        "top": "0px",
+                        "paddingTop": "15px",
+                        "paddingLeft": "5px",
+                        "backgroundColor": "#000",
+                        "widget": {
+                            "widget": "share",
+                            "options": {
+                                "id": "share_popup_widget",
+                                "networks": [
+                                    {
+                                        "networks": [
+                                            "facebook",
+                                            "twitter",
+                                            "googleplus",
+                                            "pinterest"
+                                        ],
+                                        "url": "{{share_url}}"
+                                    }
+                                ],
+                                "dite": {
+                                    "screenName": "share"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+                ]
+            },
+            {
+                "id": "video_screen",
+                "top": "9.13%",
+                "height": "52.17%",
+                "elements": [
+                    {
+                        "id": "video_mode",
+                        "elements": [
+                            {
+                                "id": "video_player",
+                                "height": "100%",
+                                "width": "100%",
+                                "widget": {
+                                    "widget": "youTubePlayer",
+                                    "options": {
+                                        "id": "video_widget",
+                                        "videoEnd": {
+                                            "fadeIn": [
+                                                "video_hotspot"
+                                            ],
+                                            "fadeOut": [
+                                                "video_player"
+                                            ]
+                                        },
+                                        "autoPlay": false,
+                                        "videoId": "{{video_id}}",
+                                        "dite": {
+                                            "screenName": ""
+                                        },
+                                        "showControls": "{{show_video_controls}}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "get_started",
+                "top": "61.3%",
+                "height": "38.47%",
+                "backgroundImage": "{{start_img}}",
+                "elements": [
+                    {
+                        "id": "link1",
+                        "left": "48.24%",
+                        "top": "29.94%",
+                        "width": "33.91%",
+                        "height": "18.64%",
+                        "click": {
+                            "fadeOut": [
+                                "get_started",
+                                "video_screen"
+                            ],
+                            "fadeIn": [
+                                "quiz_container"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "quiz_container",
+                "backgroundColor": "#afca04",
+                "visible": false,
+                "width": "100%",
+                "height": "90.87%",
+                "top": "9.13%",
+                "fontSize": "4em",
+                "content": "Here goes the quiz widget ...",
+                "click": {
+                    "hide": [
+                        "quiz_container"
+                    ],
+                    "show": [
+                        "puzzle_container"
+                    ]
+                },
+                "elements": [
+                    {
+                        "id": "quiz_widget",
+                        "widget": {
+                            "widget": "share",
+                            "options": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "puzzle_container",
+                "backgroundColor": "#fff",
+                "visible": false,
+                "width": "100%",
+                "height": "52.17%",
+                "top": "9.13%",
+                "elements": [
+                    {
+                        "id": "puzzle_widget",
+                        "widget": {
+                            "widget": "puzzle",
+                            "options": {
+                                "columns": 2,
+                                "rows": 3,
+                                "images": [
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle1.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle2.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle3.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle4.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle5.png",
+                                    "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/puzzle6.png"
+                                ],
+                                "solution":"3,5,6,1,2,4",
+                                "styles":{
+                                    "puzzle":
+                                        {
+                                            "position": "absolute",
+                                            "display": "block",
+                                            "cursor": "move"
+                                        },
+                                     "backgrounCover":
+                                        {
+                                            "background-size": "100% 100%"
+                                        },
+                                     "puzzleImg":
+                                        {
+                                            "margin-left": "auto",
+                                            "margin-right": "auto",
+                                            "display": "block",
+                                            "width": "99%",
+                                            "height": "99%"
+                                        }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "final_screen",
+                "backgroundImage": "{{final_img}}",
+                "visible": false,
+                "width": "100%",
+                "height": "90.87%",
+                "top": "9.13%",
+                "elements": []
+            }
+        ]
+    },
+    "templateParams": {
+        "share_url": "qa.moontoast.net/estore/embed/{{catalogId}}",
+        "share_background_image": "",
+        "previewImageUrl": "https://s3.amazonaws.com/apps.moontoast.com/toyota/vote/share-image.jpg",
+        "video_id": "JspHqoegTkc",
+        "show_video_controls": true,
+        "header_img": "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/header.png",
+        "start_img": "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/imageMobile/get_started.png",
+        "final_img": "https://moontoast-assets-uakami.s3.amazonaws.com/chevy/final.png",
+        "chevy_url": "http://www.chevy.com",
+        "catalogId": "150"
+    },
+    "thumbnail": null,
+    "updatedDate": "Mon, 15 Jul 2013 22:14:25 +0000"
+}

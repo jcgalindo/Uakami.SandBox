@@ -1,0 +1,277 @@
+{
+    "@id": "757d6650-d53d-11e2-8b8b-0800200c9a66",
+    "appId": "cbcc2050-d53d-11e2-8b8b-0800200c9a66",
+    "accountId": null,
+    "createdDate": "Fri, 14 Jun 2013 22:28:26 +0000",
+    "deleted": null,
+    "description": "Equinot",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif?",
+    "embedCode": null,
+    "embedCodeData": [
+
+    ],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Equinot",
+    "pageTemplate": null,
+    "pageTemplateParams": [
+
+    ],
+    "piCatalog": [
+
+    ],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "toasted_app",
+        "width": "398px",
+        "height": "460px",
+        "backgroundColor": "#FFFFFF",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "app_contents",
+                "elements": [
+                    {
+                        "id": "main_screen",
+                        "top": "0",
+                        "height": "460px",
+                        "elements": [
+                            {
+                                "id": "start_rain",
+                                "width": "396px",
+                                "height": "458px",
+                                "backgroundImage": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/tr_instr.jpg",
+                                "backgroundSize": "cover",
+                                "cursor": "pointer",
+                                "z": "9999"
+                            },
+                            {
+                                "id": "rain_container",
+                                "height": "358px",
+                                "width": "396px",
+                                "overflow": "hidden",
+                                "backgroundColor": "#FFFFFF",
+                                "fontSize": "18px",
+                                "lineHeight": "100px",
+                                "textFormatting": {
+                                    "align": "center"
+                                },
+                                "border": {
+                                    "color": "#000000",
+                                    "thickness": "1px"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "toasted_rain",
+                                        "class": "rain-drop",
+                                        "height": "84px",
+                                        "width": "84px",
+                                        "margin": "5px",
+                                        "top": "-84px",
+                                        "widget": {
+                                            "widget": "toastedRain",
+                                            "location": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/",
+                                            "options": {
+                                                "id": "toastedRain",
+                                                "intensity": 1,
+                                                "autoPlay": false,
+                                                "images": [
+"http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_ramzi.png",
+"http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/mt.png","http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_tim.png", "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_anand.png", "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_blair.png", "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_errol.png", "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_howard.png", "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_marcus.png", "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_ryan.png",
+"http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/profile_jonathan.png"]
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "audio_window",
+                "top": "360px",
+                "height": "100px",
+                "z": "9999",
+                "visible": false,
+                "fontFamily": "Arial",
+                "dite": {
+                    "eventType": "contactInformation",
+                    "screenName": "contactInformation"
+                },
+                "elements": [
+                    {
+                        "id": "score-box",
+                        "height": "100px",
+                        "backgroundImage": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/pr.jpg",
+                        "elements": [
+                        {
+                            "id": "round-current",
+                            "height": "25px",
+                            "width": "90x",
+                            "top": "20px",
+                            "left": "10px"
+
+                        },
+                        {
+                            "id": "round-total",
+                            "height": "25px",
+                            "width": "90x",
+                            "top": "40px",
+                            "left": "10px"
+                        },
+                        {
+                            "id": "score-label",
+                            "height": "25px",
+                            "width": "90x",
+                            "top": "60px",
+                            "left": "10px",
+                            "content": "Your Score: "
+
+                        },
+                        {
+                            "id": "score-current",
+                            "height": "25px",
+                            "width": "90x",
+                            "top": "60px",
+                            "left": "100px",
+                            "content": "0"
+                        },
+                        {
+                            "id": "target-current",
+                            "height": "84px",
+                            "width": "84px",
+                            "top": "7px",
+                            "left": "275px",
+                            "backgroundColor": "#FFF",
+                            "border": {
+                                "color": "black",
+                                "thickness": "1px"
+                                }
+                        }
+                        ]
+                    },
+                    {
+                        "id": "audio_player",
+                        "visible": false,
+                        "widget": {
+                            "widget": "audioPlayer",
+                            "options": {
+                                "id": "audio_widget_app",
+                                "backgroundImage": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/pr.jpg",
+                                "autoPlay": false,
+                                "audioUrl": {
+                                    "mp3": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/toasty.mp3",
+                                    "ogg": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/toasty.ogg"
+                                },
+                                "imageUrl": "http://25.media.tumblr.com/tumblr_lgp75eDQAw1qdgb75o1_500.jpg"
+                            }
+                        }
+                    },
+                    {
+                        "id": "privacy_link",
+                        "left": "92px",
+                        "top": "173px",
+                        "width": "56px",
+                        "height": "13px",
+                        "click": {
+                            "link": "{{privacy_link}}",
+                            "dite": {
+                                "screenName": "contactInformation",
+                                "eventName": "clickPrivacyPolicy"
+                            }
+                        }
+                    },
+                    {
+                        "id": "terms_link",
+                        "left": "14px",
+                        "top": "173px",
+                        "width": "75px",
+                        "height": "13px",
+                        "click": {
+                            "link": "{{terms_link}}",
+                            "dite": {
+                                "screenName": "contactInformation",
+                                "eventName": "clickTerms"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "share_popup",
+                "visible": false,
+                "width": "125px",
+                "height": "115px",
+                "left": "273px",
+                "top": "40px",
+                "mouseOut": {
+                    "fadeOut": "share_popup"
+                },
+                "click": [
+
+                ],
+                "elements": [
+                    {
+                        "id": "share_popup_background",
+                        "height": "189px",
+                        "top": "0px",
+                        "paddingTop": "15px",
+                        "paddingLeft": "5px",
+                        "backgroundImage": "{{share_background_image}}",
+                        "widget": {
+                            "widget": "share",
+                            "options": {
+                                "id": "share_popup_widget",
+                                "networks": [
+                                    {
+                                        "networks": [
+                                            "facebook",
+                                            "twitter",
+                                            "googleplus",
+                                            "pinterest"
+                                        ],
+                                        "url": "{{share_url}}"
+                                    }
+                                ],
+                                "dite": {
+                                    "screenName": "share"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "templateParams": {
+        "share_url": "{{rootUrl}}estore/embed/{{catalogId}}",
+        "share_background_image": "http://apps.moontoast.com.s3.amazonaws.com/equinot/html/assets/share_back_bkg_right.png",
+        "default_form_on": true,
+        "default_form_off": false,
+        "logo_link": "http://moontoast.com?logo=1",
+        "poster_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/posterImage.png",
+        "video_id": "SS4t3cB1kQk",
+        "show_video_controls": true,
+        "main_creative_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/formBackground.png",
+        "form_background": "https://s3.amazonaws.com/apps.moontoast.com/equinot/formBackground.png",
+        "form_text_color": "#000000",
+        "thankyou_popup": "https://s3.amazonaws.com/apps.moontoast.com/equinot/thankyouScreen.png",
+        "header_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/header.png",
+        "terms_link": "http://moontoast.com?terms=1",
+        "privacy_link": "http://moontoast.com?privacy=1"
+    },
+    "thumbnail": null,
+    "updatedDate": null,
+    "@resourceType": "offer",
+    "_links": {
+        "self": {
+            "href": "/offers/757d6650-d53d-11e2-8b8b-0800200c9a66"
+        },
+        "collection": {
+            "href": "/offers"
+        }
+    }
+}

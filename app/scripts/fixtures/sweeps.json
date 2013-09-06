@@ -1,0 +1,610 @@
+{
+    "@id": "28ac48ca-f86d-11e2-9d09-22000A977273",
+    "appId": "a7d0e5a8-efb1-11e2-99a3-12313817b3e8",
+    "accountId": null,
+    "createdDate": "Mon, 29 Jul 2013 16:37:29 +0000",
+    "deleted": null,
+    "description": "Reasons are like miles, they just keep adding up. Click to see amazing offers on the Sonata and other Hyundai vehicles today.",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "100,000 Reasons to Smile for Miles",
+    "pageTemplate": "{% block viewport %}<meta name='viewport' content='width=device-width, initial-scale=1.0'>{% endblock %}",
+    "pageTemplateParams": {
+        "swfUrl": "https://s3.amazonaws.com/apps.moontoast.com/equinot/AppContainer.swf",
+        "html5Url": "http://russell.container.dev.moontoast.net"
+    },
+    "piCatalog": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "mtt-sweeps",
+        "position": "relative",
+        "width": "auto",
+        "height": "auto",
+        "forceWidth": "398px",
+        "forceHeight": "460px",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "app_contents",
+                "position": "relative",
+                "height": "auto",
+                "elements": [
+                    {
+                        "id": "header",
+                        "position": "relative",
+                        "height": "40px",
+                        "backgroundColor": "{{header_bg_color}}",
+                        "elements": [
+                            {
+                                "id": "logo",
+                                "position": "relative",
+                                "height": "40px",
+                                "width": "200px",
+                                "backgroundImage": "{{logo_img}}",
+                                "click": {
+                                    "link": "{{logo_link}}",
+                                    "dite": {
+                                        "eventName": "clickLogo"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "share_button",
+                                "width": "4%",
+                                "height": "75%",
+                                "forceTop": "6px",
+                                "forceHeight": "20px",
+                                "backgroundImage": "{{share_img}}",
+                                "click": {
+                                    "toggle": [
+                                        "share_popup"
+                                    ],
+                                    "dite": {
+                                        "screenName": "share",
+                                        "eventName": "shareThisHeader"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main",
+                        "position": "relative",
+                        "height": "auto",
+                        "elements": [
+                            {
+                                "id": "main_screen",
+                                "position": "relative",
+                                "height": "auto",
+                                "forceHeight": "224px",
+                                "forceWidth": "398px",
+                                "forceTop": "32px",
+                                "elements": [
+                                    {
+                                        "id": "video_mode",
+                                        "elements": [
+                                            {
+                                                "id": "video_hotspot",
+                                                "visible": false,
+                                                "backgroundImage": "{{poster_image}}",
+                                                "height": "224px",
+                                                "click": {
+                                                    "fadeIn": [
+                                                        "video_player"
+                                                    ],
+                                                    "fadeOut": [
+                                                        "video_hotspot"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "id": "video_player",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "widget": {
+                                                    "widget": "youTubePlayer",
+                                                    "options": {
+                                                        "id": "video_widget",
+                                                        "forceWidth": "100%",
+                                                        "forceHeight": "100%",
+                                                        "videoEnd": {
+                                                            "fadeIn": [
+                                                                "video_hotspot"
+                                                            ],
+                                                            "fadeOut": [
+                                                                "video_player"
+                                                            ]
+                                                        },
+                                                        "autoPlay": false,
+                                                        "videoId": "{{video_id}}",
+                                                        "dite": {
+                                                            "screenName": ""
+                                                        },
+                                                        "showControls": "{{show_video_controls}}"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "main_creative",
+                                "position": "relative",
+                                "forceTop": "256px",
+                                "height": "auto",
+                                "forceHeight": "230px",
+                                "backgroundImage": "{{creative_background}}",
+                                "click": {
+                                    "show": [
+                                        "form_window"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "form_window",
+                        "position": "relative",
+                        "height": "auto",
+                        "dite": {
+                            "eventType": "contactInformation",
+                            "screenName": "contactInformation"
+                        },
+                        "elements": [
+                            {
+                                "id": "form_text",
+                                "position": "relative",
+                                "width": "auto",
+                                "height": "auto",
+                                "elements": [
+                                    {
+                                        "id": "form_headline",
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "fontSize": "1em",
+                                        "forceFontSize": "18px",
+                                        "forceHeight": "60px",
+                                        "forceLeft": "30px",
+                                        "content": "ENTER TO WIN A FREE TRIP TO ASPEN"
+                                    },
+                                    {
+                                        "id": "form_byline",
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "fontSize": ".8em",
+                                        "forceFontSize": "18px",
+                                        "forceHeight": "60px",
+                                        "forceLeft": "30px",
+                                        "content": "Includes 4 nights with 4 friends at a 5 star hotel, airfare and a rental SUV during your stay."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "form_close",
+                                "visible": "{{default_form_off}}",
+                                "click": {
+                                    "fadeOut": [
+                                        "form_window"
+                                    ],
+                                    "dite": {
+                                        "screenName": "contactInformation",
+                                        "eventName": "close"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "form_container",
+                                "position": "relative",
+                                "height": "auto",
+                                "forceTop": "55px",
+                                "widget": {
+                                    "widget": "simpleForm",
+                                    "desktopWidget": {
+                                        "widgetName": "simpleForm",
+                                        "widgetClass": "com.moontoast.form.view.mediator.MTFormMediator",
+                                        "widgetLocation": "https://s3.amazonaws.com/apps.moontoast.com/equinot/FormWidget.swf"
+                                    },
+                                    "options": {
+                                        "submit": {
+                                            "url": "https://hyundai.moontoast.com/api/rpc?methodName=saveEngagement",
+                                            "method": "GET"
+                                        },
+                                        "left": "35px",
+                                        "forceLeft": "15px",
+                                        "fontColor": "{{form_text_color}}",
+                                        "optText": "{{opt_text}}",
+                                        "forceWidth": "388px",
+                                        "formWidth": "310px",
+                                        "dite": {
+                                            "screenName": "contactInformation"
+                                        },
+                                        "afterSubmit": {
+                                            "fadeIn": [
+                                                "thankyou_screen"
+                                            ],
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "conversionreferral"
+                                            }
+                                        },
+                                        "fields": [
+                                            [
+                                                {
+                                                    "preset": "firstName",
+                                                    "width": "90%",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "First Name is required"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "preset": "lastName",
+                                                    "width": "90%",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Last Name is required"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "preset": "email",
+                                                    "width": "90%",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Email is required"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "preset": "zipUS",
+                                                    "width": "90%",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Zip Code is required"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "preset": "gender",
+                                                    "width": "30%",
+                                                    "placeholder": "Select Gender",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "First Name is required"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "preset": "ageRange",
+                                                    "width": "40%",
+                                                    "placeholder": "Select Age",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "First Name is required"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "value": "true",
+                                                    "placeholder": "In the future, I would like to receive emails from Totally Sick.",
+                                                    "position": "relative"
+                                                },
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "value": "true",
+                                                    "placeholder": "I have read terms and conditions of this contest.",
+                                                    "position": "relative"
+                                                },
+                                                {
+                                                    "preset": "columnSpacer"
+                                                },
+                                                {
+                                                    "preset": "rowSpacer"
+                                                },
+                                                {
+                                                    "preset": "columnSpacer"
+                                                },
+                                                {
+                                                    "preset": "submit",
+                                                    "width": "",
+                                                    "placeholder": "Submit",
+                                                    "backgroundColor": ""
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "id": "thankyou_screen",
+                                "visible": false,
+                                "width": "100%",
+                                "height": "auto",
+                                "forceHeight": "205px",
+                                "dite": {
+                                    "eventType": "thankYou",
+                                    "screenName": "thankYou"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "thankyou_close",
+                                        "visible": false,
+                                        "click": {
+                                            "fadeOut": [
+                                                "thankyou_screen"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "thankyou_headline",
+                                        "position": "relative",
+                                        "forceTop": "2px",
+                                        "content": "THANK YOU FOR YOUR SUBMISSION!",
+                                        "forceFontSize": "18px",
+                                        "forceHeight": "60px",
+                                        "height": "auto"
+                                    },
+                                    {
+                                        "id": "thankyou_byline",
+                                        "position": "relative",
+                                        "forceTop": "54px",
+                                        "forceWidth": "378px",
+                                        "forceLeft": "10px",
+                                        "forceFontSize": "14px",
+                                        "content": "We'll be contacting the winner by September 12, 2013 by email.",
+                                        "linkColor": "#2b73c6",
+                                        "linkUnderline": true,
+                                        "width": "100%",
+                                        "height": "auto",
+                                        "textFormatting": {
+                                            "align": "center",
+                                            "selectable": true
+                                        }
+                                    },
+                                    {
+                                        "id": "thankyou_sharetext",
+                                        "position": "relative",
+                                        "forceTop": "99px",
+                                        "content": "Don't forget to tell your friends!",
+                                        "forceFontSize": "14px",
+                                        "height": "auto",
+                                        "textFormatting": {
+                                            "align": "center",
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "id": "share_box",
+                                        "position": "relative",
+                                        "forceLeft": "75px",
+                                        "forceTop": "149px",
+                                        "width": "auto",
+                                        "forceWidth": "300px",
+                                        "height": "auto",
+                                        "elements": [
+                                            {
+                                                "id": "facebook_share",
+                                                "width": "67px",
+                                                "height": "67px",
+                                                "forceWidth": "47px",
+                                                "forceHeight": "47px",
+                                                "backgroundImage": "{{fb_img}}",
+                                                "click": {
+                                                    "share": {
+                                                        "network": "facebook",
+                                                        "url": "{{share_url}}"
+                                                    },
+                                                    "dite": {
+                                                        "screenName": "thankYou",
+                                                        "eventName": "facebook"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "twitter_share",
+                                                "left": "74px",
+                                                "width": "67px",
+                                                "height": "67px",
+                                                "forceWidth": "47px",
+                                                "forceHeight": "47px",
+                                                "backgroundImage": "{{tw_img}}",
+                                                "click": {
+                                                    "share": {
+                                                        "network": "twitter",
+                                                        "url": "{{share_url}}"
+                                                    },
+                                                    "dite": {
+                                                        "screenName": "thankYou",
+                                                        "eventName": "twitter"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "googleplus_share",
+                                                "left": "145px",
+                                                "width": "67px",
+                                                "height": "67px",
+                                                "forceWidth": "47px",
+                                                "forceHeight": "47px",
+                                                "backgroundImage": "{{gplus_img}}",
+                                                "click": {
+                                                    "share": {
+                                                        "network": "googleplus",
+                                                        "url": "{{share_url}}"
+                                                    },
+                                                    "dite": {
+                                                        "screenName": "thankYou",
+                                                        "eventName": "googlePlus"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "pinterest_share",
+                                                "left": "218px",
+                                                "width": "67px",
+                                                "height": "67px",
+                                                "forceWidth": "47px",
+                                                "forceHeight": "47px",
+                                                "backgroundImage": "{{pinterest_img}}",
+                                                "click": {
+                                                    "share": {
+                                                        "network": "pinterest",
+                                                        "url": "{{share_url}}"
+                                                    },
+                                                    "dite": {
+                                                        "screenName": "thankYou",
+                                                        "eventName": "pinterest"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "footer",
+                        "position": "relative",
+                        "height": "25px",
+                        "forceTop": "205px",
+                        "backgroundColor": "{{footer_bg_color}}",
+                        "elements": [
+                            {
+                                "id": "footer_copy",
+                                "position": "relative",
+                                "width": "auto",
+                                "elements": [
+                                    {
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "content": "OFFICIAL RULES",
+                                        "click": {
+                                            "link": "{{rules_link}}",
+                                            "dite": {
+                                                "eventName": "clickLogo"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "content": "PRIVACY",
+                                        "click": {
+                                            "link": "{{privacy_link}}",
+                                            "dite": {
+                                                "eventName": "clickLogo"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "content": "MORE DETAILS",
+                                        "click": {
+                                            "link": "{{details_link}}",
+                                            "dite": {
+                                                "eventName": "clickLogo"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "share_popup",
+                        "visible": false,
+                        "width": "185px",
+                        "height": "170px",
+                        "right": "13px",
+                        "forceLeft": "266px",
+                        "mouseOut": {
+                            "fadeOut": "share_popup"
+                        },
+                        "click": [],
+                        "elements": [
+                            {
+                                "id": "share_popup_background",
+                                "position": "relative",
+                                "backgroundImage": "{{share_background_image}}",
+                                "noScaleBackground": true,
+                                "widget": {
+                                    "widget": "share",
+                                    "options": {
+                                        "id": "share_popup_widget",
+                                        "position": "relative",
+                                        "networks": [
+                                            {
+                                                "networks": [
+                                                    "facebook",
+                                                    "twitter",
+                                                    "google+",
+                                                    "pinterest"
+                                                ],
+                                                "url": "{{share_url}}"
+                                            }
+                                        ],
+                                        "dite": {
+                                            "screenName": "share"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "templateParams": {
+        "previewImageUrl": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/Final_Hyundai_Share_Image_Preview.jpg",
+        "share_url": "hyundai.moontoast.com/estore/embed/{{catalogId}}",
+        "share_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_share.png",
+        "share_background_image": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/share_back_bkg_right.png",
+        "creative_background": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/sweeps/main_creative_tablet_portrait.jpg",
+        "default_form_on": false,
+        "default_form_off": false,
+        "stylesheetUrl": "http://russell.container.dev.moontoast.net/app/styles/sweeps.css",
+        "header_bg_color": "#0D4E89",
+        "logo_link": "http://www.hyundaiusa.com",
+        "logo_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/Hyundai_Logo_MTVideoLeadGen.png",
+        "poster_image": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/Final_Hyundai_Poster_Image.jpg",
+        "video_id": "mcQT0uN4BZU",
+        "show_video_controls": true,
+        "form_text_color": "#000000",
+        "header_image": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/Hyundai_Logo_MTVideoLeadGen.jpg",
+        "footer_bg_color": "#0D4E89",
+        "rules_link": "http://moontoast.com?terms=1",
+        "privacy_link": "http://moontoast.com?privacy=1",
+        "details_link": "http://www.moontoast.com/contact",
+        "opt_text": "Send me updates about events, special offers, exciting news and product announcements from Hyundai.",
+        "fb_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_facebook.png",
+        "tw_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_twitter.png",
+        "gplus_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_googleplus.png",
+        "pinterest_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_pinterest.png",
+        "catalogId": "3412",
+        "appDiteName": "videoLeadGen",
+        "viewport": "width=device-width, initial-scale=1.0"
+    },
+    "thumbnail": null,
+    "updatedDate": "Fri, 02 Aug 2013 22:06:41 +0000"
+}

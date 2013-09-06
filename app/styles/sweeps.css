@@ -1,0 +1,264 @@
+    body, html {
+        height: auto !important;
+    }
+    #mtt-sweeps {
+        overflow: scroll !important;
+        background: #D6D6D8;
+    }
+    #logo{
+        float: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+    }
+    #share_button{
+        top: 20%;
+        right: 15px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    #main_screen {
+        padding-top: 56.25%;
+    }
+    #main_screen > div {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+    }
+    #main_creative {
+        padding-top: 26.5%;
+        background-size: 100% auto;
+        background-color: #EBEBEB;
+        background-position: left -2px;
+        background-repeat: no-repeat;
+    }
+    #form_window{
+        background: #d6d6d8 !important;
+    }
+    #form_window > div {
+        width: auto !important;
+    }
+    #form_text {
+        margin-top: 10px;
+        padding: 0 3.125% !important;
+    }
+    #form_headline {
+        margin-bottom: 10px;
+    }
+    #form_container > .moontemplate > div {
+        position: relative !important;
+    }
+    #form_widget_submit{
+        display: block;
+        position: relative !important;
+        left: /*15px*/ auto !important;
+        top: auto !important;
+        width: 80px !important;
+        height: 33px !important;
+        clear: left;
+        margin: 0 auto;
+    }
+    input[type=text] {
+        float: left !important;
+        clear: both !important;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin-bottom: 5px !important;
+        height: auto !important;
+        padding: 5px !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    input[type=checkbox]{
+        position: absolute;
+    }
+    select {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin: 5px 0 5px 5% !important;
+        height: 30px !important;
+        width: 90% !important;
+        float: left;
+        clear: both;
+        background: #666666 !important;
+    }
+    #ageRange{
+        clear: none !important
+    }
+    #zipUS{
+        width: 136px !important;
+    }
+    .mtt-form-check{
+        display: block;
+        font-size: 1em !important;
+        top: auto !important;
+        left: auto !important;
+    }
+    .mtt-form-check input{
+        -webkit-transform: scale(1) !important;
+    }
+    .mtt-form-check-label{
+        float: left;
+        padding: 0;
+        font-size: 1em !important;
+    }
+    .mtt-form-col{
+        width: 100% !important;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .mtt-form-col > div {
+        height: auto !important;
+        width: 44% !important;
+        top: auto !important;
+        left: auto !important;
+        float: left;
+        overflow: hidden !important;
+        margin: 0 0 15px 5% !important;
+    }
+    #red_pleca{
+        height: 35px !important;
+    }
+    #thankyou_screen {
+        top:0;
+        left:0;
+        min-height: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5% 10px;
+        background-color: #ededed;
+        z-index: 5000;
+    }
+    #thankyou_screen > div {
+        position: absolute !important;
+        bottom: 10px;
+        left: 0;
+        height: auto !important;
+    }
+    #thankyou_headline {
+        font-size: 2em;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    #thankyou_byline {
+        margin-bottom: 15px;
+    }
+    #thankyou_sharetext {
+        margin-bottom: 15px;
+    }
+    #share_box {
+        margin: 0 auto;
+        text-align: center;
+    }
+    #facebook_share, #twitter_share, #googleplus_share, #pinterest_share {
+        position: relative !important;
+        display: inline-block !important;
+        left: auto !important;
+        margin: 0 1% 10px;
+    }
+    .checkbox_label, .radio_label {
+        display: block;
+        position: relative;
+        padding: 10px 10px 10px 40px;
+        margin-right: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+    .checkbox_label:after, .radio_label:after {
+        font-family: 'FontAwesome';
+        content: '\f096';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.5em;
+    }
+    .checkbox_label.checked:after, .radio_label.checked:after {
+        content: '\f046';
+    }
+    #footer_copy {
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+    }
+    #footer_copy > div > div{
+        display:  inline-block !important;
+        text-align: center;
+        line-height: 2em !important;
+        font-size: 0.8em;
+        margin: 0 5px !important;
+    }
+    #share_popup {
+        top: 40px;
+        font-size: 0.7em;
+    }
+    #share_popup_background {
+        display: table !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10px 0 5px 5px !important;
+    }
+    .social_icon {
+        margin: 0 0 3px 10px;
+    }
+
+@media (min-width:768px) and (max-width: 1000px) {
+    #form_text {
+        float: left;
+        width: 33% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    #form_container {
+        width: 66% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+    }
+    .mtt-form-col {
+        width: 50% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .mtt-form-col > div {
+        width: auto !important;
+        margin: 10px 5% !important;
+    }
+    #form_widget_submit {
+        margin: 10px auto !important;
+    }
+}
+
+@media (min-width: 1000px) {
+    #main {
+        width: 75% !important;
+    }
+    #form_window {
+        position: absolute !important;
+        top: 40px;
+        right: 0;
+        width: 25% !important;
+    }
+    #thankyou_screen > div {
+        position: relative !important;
+        bottom: auto;
+        left: auto;
+    }
+    .mtt-form-col > div {
+        width:  auto !important;
+        margin-right: 5% !important;
+    }
+    #share_box {
+        width: 80% !important;
+    }
+}

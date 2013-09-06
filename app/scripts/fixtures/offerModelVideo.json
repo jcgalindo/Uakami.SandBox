@@ -1,0 +1,143 @@
+{
+
+    "@id": "1744", 
+    "@resourceType": "offer", 
+    "_links": {
+        "collection": {
+            "href": "/offers"
+        }, 
+        "self": {
+            "href": "/offers/1744"
+        }
+    }, 
+    "accountId": "100", 
+    "appId": "Sweepstake", 
+    "description": "Enter for your chance to win this $900 package from some of our favorite Hill Center merchants! $100 from each store featured!", 
+    "embedCode": "<object style=\"width: 398px; height: 460px;\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"460\" height=\"398\" id=\"embeddedstore\" > <param name=\"movie\" value=\"http://analytics-dev.moontoast.com/TemplatedApp.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--[if !IE]>--> <object type=\"application/x-shockwave-flash\" data=\"http://analytics-dev.moontoast.com/TemplatedApp.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" width=\"460\" height=\"398\" style=\"width: 398px; height: 460px;\"> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--<![endif]--> <div style=\"background-color:#ffffff;\"> <!--[if gte IE 6]>--> <p> Either scripts and active content are not permitted to run or Adobe Flash Player version 0.0.0 or greater is not installed. </p> <!--<![endif]--> <a href=\"http://www.adobe.com/go/getflashplayer\"> <img src=\"https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\" alt=\"Get Adobe Flash Player\" /> </a> </div> <!--[if !IE]>--> </object> <!--<![endif]--> </object>", 
+    "embedCodeData": {
+        "buttonBorder": "", 
+        "buttonColor": "", 
+        "buttonSize": "Small", 
+        "buttonText": "", 
+        "file": "sweepstakes.swf", 
+        "height": "398", 
+        "swfUrl": "https://moontoast-assets-dev.s3.amazonaws.com/flash/embedded-store/sweepstakes.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F", 
+        "swfVars": "catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F", 
+        "type": "flash", 
+        "width": "460"
+    }, 
+    "imageFullSize": "https://crosscreek.moontoast.com/file/thumbnail/id/533866/w/212/h/212", 
+    "mobileFallback": "mobile_sweepstakes", 
+    "name": "$900 Giveaway: Hill Center Green Hills!", 
+    "piCatalog": {
+        "communityHost": "crosscreek", 
+        "communityId": "100", 
+        "createdAt": "2012-10-01 20:59:15", 
+        "guidePageId": "1388", 
+        "thumbnailId": "533866"
+    }, 
+    "rootUrl": "https://crosscreek.moontoast.com/", 
+    "thumbnail": "https://crosscreek.moontoast.com/file/thumbnail/id/533866/w/62/h/62",
+    "template": {
+                "id": "video_app",
+                "width":"398px",
+                "height":"460px",
+                "backgroundColor":"#000000"
+                "elements": [{
+                    "id": "app_contents",
+                    "elements": [{
+                        "id": "app_header",
+                        "height": "42px",
+                        "backgroundColor": "{{header_color}}",
+                        "elements": [{
+                            "id": "logo",
+                            "left": "6%",
+                            "width": "100px",
+                            "backgroundImage": "{{app_header_image}}",
+                            "backgroundColor": "{{header_color}}"
+                        }, {
+                            "id": "share_this_button",
+                            "left": "272px",
+                            "width": "172px",
+                            "visible": "{{allow_sharing}}",
+                            "backgroundImage": "{{share_this_image}}",
+"click": {
+    "dite": {
+        "screenName": "",
+        "eventName": "clickShare",
+        "eventData": "shareThisHeader"
+    }
+}
+                        }]
+                        }, {
+                            "id": "video_player",
+                            "height": "209px",
+                            "width": "398px",
+                            "top": "42px",
+                            "backgroundImage": "{{poster_image}}",
+                            "visible": true,
+                            "widget": {
+                                "widget": "videoPlayer",
+                                "options": {
+                                    "id": "video_widget",
+                                    "autoPlay": false,
+                                    "width": "398px",
+                                    "height": "209px",
+                                    "videoEnd": {
+                                        "fadeIn": ["{{video_end_command}}"],
+                                        "fadeOut": ["video_player"]
+                                    },
+                                    "dite": {
+                                        "screenName": ""
+                                    },
+                                    "videoUrl": {
+                                        "mp4": "http://moontoast-nike.s3.amazonaws.com/nike_2/videos/nike-525x295.mp4",
+                                        "ogg": "http://moontoast-nike.s3.amazonaws.com/nike_2/videos/nike-525x295.ogg",
+                                        "webm": "http://moontoast-nike.s3.amazonaws.com/nike_2/videos/nike-524x294.webm"   
+                                    },
+                                    "showControls": true
+                                }
+                            }
+                        }]
+                }]
+            },
+
+    "templateParams": {
+        
+        "share_url": "https://toasters.moontoast.com/estore/embed/1810",
+        "video_end_command": "video_thankyou",
+        "video_url": "https://www.youtube.com/watch?v=u1zgFlCw8Aw&feature=player_embedded",
+        "video_id": "u1zgFlCw8Aw",
+        "show_video_controls": true,
+        
+        "header_color": "#fafafa",
+        
+        "app_header_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_header.png",
+        "linked_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_links.png",
+        "moontoast_powered_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_moontoast.png",
+        "share_this_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_sharethis.png",
+        "play_again_image": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/videoApp_playAgain.png",
+        "close_button": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/close.png",
+        
+        "thankyou_text_large": "THANK YOU FOR VIEWING OUR VIDEO",
+        "thankyou_text_small": "We'll be sending you the information you need. Hopefully you gave us your actual email address.",
+        "show_thankyou_share": "true",
+        
+        "share_flavor": "Tell your friends about {{store_name}}.",
+        "store_name": "Nike",
+        
+        "show_poster_image": true,
+        "autoplay_video": false,
+        
+        "embed_section_label": "Add our store:",
+        "embed_code": "<object style=\"width: 398px; height: 460px;\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"460\" height=\"398\" id=\"embeddedstore\" > <param name=\"movie\" value=\"http://analytics-dev.moontoast.com/TemplatedApp.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--[if !IE]>--> <object type=\"application/x-shockwave-flash\" data=\"http://analytics-dev.moontoast.com/TemplatedApp.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" width=\"460\" height=\"398\" style=\"width: 398px; height: 460px;\"> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--<![endif]--> <div style=\"background-color:#ffffff;\"> <!--[if gte IE 6]>--> <p> Either scripts and active content are not permitted to run or Adobe Flash Player version 0.0.0 or greater is not installed. </p> <!--<![endif]--> <a href=\"http://www.adobe.com/go/getflashplayer\"> <img src=\"https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\" alt=\"Get Adobe Flash Player\" /> </a> </div> <!--[if !IE]>--> </object> <!--<![endif]--> </object>",
+        "embed_code_footer": "Add our store to your tumblr, blog, website, or a social network.",
+        
+        "small_twitter_image": "https://moontoast-assets-live.s3.amazonaws.com/images/sharing_endpoints/twitter.png",
+        "small_facebook_image": "https://moontoast-assets-live.s3.amazonaws.com/images/sharing_endpoints/facebook.png",
+        
+        "play_button": "//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/videoApp/playButton.png",
+        
+        "allow_sharing": true
+    }
+}

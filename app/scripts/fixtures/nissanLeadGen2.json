@@ -1,0 +1,712 @@
+{
+    "@id": "33bee6fe-0a02-11e3-af5a-22000a1d97ef",
+    "appId": "d9e7e122-0906-11e3-96fc-1231381a2950",
+    "appContainerMaxVersion": "",
+    "accountId": null,
+    "createdDate": "Wed, 21 Aug 2013 01:37:12 +0000",
+    "data": null,
+    "deleted": null,
+    "description": "You could win 1 of 3 new Nissans in Nissan’s Keep Summer Rolling Service Sweepstakes®!",
+    "diteEndpoint": "http://analytics.moontoast.com/track-qa.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "endDate": null,
+    "env": "qa",
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Enter Now to Win a new Nissan 370Z, Altima or Pathfinder!",
+    "odpBaseUrl": "https://offer-qa.moontoast.com",
+    "pageTemplate": "{% block viewport %}<meta name='viewport' content='width=device-width, initial-scale=1.0'> {% endblock %}",
+    "pageTemplateParams": {
+        "swfUrl": "{{odpBaseUrl}}/container-qa/1.1.1-dev/flash/AppContainer.swf"
+    },
+    "piCatalog": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "video_app",
+        "dite": {
+            "eventName": ""
+        },
+        "elements": [
+            {
+                "id": "app_contents",
+                "elements": [
+                    {
+                        "id": "preloader",
+                        "widget": {
+                            "widget": "preloader",
+                            "options": {
+                                "preloadUrls": [
+                                    "{{sweeps_background}}",
+                                    "{{form_background}}"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "mtt_header",
+                        "elements": [
+                            {
+                                "id": "mtt_logo",
+                                "backgroundImage": "{{logo_img}}",
+                                "click": {
+                                    "link": "{{logo_link}}",
+                                    "dite": {
+                                        "eventName": "clickLogo"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "mtt_share_button",
+                                "width": "35px",
+                                "height": "44px",
+                                "backgroundImage": "{{share_img}}",
+                                "click": {
+                                    "toggle": [
+                                        "share_popup"
+                                    ],
+                                    "dite": {
+                                        "eventType": "shareThisHeader",
+                                        "eventName": "shareThisHeader"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "sweeps_text",
+                                "backgroundImage": "{{sweeps_background}}",
+                                "backgroundRepeat": "no-repeat",
+                                "backgroundSize": "contain",
+                                "backgroundPosition": "center"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main_screen",
+                        "elements": [
+                            {
+                                "id": "video_mode",
+                                "elements": [
+                                    {
+                                        "id": "video_hotspot",
+                                        "visible": false,
+                                        "backgroundImage": "{{poster_image}}",
+                                        "height": "224px",
+                                        "click": {
+                                            "fadeIn": [
+                                                "video_player"
+                                            ],
+                                            "fadeOut": [
+                                                "video_hotspot"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "video_player",
+                                        "position": "absolute",
+                                        "widget": {
+                                            "widget": "youTubePlayer",
+                                            "options": {
+                                                "id": "video_widget",
+                                                "videoEnd": {
+                                                    "fadeIn": [
+                                                        "video_hotspot"
+                                                    ],
+                                                    "fadeOut": [
+                                                        "video_player"
+                                                    ]
+                                                },
+                                                "autoPlay": "{{video_autoplay}}",
+                                                "videoId": "{{video_id}}",
+                                                "dite": {
+                                                    "screenName": ""
+                                                },
+                                                "showControls": "{{show_video_controls}}"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "form_window",
+                        "backgroundImage": "{{form_background}}",
+                        "visible": "{{default_form_on}}",
+                        "dite": {
+                            "eventName": "contactInformation"
+                        },
+                        "elements": [
+                            {
+                                "id": "form_headline",
+                                "content": "{{form_headline_text}}"
+                            },
+                            {
+                                "id": "form_close",
+                                "visible": "{{default_form_off}}",
+                                "left": "363px",
+                                "width": "35px",
+                                "height": "35px",
+                                "click": {
+                                    "fadeOut": [
+                                        "form_window"
+                                    ],
+                                    "dite": {
+                                        "screenName": "contactInformation",
+                                        "eventName": "close"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "opt_in_text"
+                            },
+                            {
+                                "id": "form_container",
+                                "widget": {
+                                    "widget": "simpleForm",
+                                    "desktopWidget": {
+                                        "widgetName": "simpleForm",
+                                        "widgetClass": "com.moontoast.form.view.mediator.MTFormMediator",
+                                        "widgetLocation": "{{odpBaseUrl}}/container-qa/1.1.1-dev/flash/FormWidget.swf"
+                                    },
+                                    "options": {
+                                        "id": "form_widget",
+                                        "submit": {
+                                            "url": "{{txnBaseUrl}}/api/rpc?methodName=saveData",
+                                            "method": "GET"
+                                        },
+                                        "optText": "{{opt_text}}",
+                                        "dite": {
+                                            "screenName": "contactInformation"
+                                        },
+                                        "afterSubmit": {
+                                            "fadeOut": [
+                                                "form_window"
+                                            ],
+                                            "fadeIn": [
+                                                "thankyou_screen"
+                                            ],
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "conversionreferral"
+                                            }
+                                        },
+                                        "elements": [
+                                            {
+                                                "id": "first_name",
+                                                "name": "name",
+                                                "type": "text",
+                                                "placeholder": "First Name",
+                                                "validate": [
+                                                    {
+                                                        "type": "required",
+                                                        "message": "First Name is required"
+                                                    }
+                                                ],
+                                                "click": {
+                                                    "dite": {
+                                                        "eventName": "fieldFirstName",
+                                                        "screenName": "contactInformation"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "last_name",
+                                                "name": "name_last",
+                                                "type": "text",
+                                                "placeholder": "Last Name",
+                                                "validate": [
+                                                    {
+                                                        "type": "required",
+                                                        "message": "Last Name is required"
+                                                    }
+                                                ],
+                                                "click": {
+                                                    "dite": {
+                                                        "eventName": "fieldLastName",
+                                                        "screenName": "contactInformation"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "email",
+                                                "name": "email",
+                                                "type": "text",
+                                                "placeholder": "Email Address",
+                                                "validate": [
+                                                    {
+                                                        "type": "required",
+                                                        "message": "Email Address is required"
+                                                    },
+                                                    {
+                                                        "type": "email",
+                                                        "message": "Please enter a valid email address."
+                                                    }
+                                                ],
+                                                "click": {
+                                                    "dite": {
+                                                        "eventName": "fieldEmail",
+                                                        "screenName": "contactInformation"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "zip",
+                                                "name": "zip",
+                                                "type": "text",
+                                                "placeholder": "Zip Code",
+                                                "validate": [
+                                                    {
+                                                        "type": "required",
+                                                        "message": "Zip Code is required"
+                                                    }
+                                                ],
+                                                "click": {
+                                                    "dite": {
+                                                        "eventName": "fieldZip",
+                                                        "screenName": "contactInformation"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "check",
+                                                "name": "agree_terms",
+                                                "checked": "true",
+                                                "list": [
+                                                    "{{opt_text}}"
+                                                ],
+                                                "click": {
+                                                    "dite": {
+                                                        "eventName": "fieldJoinMailingList",
+                                                        "screenName": "contactInformation"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": "form_widget_submit",
+                                                "type": "submit",
+                                                "value": "Submit",
+                                                "name": "colors",
+                                                "click": {
+                                                    "dite": {
+                                                        "eventName": "clickSubmit",
+                                                        "screenName": "contactInformation"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "thankyou_screen",
+                        "visible": false,
+                        "width": "100%",
+                        "height": "auto",
+                        "dite": {
+                            "eventName": "thankYou"
+                        },
+                        "elements": [
+                            {
+                                "id": "thankyou_close",
+                                "visible": false,
+                                "click": {
+                                    "fadeOut": [
+                                        "thankyou_screen"
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "thankyou_headline",
+                                "content": "{{thankyou_headline}}"
+                            },
+                            {
+                                "id": "thankyou_message",
+                                "content": "Visit <a href='http://www.keepsummerrolling.com' target='_blank' screenName='thankYou' eventName='clickLink'>www.keepsummerrolling.com</a> for your chance to win one of three new Nissans!"
+                            },
+                            {
+                                "id": "thankyou_sharetext",
+                                "content": "Please share with your friends!"
+                            },
+                            {
+                                "id": "share_box",
+                                "elements": [
+                                    {
+                                        "id": "facebook_share",
+                                        "click": {
+                                            "share": {
+                                                "network": "facebook",
+                                                "url": "{{share_url}}"
+                                            },
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "facebook"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "id": "twitter_share",
+                                        "click": {
+                                            "share": {
+                                                "network": "twitter",
+                                                "url": "{{share_url}}"
+                                            },
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "twitter"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "id": "googleplus_share",
+                                        "click": {
+                                            "share": {
+                                                "network": "googleplus",
+                                                "url": "{{share_url}}"
+                                            },
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "googlePlus"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "id": "pinterest_share",
+                                        "click": {
+                                            "share": {
+                                                "network": "pinterest",
+                                                "url": "{{share_url}}"
+                                            },
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "pinterest"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "share_popup",
+                        "visible": false,
+                        "position": "absolute",
+                        "mouseOut": {
+                            "fadeOut": "share_popup"
+                        },
+                        "click": [],
+                        "elements": [
+                            {
+                                "id": "share_popup_background",
+                                "widget": {
+                                    "widget": "share",
+                                    "options": {
+                                        "id": "share_popup_widget",
+                                        "position": "relative",
+                                        "networks": [
+                                            {
+                                                "network": "facebook",
+                                                "url": "{{share_url}}"
+                                            },
+                                            {
+                                                "network": "twitter",
+                                                "url": "offer.moontoast.com/d9b72682-09dc-11e3-b98c-22000a1d97ef&title=You could win 1 of 3 new Nissans in Nissan’s Keep Summer Rolling Service Sweepstakes®!&shortener=bitly&pubid=moontoast"
+                                            },
+                                            {
+                                                "networks": [
+                                                    "google+",
+                                                    "pinterest"
+                                                ],
+                                                "args": {
+                                                    "shortener": "bitly",
+                                                    "pubid": "moontoast"
+                                                },
+                                                "url": "{{share_url}}"
+                                            }
+                                        ],
+                                        "dite": {
+                                            "screenName": "share"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "templateOverrides": [
+        {
+            "rules": {
+                "deviceType": "flash"
+            },
+            "overrides": {
+                "video_app": {
+                    "backgroundColor": "#000000"
+                },
+                "mtt_header": {
+                    "height": "42px",
+                    "width": "398px"
+                },
+                "sweeps_text": {
+                    "left": "46px",
+                    "width": "310px",
+                    "content": " ",
+                    "backgroundImage": "{{flash_header_image}}"
+                },
+                "mtt_logo": {
+                    "width": "46px",
+                    "backgroundImage": "{{flash_logo_image}}"
+                },
+                "mtt_share_button": {
+                    "width": "42px",
+                    "height": "42px",
+                    "left": "356px",
+                    "backgroundImage": "{{flash_share_image}}"
+                },
+                "main_screen": {
+                    "top": "42px",
+                    "height": "224px"
+                },
+                "form_window": {
+                    "top": "266px",
+                    "height": "194px",
+                    "backgroundImage": "{{flash_form_background}}"
+                },
+                "thankyou_screen": {
+                    "top": "266px",
+                    "height": "194px",
+                    "backgroundColor": "#3b1709"
+                },
+                "form_headline": {
+                    "content": ""
+                },
+                "form_widget": {
+                    "left": "14px",
+                    "top": "55px",
+                    "width": "370px",
+                    "submitButtonId": "realSubmitButton",
+                    "fieldBorderColor": "#ed8820",
+                    "fieldBorderThickness": "2",
+                    "fieldBorderInvalidThickness": "2",
+                    "fieldBorderRadius": "5",
+                    "fieldBorderInvalidRadius": "5",
+                    "elements": [
+                        {
+                            "id": "realSubmitButton",
+                            "width": "83px",
+                            "height": "35px",
+                            "left": "278px",
+                            "top": "95px",
+                            "click": {
+                                "dite": {
+                                    "screenName": "contactInformation",
+                                    "eventName": "clickSubmit"
+                                }
+                            }
+                        }
+                    ],
+                    "fields": [
+                        [
+                            {
+                                "preset": "firstName"
+                            },
+                            {
+                                "preset": "email"
+                            },
+                            {
+                                "preset": "emailOptIn",
+                                "placeholder": " "
+                            }
+                        ],
+                        [
+                            {
+                                "preset": "lastName"
+                            },
+                            {
+                                "preset": "zipUS"
+                            },
+                            {
+                                "preset": "rowSpacer"
+                            }
+                        ]
+                    ]
+                },
+                "thankyou_headline": {
+                    "height": "60px",
+                    "textFormatting": {
+                        "align": "center"
+                    },
+                    "fontColor": "0xFFFFFF",
+                    "fontSize": "18"
+                },
+                "thankyou_message": {
+                    "top": "44px",
+                    "width": "378px",
+                    "height": "60px",
+                    "left": "10px",
+                    "fontSize": "14px",
+                    "fontColor": "0xFFFFFF",
+                    "linkColor": "#2b73c6",
+                    "linkUnderline": true,
+                    "textFormatting": {
+                        "align": "center",
+                        "selectable": true
+                    }
+                },
+                "thankyou_sharetext": {
+                    "top": "89px",
+                    "fontSize": "14px",
+                    "height": "50px",
+                    "fontColor": "0xFFFFFF",
+                    "textFormatting": {
+                        "align": "center",
+                        "bold": true
+                    }
+                },
+                "share_box": {
+                    "left": "72px",
+                    "top": "139px",
+                    "width": "300px",
+                    "height": "75px"
+                },
+                "facebook_share": {
+                    "width": "40px",
+                    "height": "40px",
+                    "backgroundImage": "{{flash_fb_img}}"
+                },
+                "twitter_share": {
+                    "left": "74px",
+                    "width": "40px",
+                    "height": "40px",
+                    "backgroundImage": "{{flash_tw_img}}",
+                    "click": {
+                        "share": {
+                            "network": "twitter",
+                            "url": "{{share_url}}"
+                        },
+                        "args": {
+                            "pubid": "moontoast",
+                            "shortener": "bitly",
+                            "text": "You could win 1 of 3 new Nissans in Nissan's Keep Summer Rolling Service Sweepstakes%C2%AE!"
+                        },
+                        "dite": {
+                            "screenName": "thankYou",
+                            "eventName": "twitter"
+                        }
+                    }
+                },
+                "googleplus_share": {
+                    "left": "145px",
+                    "width": "40px",
+                    "height": "40px",
+                    "backgroundImage": "{{flash_gplus_img}}"
+                },
+                "pinterest_share": {
+                    "left": "218px",
+                    "width": "40px",
+                    "height": "40px",
+                    "backgroundImage": "{{flash_pinterest_img}}"
+                },
+                "share_popup": {
+                    "left": "275px",
+                    "width": "120px",
+                    "top": "44px",
+                    "height": "25%"
+                },
+                "share_popup_widget": {
+                    "networks": [
+                        {
+                            "network": "facebook",
+                            "url": "{{share_url}}"
+                        },
+                        {
+                            "network": "twitter",
+                            "url": "{{share_url}}",
+                            "args": {
+                                "shortener": "bitly",
+                                "pubid": "moontoast",
+                                "text": "You could win 1 of 3 new Nissans in Nissan's Keep Summer Rolling Service Sweepstakes%C2%AE!"
+                            }
+                        },
+                        {
+                            "networks": [
+                                "google+",
+                                "pinterest"
+                            ],
+                            "url": "{{share_url}}"
+                        }
+                    ]
+                },
+                "share_popup_background": {
+                    "backgroundImage": "{{share_background_image}}",
+                    "noScaleBackground": true
+                },
+                "opt_in_text": {
+                    "content": "{{opt_text}}",
+                    "fontSize": "12px",
+                    "fontColor": "#FFFFFF",
+                    "left": "41px",
+                    "top": "120px",
+                    "width": "398px",
+                    "height": "22px"
+                }
+            }
+        }
+    ],
+    "templateParams": {
+        "previewImageUrl": "http://apps.moontoast.com.s3.amazonaws.com/nissan/video_leadgen/nissan_shareimage.jpg",
+        "share_url": "{{odpBaseUrl}}/{{id}}",
+        "share_color": "#fff",
+        "share_img": "https://s3.amazonaws.com/apps.moontoast.com/nissan/video-referral/icon_share.png",
+        "share_background_image": "http://apps.moontoast.com.s3.amazonaws.com/equinot/html/assets/share_back_bkg_right.png",
+        "share_with_friends": false,
+        "sweeps_background": "http://apps.moontoast.com.s3.amazonaws.com/nissan/video_leadgen/sweeps_is_back.png",
+        "default_form_on": true,
+        "default_form_off": false,
+        "form_background": "http://apps.moontoast.com.s3.amazonaws.com/nissan/video_leadgen/background_nissan.jpg",
+        "logo_link": "http://moontoast.com?logo=1",
+        "logo_img": "http://s3.amazonaws.com/apps.moontoast.com/nissan/video-referral/Header_logo.png",
+        "poster_image": "{{odpBaseUrl}}/nissan/video_leadgen/flash/posterImage.jpg",
+        "video_id": "ew3sA9lR994",
+        "video_autoplay": true,
+        "show_video_controls": true,
+        "display_poster": true,
+        "display_thankyou": false,
+        "playback_automatically": false,
+        "footer_background": "#d92027",
+        "footer_text": "Powered by Moontoast",
+        "thankyou_popup": "https://s3.amazonaws.com/apps.moontoast.com/equinot/thankyouScreen.png",
+        "thankyou_headline": "Thanks for Your Submission!",
+        "thankyou_video_message": "",
+        "show_social_networks": "",
+        "header_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/header.png",
+        "terms_link": "http://moontoast.com?terms=1",
+        "privacy_link": "http://moontoast.com?privacy=1",
+        "form_bg_color": "#fff",
+        "opt_text": "Send me Sweeps email reminders and future communications.",
+        "form_headline_text": "DON'T MISS A MINUTE OF SWEEPS! SIGN UP FOR MORE INFO TODAY.",
+        "fb_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_facebook.png",
+        "tw_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_twitter.png",
+        "gplus_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_googleplus.png",
+        "pinterest_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_pinterest.png",
+        "stylesheetUrl": "//offer.moontoast.com/nissan/video_leadgen/nissan-vidgen.css",
+        "title_of_app": "Video Referral Template",
+        "embed_background": "#cccccc",
+        "catalogId": "733",
+        "flash_header_image": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flashHeaderBanner.png",
+        "flash_logo_image": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flashLogoImage2.png",
+        "flash_share_image": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flashShareImage.png",
+        "flash_form_background": "{{odpBaseUrl}}/nissan/video_leadgen/flash/formBackground.png",
+        "flash_fb_img": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flash_facebook.png",
+        "flash_tw_img": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flash_tw.png",
+        "flash_gplus_img": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flash_gplus.png",
+        "flash_pinterest_img": "{{odpBaseUrl}}/nissan/video_leadgen/flash/flash_pinterest.png",
+        "appDiteName": "videoLeadGen"
+    },
+    "thumbnail": null,
+    "txnBaseUrl": "https://qa.moontoast.net",
+    "updatedDate": "Fri, 23 Aug 2013 18:08:49 +0000"
+}
