@@ -61,7 +61,7 @@ if(window.location.search.indexOf('flash=true') !== -1){
 }
 
 app.config.isMobile = isMobile;
-console.dir(app);
+
   // Event Listener to load new widgets
   $('body').bind('render-widget', function (event, obj) {
     var widgetUrl = 'widgets/' + obj.template.widget + '-widget';
@@ -75,7 +75,7 @@ console.dir(app);
       ], function (Widget) {
 
         // Create the widget
-        var widget = new Widget({
+        window.widget = new Widget({
           app: app,
           el: obj.$el
         });
