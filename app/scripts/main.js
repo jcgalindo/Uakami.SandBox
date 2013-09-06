@@ -7,7 +7,7 @@ require([
   'jquery',
   'lodash',
   'backbone',
-  'text!styles/index.css',
+  'text!styles/index.css'
 
 ],
 
@@ -38,8 +38,7 @@ function($, _, Backbone, css) {
         }
         return Params;
 
-    }
-    (window.location.search.replace('?', '').replace('?', '')))
+    }(window.location.search.replace('?', '').replace('?', '')))
 
   }, Backbone.Events);
 
@@ -62,7 +61,7 @@ if(window.location.search.indexOf('flash=true') !== -1){
 }
 
 app.config.isMobile = isMobile;
-
+console.dir(app);
   // Event Listener to load new widgets
   $('body').bind('render-widget', function (event, obj) {
     var widgetUrl = 'widgets/' + obj.template.widget + '-widget';
