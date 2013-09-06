@@ -1,0 +1,183 @@
+
+.mtt-form-col input[type=text] {
+    float: left;
+    margin-bottom: 5px !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto !important;
+    padding: 5px;
+    border: 1px solid #000;
+    font-size: 0.9em;
+}
+
+#logo_header {
+    top: 0;
+    left: 0;
+    z-index: 5000 !important;
+    background-size: 100% !important;
+}
+
+#link_fb, #link_tw, #link_chevy, #link_gp {
+    z-index: 9999 !important;
+}
+
+#birthDay{
+    margin: 0 0 30px 5% !important;
+    width: 10% !important;
+}
+
+#birthMonth{
+     margin: 0 0 30px 5% !important;
+    width: 10% !important;
+}
+
+#birthYear{
+     width: 16% !important;
+    margin: 0 0 30px 5% !important;
+}
+
+#birthDay.android{
+    margin: 77px 0 30px 5% !important;
+    width: 21% !important;
+}
+
+#birthMonth.android{
+    margin: 77px 0 30px 5% !important;
+    width: 21% !important;
+}
+
+#birthYear.android{
+    width: 38% !important;
+    margin: 77px 0 30px 5% !important;
+}
+
+#birthdayText{
+    position: absolute !important;
+    top: 65px !important;
+    left: 52%;
+    width: auto !important;
+}
+
+#birthdayTextReq{
+    position: absolute !important;
+    font-size: .5em !important;
+    left: 52%;
+    top: 95px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+
+#firstName, #lastName, #email{
+    margin-bottom: 15px !important;
+}
+
+#form_container{
+    background: url('http://moontoast-assets-live.s3.amazonaws.com/chevrolet/spark/form_bkg.png') !important;
+    background-size: 100% 100% !important;
+    }
+
+#form_widget{
+    height: 45% !important;
+    top: 55% !important;
+}
+
+#form_widget_submit{
+    height: auto !important;
+    bottom: 18% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url('http://moontoast-assets-live.s3.amazonaws.com/chevrolet/spark/submit.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+#link_learn_more{
+    top: 920px !important;
+    height: 10% !important;
+}
+
+.percentage-text{
+    top: 140px !important;
+}
+
+.android-percentage-text{
+    top: 65px !important;
+}
+
+.android-tablet-percentage-text{
+    top: 90px !important;
+}
+
+.form-submit{
+    bottom: 45px !important;
+}
+
+.android-submit{
+    bottom: 45px !important;
+}
+
+.percentage-bar{
+    display: none;
+}
+
+.question-answers{
+    line-height: 1;
+}
+
+#rules_link{
+    color: #0305d4 !important;
+    text-align: right !important;
+    text-decoration: underline;
+    text-transform: uppercase;
+    width: 25% !important;
+}
+
+#privacy_link{
+    color: #0305d4 !important;
+    text-align: right !important;
+    text-transform: uppercase;
+    text-decoration: underline;
+    width: 25% !important;
+}
+
+#video_screen{
+    top: 1% !important;
+}
+
+#header{
+    height: 6.5% !important;
+}
+
+.details{
+    background-size: cover !important;
+}
+
+.android-details{
+    background-size: 100% 100% !important;
+}
+
+.android-link{
+    font-size: 7px !important;
+    bottom: 11% !important;
+}
+
+.android-tablet-link{
+    font-size: 7px !important;
+    bottom: 6% !important;
+}
+
+.android-ty{
+    background-size: 100% 100% !important;
+}
+
+@media screen and (max-device-width: 480px){
+    .details{
+        background-size: 100% 100% !important;
+    }
+}
+#quiz_widget .moontemplate :only-child{
+    height: 100%;
+    }

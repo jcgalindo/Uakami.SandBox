@@ -1,0 +1,443 @@
+{
+    "@id": "757d6650-d53d-11e2-8b8b-0800200c9a66",
+    "appId": "cbcc2050-d53d-11e2-8b8b-0800200c9a66",
+    "accountId": null,
+    "createdDate": "Fri, 14 Jun 2013 22:28:26 +0000",
+    "deleted": null,
+    "description": "Equinot",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif?",
+    "embedCode": null,
+    "embedCodeData": [
+
+    ],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Equinot",
+    "pageTemplate": null,
+    "pageTemplateParams": [
+
+    ],
+    "piCatalog": [
+
+    ],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "video_app",
+        "width": "398px",
+        "height": "460px",
+        "backgroundColor": "#000000",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "app_contents",
+                "elements": [
+                    {
+                        "id": "preloader",
+                        "widget": {
+                            "widget": "preloader",
+                            "options": {
+                                "preloadUrls": [
+                                    "{{thankyou_popup}}",
+                                    "{{form_background}}"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "header",
+                        "height": "42px",
+                        "backgroundImage": "{{header_image}}",
+                        "elements": [
+                            {
+                                "id": "logo",
+                                "width": "300px",
+                                "click": {
+                                    "link": "{{logo_link}}",
+                                    "dite": {
+                                        "eventName": "clickLogo"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "share_button",
+                                "left": "298px",
+                                "width": "100px",
+                                "click": {
+                                    "toggle": [
+                                        "share_popup"
+                                    ],
+                                    "dite": {
+                                        "eventType": "shareThisHeader",
+                                        "eventName": "shareThisHeader"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main_screen",
+                        "top": "42px",
+                        "height": "418px",
+                        "elements": [
+                            {
+                                "id": "video_mode",
+                                "elements": [
+                                    {
+                                        "id": "video_hotspot",
+                                        "visible": false,
+                                        "backgroundImage": "{{poster_image}}",
+                                        "height": "224px",
+                                        "click": {
+                                            "fadeIn": [
+                                                "video_player"
+                                            ],
+                                            "fadeOut": [
+                                                "video_hotspot"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "video_player",
+                                        "height": "224px",
+                                        "width": "398px",
+                                        "widget": {
+                                            "widget": "toastedRain",
+                                            "location": "http://moontoast-assets-dev.s3.amazonaws.com/jonathan/widgets/",
+                                            "options": {
+                                                "id": "toastedRain",
+                                                "autoPlay": false
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main_creative",
+                        "top": "266px",
+                        "height": "194px",
+                        "backgroundImage": "{{main_creative_image}}",
+                        "elements": [
+                            {
+                                "id": "bottom_links",
+                                "elements": [
+
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "form_window",
+                "visible": "{{default_form_on}}",
+                "top": "266px",
+                "height": "194px",
+                "dite": {
+                    "eventType": "contactInformation",
+                    "screenName": "contactInformation"
+                },
+                "backgroundImage": "{{form_background}}",
+                "elements": [
+                    {
+                        "id": "form_close",
+                        "visible": "{{default_form_off}}",
+                        "left": "363px",
+                        "width": "35px",
+                        "height": "35px",
+                        "click": {
+                            "fadeOut": [
+                                "form_window"
+                            ],
+                            "dite": {
+                                "screenName": "contactInformation",
+                                "eventName": "close"
+                            }
+                        }
+                    },
+                    {
+                        "id": "form_container",
+                        "left": "2px",
+                        "top": "50px",
+                        "widget": {
+                            "widget": "simpleForm",
+                            "desktopWidget": {
+                                "widgetName": "simpleForm",
+                                "widgetClass": "com.moontoast.form.view.mediator.SimpleFormMediator",
+                                "widgetLocation": "SimpleForm.swf"
+                            },
+                            "options": {
+                                "left": "35px",
+                                "fontColor": "{{form_text_color}}",
+                                "optText": "{{form_text_color}}",
+                                "formWidth": "310px",
+                                "dite": {
+                                    "screenName": "contactInformation"
+                                },
+                                "afterSubmit": {
+                                    "fadeOut": [
+                                        "form_window"
+                                    ],
+                                    "fadeIn": [
+                                        "thankyou_screen"
+                                    ],
+                                    "dite": {
+                                        "screenName": "thankYou",
+                                        "eventName": "conversionreferral"
+                                    }
+                                },
+                                "submitButton": {
+                                    "width": "111px",
+                                    "height": "25px",
+                                    "left": "240px",
+                                    "top": "108px",
+                                    "click": [
+
+                                    ]
+                                },
+                                "elements": [
+                                    {
+                                        "id": "first_name",
+                                        "name": "first_name",
+                                        "position": "absolute",
+                                        "width": "45%",
+                                        "height": "22px",
+                                        "top": "10px",
+                                        "type": "text",
+                                        "placeholder": "First Name",
+                                        "validate": [{
+                                            "type": "required",
+                                            "message": "First Name is required"
+                                        }]
+                                    },
+                                    {
+                                        "id": "last_name",
+                                        "position": "absolute",
+                                        "name": "last_name",
+                                        "width": "45%",
+                                        "top": "10px",
+                                        "type": "text",
+                                        "placeholder": "Last Name",
+                                        "validate": [{
+                                            "type": "required",
+                                            "message": "Last Name is required"
+                                        }]
+                                    },
+                                    {
+                                        "id": "email",
+                                        "width": "45%",
+                                        "name": "email",
+                                        "type": "text",
+                                        "placeholder": "Email Address",
+                                        "validate": [{
+                                            "type": "required",
+                                            "message": "Email Address is required"
+                                        },
+                                        {
+                                            "type": "email",
+                                            "message": "Please enter a valid email address."
+                                        }]
+                                    },
+                                    {
+                                        "id": "zip",
+                                        "name": "zip_code",
+                                        "width": "45%",
+                                        "type": "text",
+                                        "placeholder": "Zip Code",
+                                        "validate": [{
+                                            "type": "required",
+                                            "message": "Zip Code is required"
+                                        }]
+                                    },
+                                    {
+                                        "type": "check",
+                                        "name": "optin",
+                                        "fontSize": "12px",
+                                        "textAlign": "center",
+                                        "list": [
+                                            "Yes, I want to receive emails"
+                                        ]
+                                    },
+                                    {
+                                        "type": "submit",
+                                        "value": " ",
+                                        "width": "108px",
+                                        "height": "30px",
+                                        "position": "absolute",
+                                        "top": "105px",
+                                        "left": "274px",
+                                        "name": "colors",
+                                        "fontColor": "#FFFFFF"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "privacy_link",
+                        "left": "92px",
+                        "top": "173px",
+                        "width": "56px",
+                        "height": "13px",
+                        "click": {
+                            "link": "{{privacy_link}}",
+                            "dite": {
+                                "screenName": "contactInformation",
+                                "eventName": "clickPrivacyPolicy"
+                            }
+                        }
+                    },
+                    {
+                        "id": "terms_link",
+                        "left": "14px",
+                        "top": "173px",
+                        "width": "75px",
+                        "height": "13px",
+                        "click": {
+                            "link": "{{terms_link}}",
+                            "dite": {
+                                "screenName": "contactInformation",
+                                "eventName": "clickTerms"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "thankyou_screen",
+                "backgroundImage": "{{thankyou_popup}}",
+                "visible": false,
+                "top": "266px",
+                "height": "194px",
+                "dite": {
+                    "eventType": "thankYou",
+                    "screenName": "thankYou"
+                },
+                "elements": [
+                    {
+                        "id": "thankyou_close",
+                        "left": "363px",
+                        "width": "35px",
+                        "height": "35px",
+                        "click": {
+                            "fadeOut": [
+                                "thankyou_screen"
+                            ]
+                        }
+                    },
+                    {
+                        "id": "facebook_share",
+                        "left": "148px",
+                        "top": "139px",
+                        "width": "52px",
+                        "height": "43px",
+                        "backgroundColor": "0xFF",
+                        "click": {
+                            "share": {
+                                "network": "facebook",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "thankYou",
+                                "eventName": "facebook"
+                            }
+                        }
+                    },
+                    {
+                        "id": "twitter_share",
+                        "left": "205px",
+                        "top": "139px",
+                        "width": "52px",
+                        "height": "43px",
+                        "backgroundColor": "0xFF",
+                        "click": {
+                            "share": {
+                                "network": "twitter",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "thankYou",
+                                "eventName": "twitter"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "share_popup",
+                "visible": false,
+                "width": "125px",
+                "height": "115px",
+                "left": "273px",
+                "top": "40px",
+                "mouseOut": {
+                    "fadeOut": "share_popup"
+                },
+                "click": [
+
+                ],
+                "elements": [
+                    {
+                        "id": "share_popup_background",
+                        "height": "189px",
+                        "top": "0px",
+                        "paddingTop": "15px",
+                        "paddingLeft": "5px",
+                        "backgroundImage": "{{share_background_image}}",
+                        "widget": {
+                            "widget": "share",
+                            "options": {
+                                "id": "share_popup_widget",
+                                "networks": [
+                                    {
+                                        "networks": [
+                                            "facebook",
+                                            "twitter",
+                                            "googleplus",
+                                            "pinterest"
+                                        ],
+                                        "url": "{{share_url}}"
+                                    }
+                                ],
+                                "dite": {
+                                    "screenName": "share"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "templateParams": {
+        "share_url": "{{rootUrl}}estore/embed/{{catalogId}}",
+        "share_background_image": "http://apps.moontoast.com.s3.amazonaws.com/equinot/html/assets/share_back_bkg_right.png",
+        "default_form_on": true,
+        "default_form_off": false,
+        "logo_link": "http://moontoast.com?logo=1",
+        "poster_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/posterImage.png",
+        "video_id": "SS4t3cB1kQk",
+        "show_video_controls": true,
+        "main_creative_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/formBackground.png",
+        "form_background": "https://s3.amazonaws.com/apps.moontoast.com/equinot/formBackground.png",
+        "form_text_color": "#000000",
+        "thankyou_popup": "https://s3.amazonaws.com/apps.moontoast.com/equinot/thankyouScreen.png",
+        "header_image": "https://s3.amazonaws.com/apps.moontoast.com/equinot/header.png",
+        "terms_link": "http://moontoast.com?terms=1",
+        "privacy_link": "http://moontoast.com?privacy=1"
+    },
+    "thumbnail": null,
+    "updatedDate": null,
+    "@resourceType": "offer",
+    "_links": {
+        "self": {
+            "href": "/offers/757d6650-d53d-11e2-8b8b-0800200c9a66"
+        },
+        "collection": {
+            "href": "/offers"
+        }
+    }
+}

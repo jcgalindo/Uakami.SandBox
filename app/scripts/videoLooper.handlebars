@@ -1,0 +1,17 @@
+<div id="video_{{rootId}}_outer" style="width: {{width}}; height: {{height}}; top: {{top}}; left: {{left}}; position: relative;">
+    <video id="video_{{rootId}}" class="video-js vjs-default-skin" controls preload="auto" width="{{width}}" height="{{height}}" poster="{{posterImage}}" data-setup="{}">
+    
+        {{#videoUrl.ogg}}
+            <source src="{{this}}" type="video/ogg" />
+        {{/videoUrl.ogg}}
+
+        {{#videoUrl.mp4}}
+            <source src="{{this}}" type="video/mp4" />
+        {{/videoUrl.mp4}}
+
+        {{#videoUrl.webm}}
+            <source src="{{this}}" type="video/webm" />
+        {{/videoUrl.webm}}
+
+    </video>
+</div>

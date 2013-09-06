@@ -1,0 +1,10 @@
+<!-- http://www.foo.com/crossdomain.xml --> 
+<cross-domain-policy>
+	<allow-access-from domain="*.s3.amazonaws.com"/>
+        <allow-access-from domain="*.facebook.com"/>
+	<allow-access-from domain="*.moontoast.com"/>
+        <allow-access-from domain="*.moontoast.net"/>
+	<allow-access-from domain="moontoast-assets-live.s3.amazonaws.com"/>
+	<allow-access-from domain="moontoast-assets-dev.s3.amazonaws.com"/>
+	<allow-access-from domain="moontoast-assets-uat7.s3.amazonaws.com"/>
+</cross-domain-policy>

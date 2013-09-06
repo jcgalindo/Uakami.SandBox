@@ -1,0 +1,386 @@
+{
+    "@id": "9423352a-05bd-11e3-ad89-22000a1d97ef",
+    "appId": "33338018-f608-11e2-b778-22000a9a92ba",
+    "appContainerMaxVersion": null,
+    "accountId": null,
+    "createdDate": "Thu, 15 Aug 2013 15:15:54 +0000",
+    "data": null,
+    "deleted": null,
+    "description": "You can be one of the very first to see Nissan’s all-new crossover. Click here to find out how!",
+    "diteEndpoint": "http://analytics.moontoast.com/track-qa.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "endDate": null,
+    "env": "qa",
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Introducing the All-New Nissan _______!",
+    "odpBaseUrl": "https://offer-qa.moontoast.com",
+    "pageTemplate": "{% block swfEmbed %}\n        <div id=\"movie\">\n            <object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"{{swfWidth}}\" height=\"{{swfHeight}}\" id=\"embeddedstore\">\n            <param name=\"movie\" value=\"{{swfUrl}}?offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=46ed2174-05ba-11e3-a422-22000a1d97ef&rootUrl={{rootUrl}}\" />\n            <param name=\"quality\" value=\"high\" />\n            <param name=\"bgcolor\" value=\"{{swfBackgroundColor}}\" />\n            <param name=\"allowScriptAccess\" value=\"always\" />\n            <param name=\"allowFullScreen\" value=\"true\" />\n            <param name=\"flashVars\" value=\"offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=46ed2174-05ba-11e3-a422-22000a1d97ef&rootUrl={{rootUrl}}\" />\n            <!--[if !IE]>-->\n            <object type=\"application/x-shockwave-flash\" data=\"{{swfUrl}}?offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=46ed2174-05ba-11e3-a422-22000a1d97ef&rootUrl=\" width=\"{{swfWidth}}\" height=\"{{swfHeight}}\"> \n            <param name=\"quality\" value=\"high\" />\n            <param name=\"bgcolor\" value=\"{{swfBackgroundColor}}\" />\n            <param name=\"allowScriptAccess\" value=\"always\" />\n            <param name=\"allowFullScreen\" value=\"true\" />\n            <param name=\"flashVars\" value=\"offerEndpoint={{endPoint}}&catalogId={{catalogId}}&offerId=46ed2174-05ba-11e3-a422-22000a1d97ef&rootUrl={{rootUrl}}&channel={{channel}}\" />\n            <!--<![endif]-->\n\n            <!--[if !IE]>-->\n            </object>\n            <!--<![endif]-->\n            </object>\n\n        </div>\n{% endblock %}",
+    "pageTemplateParams": {
+        "html5Url": "https://moontoast-assets-uakami.s3.amazonaws.com/nissan/App",
+        "swfEmbedUrl": "{{odpBaseUrl}}/container-qa/1.1.0-dev/flash/AppContainer.swf?offerEndpoint=http://api-qa.moontoast.com/offers/46ed2174-05ba-11e3-a422-22000a1d97ef&offerId="
+    },
+    "piCatalog": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "video_app",
+        "width": "100%",
+        "height": "100%",
+        "backgroundColor": "#000000",
+        "overflow": "scroll",
+        "dite": {
+            "eventType": "",
+            "eventName": ""
+        },
+        "elements": [
+            {
+                "id": "preloader",
+                "widget": {
+                    "widget": "preloader",
+                    "options": {
+                        "preloadUrls": [
+                            "{{header_img}}",
+                            "{{start_img}}"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "header",
+                "height": "7.7%",
+                "backgroundColor": "#ffffff",
+                "elements": [
+                    {
+                        "id": "logo_header",
+                        "backgroundRepeat": "no-repeat",
+                        "width": "100%"
+                    },
+                    {
+                        "id": "nissan",
+                        "left": "2%",
+                        "top": "5%",
+                        "width": "63.82%",
+                        "height": "90%",
+                        "click": {
+                            "link": "{{nissan_url}}",
+                            "dite": {
+                                "screenName": "default",
+                                "eventName": "clickLogo"
+                            }
+                        }
+                    },
+                    {
+                        "id": "share_button",
+                        "width": "7%",
+                        "height": "90%",
+                        "right": "0",
+                        "click": {
+                            "toggle": [
+                                "share_popup"
+                            ],
+                            "dite": {
+                                "screenName": "share",
+                                "eventName": "shareThisHeader"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "get_started",
+                "height": "100%",
+                "elements": [
+                    {
+                        "id": "link1",
+                        "left": "28%",
+                        "width": "45%",
+                        "height": "9%",
+                        "click": {
+                            "fadeOut": [
+                                "get_started"
+                            ],
+                            "fadeIn": [
+                                "form_container"
+                            ],
+                            "dite": {
+                                "screenName": "",
+                                "eventName": "clickStartApp"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "form_container",
+                "visible": false,
+                "width": "100%",
+                "height": "95.3%",
+                "dite": {
+                    "screenName": "",
+                    "eventName": "contactInformation"
+                },
+                "elements": [
+                    {
+                        "id": "form_widget",
+                        "top": "41%",
+                        "height": "100%",
+                        "widget": {
+                            "widget": "simpleForm",
+                            "options": {
+                                "submit": {
+                                    "url": "{{form_submit}}",
+                                    "method": "GET"
+                                },
+                                "afterSubmit": {
+                                    "fadeOut": [
+                                        "form_container"
+                                    ],
+                                    "fadeIn": [
+                                        "thankyou_screen"
+                                    ],
+                                    "dite": {
+                                        "screenName": "",
+                                        "eventName": "thankYou"
+                                    }
+                                },
+                                "elements": [
+                                    {
+                                        "id": "form_widget_submit",
+                                        "type": "submit",
+                                        "value": "",
+                                        "width": "44%",
+                                        "height": "10%",
+                                        "position": "absolute",
+                                        "left": "28%",
+                                        "name": "colors",
+                                        "click": {
+                                            "dite": {
+                                                "screenName": "contactInformation",
+                                                "eventName": "clickSubmit"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "fields": [
+                                    [
+                                        {
+                                            "preset": "firstName",
+                                            "width": "90%",
+                                            "placeholder": " ",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "First Name is required"
+                                                }
+                                            ],
+                                            "click": {
+                                                "dite": {
+                                                    "screenName": "contactInformation",
+                                                    "eventName": "fieldFirstName"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "preset": "lastName",
+                                            "width": "90%",
+                                            "placeholder": " ",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "Last Name is required"
+                                                }
+                                            ],
+                                            "click": {
+                                                "dite": {
+                                                    "screenName": "contactInformation",
+                                                    "eventName": "fieldLastName"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "preset": "email",
+                                            "width": "90%",
+                                            "name": "email",
+                                            "placeholder": " ",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "Email Address is required"
+                                                },
+                                                {
+                                                    "type": "email",
+                                                    "message": "Please enter a valid email addresssss."
+                                                }
+                                            ],
+                                            "click": {
+                                                "dite": {
+                                                    "screenName": "contactInformation",
+                                                    "eventName": "fieldEmail"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "preset": "zipUS",
+                                            "width": "90%",
+                                            "placeholder": " ",
+                                            "validate": [
+                                                {
+                                                    "type": "required",
+                                                    "message": "Zip Code is required"
+                                                }
+                                            ],
+                                            "click": {
+                                                "dite": {
+                                                    "screenName": "contactInformation",
+                                                    "eventName": "fieldZip"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "preset": "emailOptIn",
+                                            "value": true,
+                                            "placeholder": "",
+                                            "position": "relative",
+                                            "marginLeft": "2%",
+                                            "click": {
+                                                "dite": {
+                                                    "screenName": "contactInformation",
+                                                    "eventName": "fieldJoinMailingList"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "thankyou_screen",
+                "visible": false,
+                "width": "100%",
+                "height": "95.3%",
+                "dite": {
+                    "screenName": "thankYou",
+                    "eventName": "conversionReferral"
+                },
+                "elements": [
+                    {
+                        "id": "link_fb_thanks",
+                        "left": "46%",
+                        "click": {
+                            "share": {
+                                "network": "facebook",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "",
+                                "eventName": "thankYou/facebook"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_tw_thanks",
+                        "left": "35%",
+                        "click": {
+                            "share": {
+                                "network": "twitter",
+                                "url": "offer-qa.moontoast.com/9423352a-05bd-11e3-ad89-22000a1d97ef&title=I just signed up to be one of the first to see @NissanUSA's all-new crossover. Make sure you're in the know, too: &shortener=bitly&pubid=moontoast"
+                            },
+                            "dite": {
+                                "screenName": "",
+                                "eventName": "thankYou/twitter"
+                            }
+                        }
+                    },
+                    {
+                        "id": "link_gp_thanks",
+                        "left": "57%",
+                        "click": {
+                            "share": {
+                                "network": "googleplus",
+                                "url": "{{share_url}}"
+                            },
+                            "dite": {
+                                "screenName": "",
+                                "eventName": "thankYou/googlePlus"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "share_popup",
+                "visible": false,
+                "width": "185px",
+                "height": "180px",
+                "right": "13px",
+                "forceLeft": "266px",
+                "mouseOut": {
+                    "fadeOut": "share_popup"
+                },
+                "click": [],
+                "elements": [
+                    {
+                        "id": "share_popup_background",
+                        "position": "relative",
+                        "backgroundImage": "{{share_background_image}}",
+                        "noScaleBackground": true,
+                        "widget": {
+                            "widget": "share",
+                            "options": {
+                                "id": "share_popup_widget",
+                                "position": "relative",
+                                "networks": [
+                                    {
+                                        "network": "facebook",
+                                        "url": "{{share_url}}"
+                                    },
+                                    {
+                                        "network": "twitter",
+                                        "url": "offer-qa.moontoast.com/9423352a-05bd-11e3-ad89-22000a1d97ef&title=I just signed up to be one of the first to see @NissanUSA's all-new crossover. Make sure you're in the know, too: &shortener=bitly&pubid=moontoast"
+                                    },
+                                    {
+                                        "networks": [
+                                            "google+"
+                                        ],
+                                        "args": {
+                                            "shortener": "bitly",
+                                            "pubid": "moontoast"
+                                        },
+                                        "url": "{{share_url}}"
+                                    }
+                                ],
+                                "dite": {
+                                    "screenName": "share"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "templateOverrides": null,
+    "templateParams": {
+        "share_url": "{{odpBaseUrl}}/{{id}}",
+        "form_submit": "https://qa.moontoast.net/api/rpc?methodName=saveData",
+        "share_background_image": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/share_back_bkg_right.png",
+        "previewImageUrl": "http://apps.moontoast.com/nissan/reveal/nissan-reveal-share-image.jpg",
+        "header_img": "https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/header.png",
+        "start_img": "https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/main.png",
+        "final_img": "https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/thankyou.png",
+        "nissan_url": "http://www.nissanusa.com",
+        "catalogId": "727",
+        "sweepstakes-bg": "https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/form.png",
+        "appDiteName": "customnissanreveal",
+        "stylesheetUrl": "https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/nissan.css"
+    },
+    "thumbnail": null,
+    "txnBaseUrl": "https://www.qa.moontoast.net",
+    "updatedDate": "Wed, 21 Aug 2013 19:17:36 +0000"
+}

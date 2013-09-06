@@ -1,0 +1,23 @@
+<ul id="top_leaders">
+    {{#topLeaders}}
+        <li class="leader">
+            <div class="leader_image">
+                <div class="rank">{{this.rank}}</div>
+                <div class="leader_thumb" style="background-image:url({{this.image}});"></div>
+            </div>
+            <div class="leader_description">
+                <b>{{this.name}}</b>
+                {{this.title}}
+            </div>
+        </li>
+    {{/topLeaders}}
+</ul>
+<ul id="sub_leaders">
+    {{#subLeaders}}
+    <li class="sub_leader">
+        <b>{{this.name}}</b>
+        {{this.title}}
+        <div class="progress_bar" style="width:{{this.progress}}%; background-color: {{this.color}}"></div>
+    </li>
+    {{/subLeaders}}
+</ul>

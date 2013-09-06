@@ -1,0 +1,46 @@
+{
+    "template": {
+        "id": "video_app",
+        "width":"398px",
+        "height":"460px",
+        "backgroundColor":"#000000",
+        "elements": [{
+            "id": "preloader",
+            "widget": {
+                "widget": "preloader",
+                "options": {
+                    "id": "my_preloader",
+                    "backgroundColor": "red",
+                    "backgroundImage": "http://3.bp.blogspot.com/-S17qVH-xBoY/TzP4w3BxNkI/AAAAAAAABvk/yFkVL37ncAw/s1600/funny+squirrels+with+guns+(2).jpg",
+                    "elements": ["content2"],
+                    "requireClick": false,
+                    "transition": "slideInLeft",
+                    "preloadUrls": [
+                        "http://www.wallpaperswala.com/wp-content/gallery/squirrel-wallpaper/squirrel2131234.jpg",
+                        "http://ntnaturephotos.files.wordpress.com/2011/04/red_squirrel_in_snow.jpg"
+                    ],
+                    "elementsOnFinish": ["content"],
+                    "networks": ["facebook", "twitter"]
+                }
+            }
+        }, {
+            "id": "content",
+            "content": "Loaded!",
+            "color": "yellow",
+            "backgroundImage": "http://www.eclectech.co.uk/b3ta/gardensquirrelhandbag-wallpaper.jpg"
+        }, {
+            "id": "content2",
+            "elements": [{
+                "id": "content3",
+                "content": "hello",
+                "left": "200px",
+                "backgroundImage": "http://fc03.deviantart.net/fs45/f/2009/090/2/2/Squirrel_Pose_by_FantasticFennec.png"
+            }, {
+                "id": "content4",
+                "content": "world",
+                "left": "300px",
+                "backgroundImage": "http://www.wallpaperswala.com/wp-content/gallery/squirrel-wallpaper/squirrel3456.jpg"
+            }]
+        }]
+    }
+}

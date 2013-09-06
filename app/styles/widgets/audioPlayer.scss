@@ -1,0 +1,99 @@
+.audio_widget {
+    
+    .cover_image {
+        position: absolute;
+        left: 2%;
+        top: 20px;
+        width: 13%;
+    }
+
+    .title {
+        position: absolute;
+        left: 17%;
+        top: 25px;
+    }
+
+    .play_pause {
+        cursor: pointer;
+        left: 17%;
+        position: absolute;
+        top: 50px;
+        width: 5%;
+    }
+
+    .slider {
+        width: 55%;
+        height: 12px;
+        background: #999;
+        left: 23%;
+        top: 55px;
+        position: absolute;
+    }
+
+    .slider_inner {
+        height: 100%;
+        width: 0%;
+        position: relative;
+        background: #000000;
+    }
+
+    .volume_icon {
+        left: 80%;
+        position: absolute;
+        top: 60px;
+        width: 1.5%;
+    }
+
+    .volume_levels {
+
+        position: absolute;
+        margin-top: 30px;
+        left: 84%;
+        width: 17%;
+        height: 40px;
+
+        .volume_levels_inner {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .volume_level {
+            width: 8%;
+            height: 100%;
+            background: #999;
+            position: relative;
+            margin-left: 3%;
+            margin-top: 0px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .volume_level.on {
+            background: #000;
+        }
+
+        .volume_level_1 {
+            margin-top: 37px;
+        }
+
+        .volume_level_2 {
+            margin-top: 28px;
+        }
+
+        .volume_level_3 {
+            margin-top: 21px;
+        }
+
+        .volume_level_4 {
+            margin-top: 14px;
+        }
+
+        .volume_level_5 {
+            margin-top: 7px;
+        }
+
+    }
+
+}

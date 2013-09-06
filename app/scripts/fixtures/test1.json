@@ -1,0 +1,80 @@
+{
+    "@id": "ab3f5c0c-099b-11e3-8321-1231393f4fe2",
+    "accountId": null,
+    "appId": "ab1a9cf0-099b-11e3-b1e8-12313d25ccb2",
+    "createdDate": "Mon, 27 Aug 2013 15:11:24 +0000",
+    "description": "",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "Hello Wordl!",
+    "pageTemplate": "",
+    "pageTemplateParams": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "backgroundColor": "#000000",
+        "dite": {
+            "eventName": "",
+            "eventType": ""
+        },
+        "elements": [
+            {
+                "id": "preloader",
+                "widget": {
+                    "options": {
+                        "preloadUrls": []
+                    },
+                    "widget": "preloader"
+                }
+            },
+            {
+                "backgroundColor": "gray",
+                "elements": [
+                    {
+                        "content": "go to google",
+                        "id": "header_googleLink",
+                        "click": {
+                            "link": "{{google_link}}",
+                            "dite": {
+                                "eventName": "clickLogo"
+                            }
+                        }
+                    }
+                ],
+                "className": "header",
+                "id": "header"
+            },
+            {
+                "elements": [
+                    {
+                        "content": "HELLO WORLD",
+                        "id": "main_helloWorldText"
+
+                    }
+                ],
+                "className": "main",
+                "id": "main"
+            },
+            {
+                "elements": [],
+                "className": "footer",
+                "id": "footer"
+            }
+        ],
+        "height": "500px",
+        "id": "app",
+        "minHeight": "500px",
+        "overflow": "hidden",
+        "width": "500px"
+    },
+    "templateParams": {
+        "mobileFirst": "true",
+        "stylesheetUrl": "/app/styles/clientspecific/tests/test1.css",
+        "google_link": "http://www.google.com/"
+    },
+    "thumbnail": null,
+    "txnBaseUrl": "https://vevo.moontoast.com",
+    "updatedDate": "Mon, 19 Aug 2013 22:51:42 +0000"
+}

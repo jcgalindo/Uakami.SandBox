@@ -1,0 +1,557 @@
+{
+    "@id": "45ed8ce8-039c-11e3-a85a-12313932ff99",
+    "appId": "45e1fc7a-039c-11e3-8445-1231381a2950",
+    "appContainerMaxVersion": null,
+    "accountId": null,
+    "createdDate": "Mon, 12 Aug 2013 22:12:27 +0000",
+    "data": null,
+    "deleted": null,
+    "description": "ENTER FOR A CHANCE TO BE A VIP AND WIN THE NEW 2014 TOYOTA TUNDRA CREWMAX ",
+    "diteEndpoint": "http://analytics.moontoast.com/track.gif",
+    "embedCode": null,
+    "embedCodeData": [],
+    "endDate": null,
+    "env": "prod",
+    "imageFullSize": null,
+    "mobileFallback": null,
+    "name": "WIN THE NEW 2014 TOYOTA TUNDRA CREWMAX",
+    "odpBaseUrl": "https://offer.moontoast.com",
+    "pageTemplate": "{% block viewport %}<meta name='viewport' content='width=device-width, initial-scale=1.0'> <style type='text/css'>body.embed_body {background:#000 !important;}</style> {% endblock %}",
+    "pageTemplateParams": [],
+    "piCatalog": [],
+    "rootUrl": "http://apps.moontoast.com/",
+    "template": {
+        "id": "mtt-sweeps",
+        "position": "relative",
+        "width": "auto",
+        "height": "auto",
+        "dite": {
+            "eventType": "default"
+        },
+        "elements": [
+            {
+                "id": "app_contents",
+                "position": "relative",
+                "height": "auto",
+                "elements": [
+                    {
+                        "id": "header",
+                        "position": "relative",
+                        "height": "43px",
+                        "backgroundColor": "{{header_bg_color}}",
+                        "elements": [
+                            {
+                                "id": "share_button",
+                                "position": "relative",
+                                "width": "35px",
+                                "height": "43px",
+                                "backgroundImage": "{{share_img}}",
+                                "click": {
+                                    "toggle": [
+                                        "share_popup"
+                                    ],
+                                    "dite": {
+                                        "screenName": "share",
+                                        "eventName": "shareThisHeader"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "share_popup",
+                        "visible": false,
+                        "position": "absolute",
+                        "mouseOut": {
+                            "fadeOut": "share_popup"
+                        },
+                        "click": [],
+                        "elements": [
+                            {
+                                "id": "share_popup_background",
+                                "position": "relative",
+                                "widget": {
+                                    "widget": "share",
+                                    "options": {
+                                        "id": "share_popup_widget",
+                                        "position": "relative",
+                                        "networks": [
+                                            {
+                                                "networks": [
+                                                    "facebook",
+                                                    "twitter",
+                                                    "google+"
+                                                ],
+                                                "url": "{{share_url}}"
+                                            }
+                                        ],
+                                        "dite": {
+                                            "screenName": "share"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "main",
+                        "position": "relative",
+                        "height": "auto",
+                        "elements": [
+                            {
+                                "id": "main_screen",
+                                "position": "relative",
+                                "elements": []
+                            },
+                            {
+                                "id": "main_creative",
+                                "position": "relative",
+                                "backgroundImage": "{{creative_background}}"
+                            },
+                            {
+                                "id": "button_wrapper",
+                                "visible": false,
+                                "position": "relative",
+                                "height": "70px",
+                                "elements": [
+                                    {
+                                        "id": "enter_button",
+                                        "position": "relative",
+                                        "width": "186px",
+                                        "height": "38px",
+                                        "content": "Enter Here",
+                                        "click": {
+                                            "show": [
+                                                "form_window"
+                                            ],
+                                            "hide": [
+                                                "button_wrapper"
+                                            ],
+                                            "dite": {
+                                                "screenName": "contactInformation/clickStartApp"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "form_window",
+                        "visible": true,
+                        "position": "relative",
+                        "height": "auto",
+                        "dite": {
+                            "eventType": "contactInformation",
+                            "screenName": "contactInformation"
+                        },
+                        "elements": [
+                            {
+                                "id": "form_text",
+                                "visible": false,
+                                "position": "relative",
+                                "width": "auto",
+                                "height": "auto",
+                                "elements": [
+                                    {
+                                        "id": "form_headline",
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "content": "enter for a chance to win"
+                                    },
+                                    {
+                                        "id": "form_byline",
+                                        "position": "relative",
+                                        "content": "The new 2014 toyota tundra limited crewmax 5.7l v8 and be the ultimate vip guest at nascar contenders live<sup>sm</sup>!"
+                                    },
+                                    {
+                                        "id": "form_required",
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "content": "*Required fields"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "form_container",
+                                "visible": false,
+                                "position": "relative",
+                                "height": "auto",
+                                "widget": {
+                                    "widget": "simpleForm",
+                                    "desktopWidget": {
+                                        "widgetName": "simpleForm",
+                                        "widgetClass": "com.moontoast.form.view.mediator.MTFormMediator",
+                                        "widgetLocation": "https://s3.amazonaws.com/apps.moontoast.com/equinot/FormWidget.swf"
+                                    },
+                                    "options": {
+                                        "submit": {
+                                            "url": "{{txnBaseUrl}}/api/rpc?methodName=saveData",
+                                            "method": "GET"
+                                        },
+                                        "fontColor": "{{form_text_color}}",
+                                        "optText": "{{opt_text}}",
+                                        "dite": {
+                                            "screenName": "contactInformation"
+                                        },
+                                        "afterSubmit": {
+                                            "fadeIn": [
+                                                "thankyou_screen"
+                                            ],
+                                            "fadeOut": [
+                                                "form_text",
+                                                "form_container"
+                                            ],
+                                            "dite": {
+                                                "screenName": "thankYou",
+                                                "eventName": "conversionreferral"
+                                            }
+                                        },
+                                        "fields": [
+                                            [
+                                                {
+                                                    "preset": "firstName",
+                                                    "width": "90%",
+                                                    "placeholder": "First Name*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "First Name is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldFirstName"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "lastName",
+                                                    "placeholder": "Last Name*",
+                                                    "width": "90%",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Last Name is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldLastName"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "email",
+                                                    "width": "90%",
+                                                    "placeholder": "Email*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Email is required"
+                                                        },
+                                                        {
+                                                            "type": "email",
+                                                            "message": "Please enter a valid email"
+                                                        },
+                                                        {
+                                                            "type": "email_confirm",
+                                                            "message": "Your emails don't match"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldEmail"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "confirmEmail",
+                                                    "width": "90%",
+                                                    "placeholder": "Confirm Email*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Email is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldEmailConfirmation"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "address",
+                                                    "width": "90%",
+                                                    "placeholder": "Address*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Address is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldAddress1"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "setValue",
+                                                    "id": "country",
+                                                    "name": "country",
+                                                    "width": "90%",
+                                                    "placeholder": "Select Country*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Country is required"
+                                                        }
+                                                    ],
+                                                    "value": "United States"
+                                                },
+                                                {
+                                                    "preset": "state",
+                                                    "width": "90%",
+                                                    "placeholder": "State*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "placeholder": "Select State",
+                                                            "message": "State is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldState"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "city",
+                                                    "width": "90%",
+                                                    "placeholder": "City*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "City is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldCity"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "zipUS",
+                                                    "width": "90%",
+                                                    "placeholder": "Postal Code*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Postal Code is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldZip"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "phone",
+                                                    "width": "90%",
+                                                    "placeholder": "Phone*",
+                                                    "validate": [
+                                                        {
+                                                            "type": "phone",
+                                                            "message": "Phone Number is not valid"
+                                                        },
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Phone is required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldPhone"
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "name": "privacy_policy",
+                                                    "value": "true",
+                                                    "placeholder": "YES, I have read and agree to NASCAR.COM's <a href='{{privacy_link}}'>Privacy Policy</a>.",
+                                                    "position": "relative",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldTerms"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "name": "official_rules",
+                                                    "value": "true",
+                                                    "placeholder": "I agree, to the <a href='{{rules_link}}'>Official Rules</a> of the Contenders Live Sweepstakes.",
+                                                    "position": "relative",
+                                                    "validate": [
+                                                        {
+                                                            "type": "required",
+                                                            "message": "Required"
+                                                        }
+                                                    ],
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldTerms"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "name": "toyota_offers",
+                                                    "value": "false",
+                                                    "placeholder": "Yes, I would like to receive email updates on the New 2014 Tundra.",
+                                                    "position": "relative",
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldJoinMailingList"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "name": "sprint_offers",
+                                                    "value": "false",
+                                                    "placeholder": "Yes, I would like to receive NASCAR related news and offers from Sprint.",
+                                                    "position": "relative",
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldJoinMailingList"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "preset": "emailOptIn",
+                                                    "name": "nascar_offers",
+                                                    "value": "false",
+                                                    "placeholder": "Yes, I want to receive information from NASCAR and NASCAR.COM.",
+                                                    "position": "relative",
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/fieldJoinMailingList"
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "preset": "submit",
+                                                    "width": "auto",
+                                                    "placeholder": "Submit",
+                                                    "click": {
+                                                        "dite": {
+                                                            "screenName": "contactInformation/clickSubmit"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "id": "thankyou_screen",
+                                "visible": true,
+                                "position": "relative",
+                                "width": "100%",
+                                "height": "auto",
+                                "dite": {
+                                    "eventType": "thankYou",
+                                    "screenName": "thankYou"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "thankyou_headline",
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "content": "Thank You"
+                                    },
+                                    {
+                                        "id": "thankyou_byline",
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "content": "for participating"
+                                    },
+                                    {
+                                        "id": "thankyou_subtext",
+                                        "visible": true,
+                                        "position": "relative",
+                                        "width": "auto",
+                                        "height": "auto",
+                                        "content": "the sweepstakes is now over"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "templateOverrides": [
+        {
+            "rules": {
+                "deviceType": "flash"
+            },
+            "overrides": {
+                "mtt-sweeps": {
+                    "height": "460",
+                    "width": "398",
+                    "elements": [
+                        {
+                            "click": {
+                                "link": "http://apps.moontoast.com.s3.amazonaws.com/nascar/sweepstakes/index.html"
+                            },
+                            "backgroundImage": "https://s3.amazonaws.com/moontoast-assets-live/nascar/nascarDesktop.png"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "templateParams": {
+        "previewImageUrl": "https://moontoast-assets-live.s3.amazonaws.com/nascar/share_img.jpg",
+        "share_url": "http://mnt.st/15wxm8M",
+        "share_img": "https://apps-cdn.moontoast.com/hyundai/video-lead-gen/icon_share.png",
+        "main_background": "//moontoast-assets-live.s3.amazonaws.com/nascar/bg_main_screen.png",
+        "creative_background": "//moontoast-assets-live.s3.amazonaws.com/nascar/main_creative_bg.jpg",
+        "default_form_on": false,
+        "default_form_off": false,
+        "stylesheetUrl": "//moontoast-assets-live.s3.amazonaws.com/nascar/nascar.css",
+        "header_bg_color": "#000",
+        "form_text_color": "#000000",
+        "privacy_link": "http://www.nascar.com/en_us/privacy.html",
+        "rules_link": "http://contenderslive.nascar.com/downloads/NASCAR_Contenders_Live_Sweepstakes_Official_Rules.pdf",
+        "catalogId": "3504",
+        "appDiteName": "nascarcontenders"
+    },
+    "thumbnail": null,
+    "txnBaseUrl": "https://toyota.moontoast.com",
+    "updatedDate": "Mon, 12 Aug 2013 23:43:05 +0000"
+}

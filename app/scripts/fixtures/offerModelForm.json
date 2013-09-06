@@ -1,0 +1,141 @@
+{
+    "@id": "1744", 
+    "@resourceType": "offer", 
+    "_links": {
+        "collection": {
+            "href": "/offers"
+        }, 
+        "self": {
+            "href": "/offers/1744"
+        }
+    }, 
+    "accountId": "100", 
+    "appId": "Sweepstake", 
+    "description": "Enter for your chance to win this $900 package from some of our favorite Hill Center merchants! $100 from each store featured!", 
+    "embedCode": "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"460\" height=\"398\" id=\"embeddedstore\" > <param name=\"movie\" value=\"https://moontoast-assets-dev.s3.amazonaws.com/flash/embedded-store/sweepstakes.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--[if !IE]>--> <object type=\"application/x-shockwave-flash\" data=\"https://moontoast-assets-dev.s3.amazonaws.com/flash/embedded-store/sweepstakes.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" width=\"460\" height=\"398\" > <param name=\"quality\" value=\"high\" /> <param name=\"bgcolor\" value=\"#ffffff\" /> <param name=\"allowScriptAccess\" value=\"always\" /> <param name=\"allowFullScreen\" value=\"true\" /> <param name=\"flashVars\" value=\"catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F\" /> <!--<![endif]--> <div style=\"background-color:#ffffff;\"> <!--[if gte IE 6]>--> <p> Either scripts and active content are not permitted to run or Adobe Flash Player version 0.0.0 or greater is not installed. </p> <!--<![endif]--> <a href=\"http://www.adobe.com/go/getflashplayer\"> <img src=\"https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\" alt=\"Get Adobe Flash Player\" /> </a> </div> <!--[if !IE]>--> </object> <!--<![endif]--> </object>", 
+    "embedCodeData": {
+        "buttonBorder": "", 
+        "buttonColor": "", 
+        "buttonSize": "Small", 
+        "buttonText": "", 
+        "file": "sweepstakes.swf", 
+        "height": "398", 
+        "swfUrl": "https://moontoast-assets-dev.s3.amazonaws.com/flash/embedded-store/sweepstakes.swf?catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F", 
+        "swfVars": "catalogId=1744&rootUrl=https%3A%2F%2Fcrosscreek.moontoast.com%2F", 
+        "type": "flash", 
+        "width": "460"
+    }, 
+    "imageFullSize": "https://crosscreek.moontoast.com/file/thumbnail/id/533866/w/212/h/212", 
+    "mobileFallback": "mobile_sweepstakes", 
+    "name": "$900 Giveaway: Hill Center Green Hills!", 
+    "piCatalog": {
+        "communityHost": "crosscreek", 
+        "communityId": "100", 
+        "createdAt": "2012-10-01 20:59:15", 
+        "guidePageId": "1388", 
+        "thumbnailId": "533866"
+    }, 
+    "rootUrl": "https://crosscreek.moontoast.com/", 
+    "thumbnail": "https://crosscreek.moontoast.com/file/thumbnail/id/533866/w/62/h/62",
+    "template": {
+        "backgroundColor": "#FFFFFF",
+        "widget": {
+            "widget": "form",
+            "id": "form_widget",
+            "options": {
+                "id": "my_form",
+                "afterSubmit": {
+                    "link": "http://tysonlloydcadenhead.com",
+                    "slideOutRight": ["form_widget"]
+                },
+                "submit": {
+                    "url": "scripts/fixtures/formResponse.json",
+                    "method": "GET"
+                },
+                "elements": [{
+                    "type": "text",
+                    "name": "name",
+                    "value": "{{data.my_form.request.name}}",
+                    "border": {
+                        "thickness": "2px",
+                        "color": "gray",
+                        "alpha": 1
+                    },
+                    "fontColor": "#333",
+                    "placeholder": "What is your name?",
+                    "validate": [{
+                        "type": "required",
+                        "message": "This is required!"
+                    }, {
+                        "type": "minLength",
+                        "value": 5,
+                        "message": "This needs to be an email address"    
+                    }]
+                },
+                {
+                    "type": "label",
+                    "value": "What colors do you like?",
+                    "top": "10px",
+                    "for": "colors"
+                },
+                {
+                    "type": "radio",
+                    "name": "colors",
+                    "list": ["red", "green", "blue"],
+                    "validate": [{
+                        "type": "required",
+                        "message": "Color is required"
+                    }],
+                    "value": "green"
+                },
+                {
+                    "type": "label",
+                    "value": "Description",
+                    "top": "10px"
+                },
+                {
+                    "type": "textarea",
+                    "name": "Description",
+                    "placeholder": "Description",
+                    "height": "100px",
+                    "top": "0px",
+                    "validate": [{
+                        "type": "required",
+                        "message": "Color is required"
+                    }]
+                },
+                {
+                    "type": "select",
+                    "name": "age",
+                    "top": "10px",
+                    "value": "{{data.my_form.request.age}}",
+                    "placeholder": "How old are you?",
+                    "list": ["young", "normal", "old"],
+                    "validate": [{
+                        "type": "required",
+                        "message": "Color is required"
+                    }]
+                }, {
+                    "type": "button",
+                    "value": "Cancel",
+                    "top": "10px",
+                    "width": "40%",
+                    "backgroundColor": "#CCC",
+                    "click": {
+                        "slideOutLeft": ["form_widget"]
+                    }
+                }, {
+                    "type": "submit",
+                    "value": "Submit this form!",
+                    "top": "10px",
+                    "width": "50%",
+                    "left": "16px",
+                    "backgroundColor": "yellow",
+                    "click": {
+                        "slideInRight": ["thank_you_page"]
+                    }
+                }]
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<span class="audio_widget">
+    <audio id="preview_audio_{{rootId}}">
+        {{#audioUrl.ogg}}
+            <source src="{{this}}" type="audio/ogg" />
+        {{/audioUrl.ogg}}
+        {{#audioUrl.mp3}}
+            <source src="{this}" type="audio/mpeg" />
+        {{/audioUrl.mp3}}
+    </audio>
+    <div class="title">{{title}}</div>
+    <img id="play_pause_{{rootId}}" class="play_pause" src="//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/audioPlayer/play.png" />
+    <div id="slider_{{rootId}}" class="slider">
+        <div id="slider_inner_{{rootId}}" class="slider_inner"></div>
+    </div>
+    <img src="//moontoast-assets-live.s3.amazonaws.com/moontemplate/images/audioPlayer/volume.png" class="volume_icon" />
+    <div id="volume_levels_{{rootId}}" class="volume_levels">
+        <div class="volume_levels_inner">
+            <div id="volume_level_{{rootId}}_1" class="volume_level volume_level_1 on"></div>
+            <div id="volume_level_{{rootId}}_2" class="volume_level volume_level_2 on"></div>
+            <div id="volume_level_{{rootId}}_3" class="volume_level volume_level_3 on"></div>
+            <div id="volume_level_{{rootId}}_4" class="volume_level volume_level_4 on"></div>
+            <div id="volume_level_{{rootId}}_5" class="volume_level volume_level_5 on"></div>
+            <div id="volume_level_{{rootId}}_6" class="volume_level volume_level_6 on"></div>
+        </div>
+    </div>
+</div>

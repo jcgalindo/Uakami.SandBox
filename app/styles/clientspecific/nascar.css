@@ -1,0 +1,281 @@
+    body, html {
+        height: auto !important;
+    }
+    body {
+        font-size: 16px;
+        line-height: 1.4em;
+        font-family: sans-serif;
+        background: #000;
+    }
+    #mtt-sweeps {
+        overflow: scroll !important;
+        text-align: left;
+    }
+    #header {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 1px;
+    }
+    #share_button{
+        float: right;
+        border-left: 1px solid #4F4F4F;
+        background-repeat: no-repeat;
+        background-size: 13px 20px;
+        background-position: center;
+    }
+    #share_popup {
+        top: 40px !important;
+    }
+    #share_popup:before {
+        border-bottom: 12px solid #fff !important;
+    }
+    #share_popup_background {
+        background-color: #fff !important;
+    }
+    .social_icon {
+        color: #000 !important;
+        font-size: 1em !important;
+    }
+    #main_screen {
+        padding-top: 21.5%;
+        height: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: #ffd100; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffd100 0%, #ffab00 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd100), color-stop(100%,#ffab00)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffd100 0%,#ffab00 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffd100 0%,#ffab00 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffd100 0%,#ffab00 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffd100 0%,#ffab00 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd100', endColorstr='#ffab00',GradientType=0 ); /* IE6-9 */
+    }
+    #main_screen > div {
+        position: absolute !important;
+        width: 96% !important;
+        height: 96% !important;
+        background-image: url(http://moontoast-assets-live.s3.amazonaws.com/nascar/bg_main_screen.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 2%;
+        left: 2%;
+    }
+    #main_creative {
+        padding-top: 88%;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #button_wrapper {
+        background: #ffd100; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffd100 0%, #ffab00 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd100), color-stop(100%,#ffab00)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffd100 0%,#ffab00 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffd100 0%,#ffab00 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffd100 0%,#ffab00 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffd100 0%,#ffab00 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd100', endColorstr='#ffab00',GradientType=0 ); /* IE6-9 */
+    }
+    #enter_button {
+        margin: 16px auto 0;
+        background: #000;
+        color: #fff;
+        font-size: 20px;
+        line-height: 38px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+    #enter_button > div:after {
+        font-family: 'FontAwesome';
+        content: "\f054";
+        margin-left: 10px;
+    }
+    #form_window {
+        margin: 0 1px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e1e1e1 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e1e1e1)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e1e1e1 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1',GradientType=0 ); /* IE6-9 */
+    }
+
+    #form_text {
+        margin-top: 15px;
+        padding: 0 3.125% !important;
+        text-transform: uppercase;
+    }
+    #form_headline {
+        margin-bottom: 10px;
+        font-size: 1.125em;
+        font-weight: bold;
+    }
+    #form_byline {
+        font-size: 0.938em;
+        margin-bottom: 15px;
+    }
+    #form_required {
+        font-size: 0.813em;
+        margin-bottom: 10px;
+    }
+
+    #form_widget_submit{
+        display: block;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: 213px !important;
+        height: 38px !important;
+        line-height: 38px;
+        clear: left;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 1px solid #E9A600 !important;
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        border-radius: 5px !important;
+        background: #ffd100 !important; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffd100 0%, #ffab00 100%) !important; /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd100), color-stop(100%,#ffab00)) !important; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffd100 0%,#ffab00 100%) !important; /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffd100 0%,#ffab00 100%) !important; /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffd100 0%,#ffab00 100%) !important; /* IE10+ */
+        background: linear-gradient(to bottom,  #ffd100 0%,#ffab00 100%) !important; /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd100', endColorstr='#ffab00',GradientType=0 ) !important; /* IE6-9 */
+    }
+    input[type=text], input[type=tel] {
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        margin-bottom: 10px !important;
+        height: auto !important;
+        padding: 5px !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    select {
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        margin: 0 5% 10px !important;
+        /*height: 30px !important;*/
+        padding: 5px !important;
+        width: 90% !important;
+        max-width: 300px;
+        background: #666666 !important;
+        font-size: 14px;
+    }
+    #zipUS{
+        width: 136px !important;
+    }
+    .mtt-form-check{
+        font-size: 13px !important;
+    }
+    .checkbox_label {
+        margin-left: 10px;
+    }
+
+    .lt-ie10 .checkbox_label input {
+        float: left;
+        margin-left: 20px;
+    }
+
+    #thankyou_screen {
+        margin: 30px 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #thankyou_headline {
+        font-size: 1.500em;
+        font-weight: bold;
+    }
+
+    #thankyou_byline {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    #thankyou_subtext {
+        font-size: 0.813em;
+        margin-bottom: 15px;
+    }
+
+
+@media only screen and (min-width:640px) {
+    #main_screen {
+        padding-top: 169px;
+    }
+    #main_creative {
+        padding-top: 82.7%;
+        background-image: url(http://moontoast-assets-live.s3.amazonaws.com/nascar/main_creative_portrait.jpg) !important;
+    }
+    #button_wrapper {
+        height: 116px !important;
+    }
+    #enter_button {
+        margin: 28px auto 0;
+        width: 294px !important;
+        height: 59px !important;
+        line-height: 59px;
+        font-size: 30px;
+    }
+    #enter_button > div:after {
+        margin-left: 30px;
+    }
+    #form_text {
+        font-size: 1.125em;
+        float: left;
+        width: 33% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    #form_container {
+        margin-top: 15px;
+        width: 66% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+    }
+
+    input[type=text], input[type=tel], select {
+        width: 40% !important;
+    }
+
+    #thankyou_screen {
+        font-size: 1.125em;
+        line-height: 1.8em;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #main_screen {
+        padding-top: 135px;
+    }
+    #main_screen > div {
+        height: 90% !important;
+        width: 76% !important;
+        top: 5% !important;
+        left: 12% !important;
+    }
+    #main_creative {
+        padding-top: 425px;
+        background-size: contain;
+    }
+}

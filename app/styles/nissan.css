@@ -1,0 +1,441 @@
+#share_popup_background{
+        background-repeat: no-repeat !important;
+        }
+@media only screen and (min-device-width: 481px) and (orientation: landscape) {
+    body{
+        height: 800px !important;
+    }
+
+    #share_button{
+        position: absolute !important;
+        top: 0;
+        z-index: 6000;
+    }
+   #share_popup_background{
+        background-size: 100% 100%;
+        padding: 0 10px !important;
+        }
+
+    #share_popup:before{
+        border-bottom: 0 !important;
+    }
+    #share_popup{
+        position: absolute !important;
+        width : 14% !important;
+        height: 27% !important;
+        margin-top: 1% !important;
+    }
+    .social_icon{
+        margin : 0;
+        background-position: 19px 22px;
+        padding-left: 47px;
+        font-size: 0.85em !important;
+        line-height: 2.8em !important;
+        height: 25% !important;
+    }
+    .mtt-form-col > input[type=text] {
+        height: 40% !important;
+        width: 30% !important;
+        top: auto !important;
+        left: auto !important;
+        float: left;
+        overflow: hidden !important;
+        font-size: 24px;
+    }
+    input[name="email"]{
+        margin-left: 14% !important
+    }
+    input[name="firstName"]{
+        margin-left: 14% !important
+    }
+    input[name="lastName"]{
+        margin-left: -0.5% !important
+    }
+    input[name="zipUS"]{
+        margin-left: -0.5% !important
+    }
+     .mtt-form-col{
+         height: 16% !important;
+         color:#FFFFFF !important;
+         margin-bottom: -2% !important;
+     }
+
+    checkbox_label:after {
+        top: -5.9px !important;
+        font-size: 3em !important;
+    }
+    .checkbox_label{
+        height:46px;
+        width:188% !important;
+        font-size: 1.3em !important;
+
+    }
+    .mtt-form-check{
+        width: 100%;
+        margin-left:13%;
+        margin-top: 0.8%;
+    }
+
+    #header{
+        height 6.5%; !important;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/landscape/header.png");
+        background-size: 100% 100%;
+    }
+    #get_started{
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/landscape/main.png");
+        background-size: 100% 85%;
+        top: 6.5%;
+    }
+    #link1{
+        bottom : 18.5%;
+        position: absolute !important;
+    }
+    #form_container{
+        top: 6.5%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/landscape/form.png");
+        background-size: 100% 90%;
+    }
+    #thankyou_screen{
+        top: 6.5%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/landscape/thankyou.png");
+        background-size: 100% 100%;
+    }
+    #form_widget_submit{
+        top: 35%
+    }
+    #thankyou_screen div div{
+        position: absolute !important;
+        top: 30% !important;
+        width: 8% !important;
+        height: 10% !important;
+    }
+   #link_tw_thanks {
+        left: 38% !important
+    }
+    #link_fb_thanks {
+        left: 46% !important
+    }
+    #link_gp_thanks {
+        left: 54% !important
+    }
+}
+@media only screen and (min-device-width: 481px) and (orientation: portrait) {
+    body{
+        height: 100% !important;
+    }
+
+    #share_button{
+        position: absolute !important;
+        top: 0;
+        z-index: 6000;
+    }
+    #share_popup_background{
+        background-size: 100% 100%;
+        padding: 0 10px !important;
+        }
+
+    #share_popup:before{
+        border-bottom: 0 !important;
+    }
+    #share_popup{
+        position: absolute !important;
+        width : 19% !important;
+        height: 21% !important;
+        margin-top: 0.4% !important;
+    }
+    .social_icon{
+        margin : 0;
+        background-position: 19px 22px;
+        padding-left: 47px;
+        font-size: 1.3em !important;
+        line-height: 2.8em !important;
+        height: 25% !important;
+    }
+
+    .mtt-form-col > input[type=text] {
+        height: 26% !important;
+        width: 33% !important;
+        top: auto !important;
+        left: -2% !important;
+        float: left;
+        overflow: hidden !important;
+        font-size: 30px
+    }
+
+
+    input[name="email"]{
+        margin-left: 4.4% !important;
+    }
+    input[name="firstName"]{
+        margin-left: 4.4% !important
+    }
+    input[name="lastName"]{
+        margin-left: 8.5% !important
+
+    }
+    input[name="zipUS"]{
+        margin-left: 8.5% !important
+    }
+     .mtt-form-col{
+         height: 12.5% !important;
+         color:#FFFFFF !important;
+         margin-bottom: -20px !important;
+         margin-left: -0.5% !important;
+     }
+
+    .checkbox_label:after {
+        top: -5.9px !important;
+        font-size: 3em !important;
+    }
+    .checkbox_label{
+        height:46px;
+        width:188% !important;
+        font-size: 0.83em !important;
+
+    }
+    .mtt-form-check{
+        margin-top: 3.5%;
+        width: 100%;
+        margin-left:5%
+    }
+    .mtt-form-check .checkbox_label{
+        margin-left:-20px !important;
+    }
+
+    #header{
+        height : 4.7% !important;
+        background-size: 100% 100%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/header.png");
+    }
+    #get_started{
+        background-size: 100% 90% !important;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/main.png");
+        top: 4.7%;
+    }
+    #link1{
+        bottom : 13%;
+        position: absolute !important;
+    }
+    #form_container{
+        top: 4.7%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/form.png");
+        background-size: 100% 100% ;
+    }
+    #thankyou_screen{
+        top: 4.7%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/thankyou.png");
+        background-size: 100% 100%;
+    }
+    #thankyou_screen div div{
+        position: absolute !important;
+        top: 26% !important;
+        width: 10% !important;
+        height: 8% !important;
+    }
+    #form_widget_submit{
+        top: 30% ;
+    }
+    #share_popup_background{
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/portrait/thankyou.png");
+        background-size: 100% 100%;
+    }
+}
+@media screen and (max-device-width: 480px) {
+    body{
+        height: 100% !important;
+    }
+
+    #nissan{
+        top: -95% !important;
+    }
+    #share_button{
+        position: absolute !important;
+        top: 0 ;
+        width : 11% !important;
+        z-index: 6000;
+    }
+    #share_popup_background{
+        background-size: 100% 100% !important;
+        padding: 0 10px !important;
+        }
+
+    #share_popup:before{
+        border-bottom: 0 !important;
+    }
+    #share_popup{
+        position: absolute !important;
+        margin-top: 8% !important;
+        width : 35% !important;
+        height: 35% !important;
+    }
+    .social_icon{
+        margin : 0;
+        background-position: 19px 22px;
+        padding-left: 47px;
+        text-align:left;
+        font-size: 2.6em !important;
+        line-height: 2.8em !important;
+        height: 25% !important;
+    }
+
+    .mtt-form-col > input[type=text] {
+        height: 28% !important;
+        width: 30% !important;
+        top: auto !important;
+        left: 4% !important;
+        float: left;
+        overflow: hidden !important;
+        font-size: 55px
+    }
+     .mtt-form-col{
+         height: 16.5% !important;
+         color:#FFFFFF !important;
+         margin-bottom: -4px !important;
+         margin-left: -5.5% !important;
+     }
+
+    .checkbox_label:after {
+        top: -30.9px !important;
+    }
+    .checkbox_label{
+        height:99px;
+        width:188% !important;
+        font-size: 3em !important;
+    }
+    .mtt-form-check{
+        width: 100%;
+        margin-left:8%;
+        margin-top: 5% !important;
+    }
+    .mtt-form-check .checkbox_label{
+        margin: 9px 0 0 0 !important;
+    }
+    #form_widget{
+        top : 45% !important;
+    }
+    #logo_header{
+        height:100%;
+        background-size: 100% 100%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/default/header.png");
+    }
+    #header{
+        height: 9% !important;
+    }
+    #get_started{
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/default/main.png");
+        background-size: 100% 90%;
+    }
+    #link1{
+        height : 11% !important;
+        left : 20% !important;
+        width: 60% !important;
+        bottom : 12%;
+        position: absolute !important;
+    }
+    #form_container{
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/default/form.png");
+        background-size: 100% 95% ;
+    }
+    #thankyou_screen{
+        top: 0%;
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/default/thankyou.png");
+        background-size: 100% 100%;
+    }
+    #thankyou_screen div div{
+        position: absolute !important;
+        top: 30% !important;
+        width: 11% !important;
+        height: 8% !important;
+    }
+    #form_widget_submit{
+        top: 37% ;
+        left :20% !important;
+        width:60% !important;
+    }
+    #link_tw_thanks {
+        left: 30% !important
+    }
+    #link_fb_thanks {
+        left: 44% !important
+    }
+    #link_gp_thanks {
+        left: 58.7% !important
+    }
+     input[name="lastName"]{
+        margin-left: 7% !important
+    }
+    input[name="zipUS"]{
+        margin-left: 7% !important
+    }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape){
+    body{
+        height: 1100px !important;
+    }
+
+    .mtt-form-col > input[type=text] {
+        height: 45% !important;
+        width: 32 !important;
+        top: auto !important;
+        left: 5% !important;
+        float: left;
+        overflow: hidden !important;
+        font-size: 36px
+    }
+    #get_started{
+        background-image: url("https://moontoast-assets-uakami.s3.amazonaws.com/nissan/mobile/landscape/main.png");
+        background-size: 100% 85%;
+        top: 6.5%;
+    }
+
+    .mtt-form-check{
+        width: 100%;
+        margin-left: 13%;
+        margin-top: 2% !important;
+        font-size: 0.59 !important;
+    }
+    .mtt-form-col{
+         height: 16.5% !important;
+         color:#FFFFFF !important;
+         margin-bottom: -4px !important;
+         margin-left: -6.5% !important;
+     }
+    input[name="lastName"]{
+        margin-left: 9% !important
+    }
+    input[name="zipUS"]{
+        margin-left: 9% !important
+    }
+    #share_popup{
+        position: absolute !important;
+        margin-top: 1%;
+        top: 0 !important;
+        width : 23% !important;
+        height: 43% !important;
+    }
+    .social_icon{
+        margin : 0;
+        background-position: 19px 22px;
+        padding-left: 47px;
+        font-size: 1.6em !important;
+        line-height: 2.8em !important;
+        text-align:left;
+        height: 25% !important;
+    }
+     .checkbox_label{
+        height:99px;
+        width:188% !important;
+        font-size: 1.7em !important;
+    }
+    .checkbox_label::after {
+        top: -5px !important;
+    }
+    #link1{
+        height : 11% !important;
+        left : 20% !important;
+        width: 60% !important;
+        bottom : 18% !important;
+        position: absolute !important;
+    }
+}
